@@ -1,5 +1,0 @@
-V	150811194257Z		10	unknown	/C=US/ST=California/O=OpenStack/OU=NovaDev/CN=6c9ff0ad59fe4888-eb213cfa00a54dfd-2014-08-11T19:42:57Z
-V	150811194300Z		11	unknown	/C=US/ST=California/O=OpenStack/OU=NovaDev/CN=4f67ebc7de484201-04b50025bbba4f04-2014-08-11T19:43:00Z
-V	150811194304Z		12	unknown	/C=US/ST=California/O=OpenStack/OU=NovaDev/CN=411ce2b84cc641af-eb213cfa00a54dfd-2014-08-11T19:43:04Z
-V	150811194307Z		13	unknown	/C=US/ST=California/O=OpenStack/OU=NovaDev/CN=411ce2b84cc641af-6ae131c107104b3e-2014-08-11T19:43:07Z
-V	150811194311Z		14	unknown	/C=US/ST=California/O=OpenStack/OU=NovaDev/CN=2b2da07a5e0a46a5-6ae131c107104b3e-2014-08-11T19:43:11Z
