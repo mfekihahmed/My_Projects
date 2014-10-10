@@ -1,5 +1,0 @@
-<HorizontalBoxLayout>
-  <form_Button label="First"/>
-  <form_Button label="Second"/>
-  <form_Button label="Third"/>
-</HorizontalBoxLayout>

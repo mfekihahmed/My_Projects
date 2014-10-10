@@ -1,3 +1,0 @@
-first
-sub.Second
-sub.subSub.3

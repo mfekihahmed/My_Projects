@@ -1,2 +1,0 @@
-the "tolerance" package contains test cases that the inference engine has to tolerate
-without failing.  

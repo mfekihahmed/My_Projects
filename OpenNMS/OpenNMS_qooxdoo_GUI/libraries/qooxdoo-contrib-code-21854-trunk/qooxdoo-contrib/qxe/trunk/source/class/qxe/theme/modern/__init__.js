@@ -1,4 +1,0 @@
-/**
- * qxe.theme.modern package
- *
- */

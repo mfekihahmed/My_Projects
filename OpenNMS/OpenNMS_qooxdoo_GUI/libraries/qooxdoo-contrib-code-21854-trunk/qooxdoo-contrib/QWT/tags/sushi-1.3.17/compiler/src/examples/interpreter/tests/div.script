@@ -1,7 +1,0 @@
-script
-  int num;
-{
-  print "number:";
-  input num;
-  print 100/num;
-}

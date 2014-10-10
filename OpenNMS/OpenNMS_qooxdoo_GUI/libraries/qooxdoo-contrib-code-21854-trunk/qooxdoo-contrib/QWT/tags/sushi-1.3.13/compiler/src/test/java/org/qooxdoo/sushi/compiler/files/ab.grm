@@ -1,8 +1,0 @@
-[PARSER]
-
-S ::= A | B;
-A ::= "a";
-B ::= "b";
-
-[SCANNER]
-

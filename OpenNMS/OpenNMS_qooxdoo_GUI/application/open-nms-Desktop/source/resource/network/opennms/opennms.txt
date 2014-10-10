@@ -1,7 +1,0 @@
-{
-"employees":[
-{"firstname":"john","lastname":"aoe"},
-{"firstname":"anna","lastname":"amith"},
-{"firstname":"aeter","lastname":"aones"}
-]
-}

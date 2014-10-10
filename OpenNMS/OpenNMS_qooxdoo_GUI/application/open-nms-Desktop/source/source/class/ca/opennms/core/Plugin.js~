@@ -1,1 +1,0 @@
-qx.Class.define("ca.inocybe.core.Plugin", {});

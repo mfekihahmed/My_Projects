@@ -1,5 +1,0 @@
-program {
-    String a;
-    a = "\x";
-}
-
