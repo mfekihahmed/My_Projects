@@ -1,0 +1,33 @@
+{
+  "name"    : "RpcExample",
+
+  "include" :
+  [
+    {
+      "path" : "../qooxdoo/trunk/tool/data/config/application.json"
+    }
+  ],
+
+  "let" :
+  {
+    "APPLICATION"  : "rpcexample",
+    "QOOXDOO_PATH" : "../qooxdoo/trunk",
+    "QOOXDOO_URI"  : "../${QOOXDOO_PATH}",
+    "QXTHEME"      : "qx.theme.Modern",
+    "API_EXCLUDE"  : ["qx.legacy.*"],
+    "LOCALES"      : [ "en" ],
+    "ROOT"         : "."
+  },
+
+  "jobs" :
+  {
+    "common" :
+    {
+      "environment" :
+      {
+        "qx.ioRemoteDebug" : "on",
+        "rpcexample.URL" : "../../RpcPhp/1.2.0/services/index.php"
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+	"name": "Root",
+	"icon": "icons/16/folder.png",
+	"groups": [
+		{
+			"name": "Projects",
+			"icon": "icons/16/folder.png",
+			"groups": [
+				{"name":"GreenStar Network",
+			     "icon": "icons/16/vinf.png"
+				},
+				{"name":"Netvirt",
+				 "icon": "icons/16/vinf.png"
+				},
+				{"name":"PanLab",
+				 "icon": "icons/16/vinf.png"
+				 }
+			]
+		}, {
+			"name": "Departments",
+			"icon": "icons/16/folder.png",
+			"groups": [
+				{"name":"IT Department",
+				 "icon": "icons/16/vinf.png"
+				},
+				{"name":"IMS Solution",
+				 "icon": "icons/16/vinf.png"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,25 @@
+<?php 
+$edge = $_POST['edge'];
+//"0x1f" -- "0x15"
+//0x1f,3,0xb,4,up/down
+$file = 'test.txt';
+file_put_contents($file, $edge, FILE_APPEND | LOCK_EX);
+$pieces = explode(",", $edge);
+//srcdpid="0xc9"
+//srcport="1"
+//dstdpid="0x1"
+//dstport="2"
+//todo="down"
+$output = shell_exec('linkupdown.py $pieces[0] $pieces[1]');
+
+?>
+
+<html>
+ <head>
+  <title>PHP Test</title>
+ </head>
+ <body>
+<p> <?php echo $edge;?> ed succesful </p>
+ </body>
+</html>
+

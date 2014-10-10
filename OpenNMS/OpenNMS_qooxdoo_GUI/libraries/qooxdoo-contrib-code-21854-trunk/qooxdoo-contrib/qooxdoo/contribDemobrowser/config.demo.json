@@ -1,0 +1,53 @@
+{
+
+  "libraries" :
+  {
+    // Currently use the following contributions explicitly
+    "include" : {
+      "Accordion" : {},
+      "Aristo" : {},
+      "CanvasCell" : {},
+      "ComboTable" : {},
+      "Cropper" : {},
+      "DarkTheme" : {},
+      "Dialog" : {},
+      "GraydientTheme" : {},
+      "MutableList" : {},
+      "OpenFlashChart" : {},
+      "qxe" : {},
+      "QxDyGraphs" : {},
+      "QxJqPlot" : {},
+      "QxProtovis" : {},
+      "RetroTheme": {},
+      "SVG" : {},
+//      "SearchBox" : {},
+      "SmartTableModel" : {},
+      "SilverBlueTheme" : {},
+      "TimeChooser" : {},
+      "TokenField" : {},
+      "UploadMgr" : {},
+//      "VirtualData" : {},
+//      "progressbar" : {},
+      "collapsablePanel" : {}
+    /*
+      // Use all supported contributions
+      "*" : {
+        "types" : ["application", "contribution", "library"],
+        "versions" : ["*"],
+        "qooxdoo-versions" : ["*"]
+      }
+    */
+    }
+
+    /*
+    //Use wildcards for all attributes to exclude a library:
+    "exclude" : {
+      "fooLib" : {
+        "types" : ["*"],
+        "versions" : ["*"],
+        "qooxdoo-versions" : ["*"]
+      }
+    }
+    */
+  }
+}

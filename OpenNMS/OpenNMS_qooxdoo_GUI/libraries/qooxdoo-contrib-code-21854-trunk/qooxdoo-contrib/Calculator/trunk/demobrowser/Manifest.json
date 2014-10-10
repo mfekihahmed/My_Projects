@@ -1,0 +1,29 @@
+{
+  "info" : 
+  {
+    "name" : "DemoBrowser",
+
+    "summary" : "Calculator demo browser",
+    "description" : "Calculator test applications.",
+    
+    "keywords" : ["demos", "run frame"],
+    "homepage" : "http://www.qooxdoo.org",
+
+    "license" : "LGPL/EPL",
+    "authors" : [],
+
+    "version" : "trunk",
+    "qooxdoo-versions": ["trunk", "0.8.2"]
+  },
+  
+  "provides" : 
+  {
+    "namespace"   : "demobrowser",
+    "encoding"    : "utf-8",
+    "class"       : "source/class",
+    "resource"    : "source/resource",
+    "translation" : "source/translation",
+    "type"        : "application"
+  }
+}
+

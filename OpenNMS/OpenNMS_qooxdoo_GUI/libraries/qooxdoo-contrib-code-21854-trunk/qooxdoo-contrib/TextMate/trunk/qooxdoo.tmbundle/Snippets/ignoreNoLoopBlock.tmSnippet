@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>@lint ignoreNoLoopBlock()</string>
+	<key>name</key>
+	<string>ignoreNoLoopBlock</string>
+	<key>scope</key>
+	<string>comment.block</string>
+	<key>tabTrigger</key>
+	<string>ignore</string>
+	<key>uuid</key>
+	<string>1E1028CC-F9A6-4052-AC49-740B8A72E7AF</string>
+</dict>
+</plist>

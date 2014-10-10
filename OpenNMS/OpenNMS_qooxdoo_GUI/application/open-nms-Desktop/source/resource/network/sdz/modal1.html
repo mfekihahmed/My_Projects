@@ -1,0 +1,136 @@
+<!doctype html>
+<html ng-app="plunker">
+  <head>
+    <script src="angular.js"></script>
+    <script src="ui-bootstrap-tpls-0.11.0.js"></script>
+	
+    <script src="example.js"></script>
+    <link href="bootstrap.min.css" rel="stylesheet">
+<title>Create New Tenant Defense</title>
+<link rel="shortcut icon" href="favicon.ico">
+</style>
+<script type="text/javascript">
+      function newdefense() {
+	  var e = document.getElementById("newN");
+      var newN = e.options[e.selectedIndex].value;
+
+        var xmlhttp;
+        if (window.XMLHttpRequest)
+          {// code for IE7+, Firefox, Chrome, Opera, Safari
+          xmlhttp=new XMLHttpRequest();
+          }
+        else
+          {// code for IE6, IE5
+          xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+          }
+
+		xmlhttp.open("GET","newdefense.php?newdefense="+newN+','+newN,true);
+        xmlhttp.send();
+
+	  
+      }
+	  //
+    </script>
+	<style>
+        .modal-dialog {
+         width: 900px;
+		 height: 900px;
+         }
+		 .modal-content {
+  width: 900px;
+}
+    </style>
+	
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="demo_style.css" rel="stylesheet" type="text/css">
+
+<link href="smart_wizard.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="jquery.smartWizard.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+    	// Smart Wizard 	
+  		$('#wizard').smartWizard();
+      
+      function onFinishCallback(){
+        $('#wizard').smartWizard('showMessage','Finish Clicked');
+        //alert('Finish Clicked');
+      }     
+		});
+</script>	
+  </head>
+  
+<body>
+
+<div ng-controller="ModalDemoCtrl">
+<script type="text/ng-template" id="myModalContent.html">
+<div class="modal-body">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td> 
+<!-- Smart Wizard -->
+<h2>Create New Tenant Defense</h2> 
+  		<div id="wizard" class="swMain">
+  			<ul>
+  				<li><a href="#step-1">
+                <label class="stepNumber">1</label>
+                <span class="stepDesc">
+                   Step 1<br />
+                   <small>Step 1 description</small>
+                </span>
+            </a></li>
+  				<li><a href="#step-2">
+                <label class="stepNumber">2</label>
+                <span class="stepDesc">
+                   Step 2<br />
+                   <small>Step 2 description</small>
+                </span>
+            </a></li>
+  				<li><a href="#step-3">
+                <label class="stepNumber">3</label>
+                <span class="stepDesc">
+                   Step 3<br />
+                   <small>Step 3 description</small>
+                </span>                   
+             </a></li>
+  				<li><a href="#step-4">
+                <label class="stepNumber">4</label>
+                <span class="stepDesc">
+                   Step 4<br />
+                   <small>Step 4 description</small>
+                </span>                   
+            </a></li>
+  			</ul>
+  			<div id="step-1">	
+            <h2 class="StepTitle">Step 1 Content</h2>
+            <ul type="disk">
+  				    <li>List 1</li>
+  				    <li>List 2</li>
+            </ul>
+            <p>Lorem ips
+            </p>
+            <p>
+            Lorem 
+            </p>
+            <p>
+            Lorem ipsum dol
+            </p>          			
+        </div>
+  			
+  		</div>
+<!-- End SmartWizard Content -->  		
+ 		
+</td></tr>
+</table>
+</div><!--endmodalbody-->
+<div class="modal-footer">
+<button class="btn btn-primary" ng-click="ok()">Apply</button>
+<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>		
+</script>
+	
+    <button class="btn btn-default" ng-click="open()">New Tenant Defense</button>
+</div>
+  </body>
+</html>

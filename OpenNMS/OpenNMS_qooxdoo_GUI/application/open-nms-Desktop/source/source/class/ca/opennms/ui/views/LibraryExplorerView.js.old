@@ -1,0 +1,327 @@
+qx.Class.define("ca.opennms.ui.views.LibraryExplorerView", {
+	extend : qx.ui.tabview.Page, 
+        //include : [qx.dev.unit.TestCase],
+        
+	construct : function() {
+		this.base(arguments, "DC Explorer", "images/icons/16/cube.png");
+		this.setLayout(new qx.ui.layout.Grow());
+		this.setPadding(0);
+		this.setShowCloseButton(false);
+
+		var explorer = new qx.ui.tabview.TabView();
+		var page = new qx.ui.tabview.Page("Nodes Explorer");
+		page.setLayout(new qx.ui.layout.VBox());
+		page.setPaddingTop(3);
+		explorer.setBarPosition("left");
+               //explorer.setBarPosition("bottom");
+		explorer.add(page);
+		explorer.setContentPadding(0);
+
+		// table model
+		var tableModel = new qx.ui.table.model.Simple();
+		tableModel.setColumns(["", "Name", "Description", "Type", "IP Address", "Manufacturer", "Substrate", "Status"]);
+		qx.event.Timer.once(function() {
+                      
+			tableModel.setData(this._loadRows());
+                        
+		}, this, 1000);
+		// make second column editable
+		tableModel.setColumnEditable(0, true);
+		// table
+		var custom = {
+			tableColumnModel : function(obj) {
+				return new qx.ui.table.columnmodel.Resize(obj);
+			}
+		};
+
+		// table
+		var table = new qx.ui.table.Table(tableModel, custom);
+
+		var tColMod = table.getTableColumnModel();
+		var resizeBehavior = tColMod.getBehavior();
+
+		// We could also set them individually:
+		// We could also set them individually:
+		resizeBehavior.setWidth(0, "5%");
+		resizeBehavior.setWidth(1, "15%");
+		// We could also set them individually:
+		resizeBehavior.setWidth(2, "10%");
+		// We could also set them individually:
+		resizeBehavior.setWidth(3, "10%");
+
+		resizeBehavior.setWidth(4, "15%");
+                resizeBehavior.setWidth(5, "15%");
+
+		resizeBehavior.setWidth(6, "15%");
+                resizeBehavior.setWidth(7, "15%");
+
+		var doubleBarRenderer = new canvascell.Renderer(new canvascell.plotter.DoubleBar({
+			upFill : '#0b0',
+			upBorder : '#0a0',
+			downFill : '#f60',
+			downBorder : '#e60'
+		}));
+
+		tColMod.setDataCellRenderer(7, doubleBarRenderer);
+		tColMod.setDataCellRenderer(0, new qx.ui.table.cellrenderer.Boolean());
+
+                //tColMod.setDataCellRenderer(0, new qx.ui.form.CheckBox("Check and choose buttom in Menu"));
+		table.setDraggable(true);
+		// create the toolbar
+		toolbar = new qx.ui.toolbar.ToolBar();
+		toolbar.setSpacing(7);
+
+
+
+
+
+
+
+
+
+		// create and add Part 1 to the toolbar
+		var part1 = new qx.ui.toolbar.Part();
+		var newButton = new qx.ui.toolbar.Button("Create", "images/icons/24/new.png");
+
+                /*var url = qx.util.ResourceManager.getInstance().toUri("data/resources/server.json");
+                var url1 = qx.util.ResourceManager.getInstance().toUri("data/resources/ovs.json");
+                var url2 = qx.util.ResourceManager.getInstance().toUri("data/resources/slices.json");
+		var server = new qx.data.store.Json(url);
+                console.log(server);
+                var ovs = new qx.data.store.Json(url1);
+                var slices = new qx.data.store.Json(url2);*/
+
+                //var model = new qx.data.Array("resource/data/resources/server.json"); 
+                //var model = qx.data.marshal.Json.createModel({a: {b: {c: "test"}}});
+                //console.log(librarystore);
+                //var librarystore = qx.io.Json.parse("resource/data/resources/resources.json");
+                //console.log(librarystore);
+                //var librarystore = 
+                
+               /*qx.event.Timer.once(function() {
+                        console.log("server loaded", this._loadServers());
+			var server = this._loadServers();
+                        var slices = this._loadSlices();
+                        var ovs = this._loadOVS();
+                        
+		}, this, 1000);*/
+                
+		newButton.addListener("execute", function() {
+                var server = this._loadServers();
+                var slices = this._loadSlices();
+                var ovs = this._loadOVS();
+                //console.log("server ", server);
+                //console.log("ovs ", ovs);
+                //console.log("slices ", slices);
+                var serverslicesovs = "[" + server + ", " + ovs + ", " + slices + "]" ;
+                //console.log("serverslicesovs ", serverslicesovs);
+			var reswiz = new dialog.Wizard();
+			reswiz.set({
+				width : 500,
+                                allowCancel : true,
+                                allowBack : true,
+                                allowNext : true, 
+                                allowFinish : true,
+			        pageData : qx.lang.Json.parse(serverslicesovs),
+                               
+				//callback : this._callbackFunc
+                                callback : function( map ){
+          
+                               //dialog.Dialog.alert("Closing Add new resource");
+                                this.__workbench = new ca.opennms.ui.core.workbench.Workbench();
+				qx.core.Init.getApplication().getRoot().add(this.__workbench, {
+				edge : 0
+				});
+          
+        
+          //reswiz.close();
+          //dialog.Dialog.close();
+          //this.debug(qx.util.Serializer.toJson(map));
+          /* qx.event.Timer.once(function() {
+	   console.log("Timer ran");
+	this._tableModel.setData(this._loadRows());
+			}, this, 1000);*/
+        },
+        context     : this
+
+
+
+
+
+
+			})
+			reswiz.start();
+                        //console.log("pageData ", pageData);
+		}, this);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		var editButton = new qx.ui.toolbar.Button("Edit", "images/icons/24/edit.png");
+		var runButton = new qx.ui.toolbar.Button("Run", "images/icons/24/run.png");
+                var stopButton = new qx.ui.toolbar.Button("Stop", "images/icons/24/stop.png");
+		var deleteButton = new qx.ui.toolbar.Button("Delete", "images/icons/24/delete.png");
+
+
+
+		var refreshButton = new qx.ui.toolbar.Button("Update", "images/icons/24/refresh.png");
+		refreshButton.addListener("execute", function() {
+			qx.event.Timer.once(function() {
+				console.log("Timer ran");
+				tableModel.setData(this._loadRows());
+			}, this, 1000);
+		}, this);
+
+
+
+		part1.add(newButton);
+		part1.add(new qx.ui.toolbar.Separator());
+		part1.add(editButton);
+		part1.add(new qx.ui.toolbar.Separator());
+		part1.add(deleteButton);
+		part1.add(new qx.ui.toolbar.Separator());
+		part1.add(refreshButton);    
+                part1.add(new qx.ui.toolbar.Separator());
+                part1.add(runButton); 
+		part1.add(new qx.ui.toolbar.Separator());
+		part1.add(stopButton);
+		toolbar.add(part1);
+		page.add(toolbar);
+		page.add(table);
+		this.add(explorer);
+		this._tableModel = tableModel;
+	},
+	members : {
+		_tableModel : null,
+		_callbackFunc : function(map) {
+			var service = new ca.opennms.services.ResourceService();
+			var netservice = new ca.opennms.services.NetworkService();
+			map.provider = qx.core.Environment.get("ca.opennms.domain");
+			map.category = "Infrastructure";
+			map.doctype = "resource_instance";
+			if (map.resource_type == "Connection") {
+				map.subcategory = "Network";
+				service.write(map);
+				netservice.provision(map);
+			} else {
+				map.subcategory = "Compute";
+				service.write(map);
+			}
+			qx.event.Timer.once(function() {
+				console.log("Timer ran");
+				this._tableModel.setData(this._loadRows());
+			}, this, 1000);
+		},
+		_loadRows : function(rowCount) {
+			var rowData = [];
+			var now = new Date().getTime();
+			var dateRange = 400 * 24 * 60 * 60 * 1000;
+			var nextId = 0;
+
+
+
+                         var urldb = "/couch/rlibrary/_design/rlibrary/_view/all";
+			 var req = new qx.io.request.Xhr();
+			 req.setUrl(urldb);
+			 req.setMethod("GET");
+                         req.setAsync(false);
+			 req.setParser("json");
+			
+			 req.addListener("success", function(e) {
+			 var req = e.getTarget();
+			 var response = req.getResponse();
+			 response.rows.forEach(function(row) {
+			 rowData.push([false, row.value.name, row.value.description, row.value.type, row.value.ipaddress, row.value.manufacturer, row.value.substrate, row.value.status]);
+                         
+			 }, this);
+			 }, this);
+                         req.send();
+                         return rowData;
+
+		},
+                _loadServers : function() {
+			 var servers = "";
+                         var urldb = "/couch/server/_design/server/_view/all";
+			 var req = new qx.io.request.Xhr();
+			 req.setUrl(urldb);
+			 req.setMethod("GET");
+                         req.setAsync(false);
+			 req.setParser("json");
+			
+			 req.addListener("success", function(e) {
+			 var req = e.getTarget();
+			 var response = req.getResponse();
+			 response.rows.forEach(function(row) {
+                         //console.log("Server row.value.message", row.value.message);
+                         //console.log("Server row.value.formData ", qx.lang.Json.stringify(row.value.formData));
+                          servers = "{ \"message\": \"" +   row.value.message + "\" , \"formData\": " + qx.lang.Json.stringify(row.value.formData) + "}";
+
+	 //rowData.push([row.value.message, row.value.formData]);
+			 }, this);
+			 }, this);
+                         req.send();
+                         //console.log("Servers ", servers);
+                         return servers;
+
+		},
+                _loadOVS : function() {
+			 var ovs = "";
+                         var urldb = "/couch/ovs/_design/ovs/_view/all";
+			 var req = new qx.io.request.Xhr();
+			 req.setUrl(urldb);
+			 req.setMethod("GET");
+                         req.setAsync(false);
+			 req.setParser("json");
+			
+			 req.addListener("success", function(e) {
+			 var req = e.getTarget();
+			 var response = req.getResponse();
+			 response.rows.forEach(function(row) {
+			 ovs = "{ \"message\": \"" +   row.value.message + "\" , \"formData\": " + qx.lang.Json.stringify(row.value.formData) + "}";
+                         
+			 }, this);
+			 }, this);
+                         req.send();
+                         return ovs;
+
+		},
+                 _loadSlices : function() {
+			var slices = "";
+                         var urldb = "/couch/slice/_design/slice/_view/all";
+			 var req = new qx.io.request.Xhr();
+			 req.setUrl(urldb);
+			 req.setMethod("GET");
+                         req.setAsync(false);
+			 req.setParser("json");
+			
+			 req.addListener("success", function(e) {
+			 var req = e.getTarget();
+			 var response = req.getResponse();
+			 response.rows.forEach(function(row) {
+			 //rowData.push([row.value.message, row.value.formData]);
+                         slices = "{ \"message\": \"" +   row.value.message + "\" , \"formData\": " + qx.lang.Json.stringify(row.value.formData) + "}";
+			 }, this);
+			 }, this);
+                         req.send();
+                         return slices;
+
+		}
+	}
+});

@@ -1,0 +1,106 @@
+{
+	"perspectives": [
+		{
+			"title": "Domain",
+			"icon": "images/icons/32/provider.png",
+			"tooltip": "Domain Manager",
+			"desktopParts": [
+				{
+					"title": "Library",
+					"className": "ca.inocybe.ui.sections.LibrarySection",
+					"location": "west",
+					"order": "0"
+				}, {
+					"title": "Substrate",
+					"className": "ca.inocybe.ui.sections.SubstrateSection",
+					"location": "west",
+					"order": "1"
+				}, {
+					"title": "Admin",
+					"className": "ca.inocybe.ui.sections.AdminSection",
+					"location": "west",
+					"order": "1"
+				}, {
+					"title": "Organization",
+					"className": "ca.inocybe.ui.sections.OrgSection",
+					"location": "west",
+					"order": "1"
+				}
+			]
+			,
+			"mobileParts": ""
+		}, {
+			"title": "Design",
+			"icon": "images/icons/32/project.png",
+			"tooltip": "Infrastructure Provider",
+			"desktopParts": [
+				{
+					"title": "Library",
+					"className": "ca.inocybe.ui.sections.LibrarySection",
+					"location": "west",
+					"order": "0"
+				}, {
+					"title": "Project",
+					"className": "ca.inocybe.ui.sections.ProjectsSection",
+					"location": "west",
+					"order": "1"
+				}, {
+					"title": "Blueprints",
+					"className": "ca.inocybe.ui.sections.BlueprintSection",
+					"location": "west",
+					"order": "1"
+				}
+			]
+			,
+			"mobileParts": ""
+		}, {
+			"title": "Operator",
+			"icon": "images/icons/32/operator.png",
+			"tooltip": "Infrastructure Provider",
+			"desktopParts": [
+				{
+					"title": "Substrate",
+					"className": "ca.inocybe.ui.sections.SubstrateSection",
+					"location": "west",
+					"order": "0"
+				}, {
+					"title": "Projects",
+					"className": "ca.inocybe.ui.sections.ProjectsSection",
+					"location": "west",
+					"order": "1"
+				}, {
+					"title": "Alarms",
+					"className": "ca.inocybe.ui.sections.AlarmsSection",
+					"location": "west",
+					"order": "1"
+				}, {
+					"title": "Events",
+					"className": "ca.inocybe.ui.sections.EventsSection",
+					"location": "west",
+					"order": "1"
+				}
+			]
+			,
+			"mobileParts": ""
+		}, {
+			"title": "Marketplace",
+			"icon": "images/icons/32/marketplace.png",
+			"tooltip": "Infrastructure Provider",
+			"desktopParts": [
+				{
+					"title": "Library",
+					"className": "ca.inocybe.ui.sections.BrowseSection",
+					"location": "west",
+					"order": "0"
+				}, {
+					"title": "Substrate",
+					"className": "ca.inocybe.ui.sections.SearchSection",
+					"location": "west",
+					"order": "1"
+				}
+			]
+			,
+			"mobileParts": ""
+		}
+	]
+}

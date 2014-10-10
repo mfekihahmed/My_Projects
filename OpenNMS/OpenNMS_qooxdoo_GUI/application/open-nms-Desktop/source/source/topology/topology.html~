@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+This file is part of Canviz. See http://www.canviz.org/
+$Id: new.html.in 256 2009-01-08 11:14:07Z ryandesign.com $
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Ecolotic Virtual EBS Manager</title>
+	
+	<script type="text/javascript" src="../canviz-0.1/prototype/prototype.js"></script>
+	<script type="text/javascript" src="../canviz-0.1/path/path.js"></script>
+	<script type="text/javascript" src="../canviz-0.1/canviz.js"></script>
+	<script type="text/javascript" src="scripts_common.js"></script>
+	<script type="text/javascript" src="scripts_new.js"></script>
+</head>
+<body>
+<h1 style="color:white; background-color:Green; font-family:verdana;">Ecolotic Virtual EBS Manager</h1>
+<h2></h2>
+<h2>Legend Table :</h2>
+<table border="1">
+  <tr>
+    <td>Ligne/Color</td>
+    <td>Signification</td>
+  </tr>
+  <tr>
+    <td><hr style="width: 75%; background:#32CD32; height: 5px;"> </td>
+    <td>Up Link</td>
+  </tr>
+  <tr>
+    <td><hr style="width: 75%; background:#DCDCDC; height: 5px;"> </td>
+    <td>Downed Link</td>
+  </tr>
+ <tr>
+    <td><hr style="width: 75%; background:#00008B; height: 5px;"> </td>
+    <td>[1-2] Mbps</td>
+  </tr>
+  <tr>
+    <td><hr style="width: 75%; background:#FF0000; height: 5px;"> </td>
+    <td>>2 Mbps</td>
+  </tr>
+  <tr>
+    <td><hr style="width: 75%; background:#00008B; height: 1px;"> </td>
+    <td>[100-1000] Kbps</td>
+  </tr>
+  <tr>
+    <td><hr style="width: 75%; border: 1px dotted #32CD32; height: 1px"></td>
+    <td><' 5 Kbps</td>
+  </tr>
+  <tr>
+    <td><hr style="width: 75%; border: 1px dotted #00008B; height: 1px"></td>
+    <td>[5-10] Kbps</td>
+  </tr>
+  <tr>
+    <td>NoFlow</h4></td>
+    <td>No Flow Between Network Node</td>
+  </tr>
+  <tr>
+    <td>Permitted</h4></td>
+    <td>Open NMS Permitted Flow</td>
+  </tr>
+  <tr>
+    <td>Denied</h4></td>
+    <td>Open NMS Denied Flow</td>
+  </tr>
+   <tr>
+    <td><hr style="width: 75%; background:#228B22; height: 5px;"> </td>
+    <td>Permitted Open NMS FLow</td>
+  </tr>
+  <tr>
+    <td><hr style="width: 75%; background:#FF8C00; height: 5px;"> </td>
+    <td>Denied Open NMS FLow</td>
+  </tr>
+</table>
+<h2></h2>
+<h2>Open NMS Console Message :</h2>
+
+<p id="click_output"></p>
+<p id="click_response"></p>
+
+<div id="debug_output"></div>
+
+<div class="graph">
+	<div id="canviz"></div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>qx.log.Logger.debug(${1:});</string>
+	<key>name</key>
+	<string>qx.log.Logger.debug</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>tabTrigger</key>
+	<string>debug</string>
+	<key>uuid</key>
+	<string>BD3B5692-FF8F-45E7-8590-F0D095BC255A</string>
+</dict>
+</plist>

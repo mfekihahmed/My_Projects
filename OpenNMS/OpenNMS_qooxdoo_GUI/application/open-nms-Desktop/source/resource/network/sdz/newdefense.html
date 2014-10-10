@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    
+    <title>Create New Tenant Defense</title>
+
+<link rel="stylesheet" type="text/css" href="standalone.css"/>
+<link rel="stylesheet" type="text/css" href="tabs.css"/>
+<link rel="stylesheet" type="text/css" href="tabs-panes.css"/>
+<script src="jquery.tools.min.js"></script>
+	
+<link rel="stylesheet" href="8639afeac649.css" type="text/css" media="screen" />
+<link rel="shortcut icon" href="favicon.ico"/>
+<script type="text/javascript" src="b70e287f8a72.js"></script>
+<script type="text/javascript" charset="utf-8">
+
+
+  /*
+    Added so that we can append Horizon scoped JS events to
+    the DOM load events without running in to the "horizon"
+    name-space not currently being defined since we load the
+    scripts at the bottom of the page.
+  */
+  var addHorizonLoadEvent = function(func) {
+    var old_onload = window.onload;
+
+    if (typeof window.onload != 'function') {
+      window.onload = func;
+    } else {
+      window.onload = function() {
+        old_onload();
+        func();
+      }
+    }
+  }
+</script>
+
+</head>
+
+
+
+<body>          
+<div id='content_body'>
+<div class='page-header'>
+   <h2>Create New Tenant Defense</h2>
+</div>
+
+
+
+            
+  
+
+<div class="workflow static_page wizard">
+<div>   
+      <h3>Create New Tenant Defense</h3>
+</div>
+<div id="wizard">
+    <ul class="nav nav-tabs wizard-tabs">
+		 <li class="active"><a href="#" class="l">Tenant Network</a></li>
+         <li><a href="#" class="l">Security Modules Specification</a></li>
+         <li><a href="#" class="l">Order Constraint</a></li> 
+		 <li><a href="#" class="l">Correlation Constraint</a></li> 
+    </ul>
+    
+
+
+	<div class="panes">
+    <div>  
+    <noscript><h3>Tenant Network</h3></noscript>  
+    <table>
+    <tbody>
+    <tr>
+      <td class="actions"> 
+    <label for="id_net_name">Tenant Network Name :</label>
+    <div class="input">
+      <select id="network-name" name="networkname">
+       <option value="VxLAN-net1">VxLAN-net1</option>
+       <option value="Gre1">GRE1</option>
+      </select>
+    </div>
+    </td>
+    <td>
+    <p></p><p>Here, you can choose the target tenant network to create new defense.<br /></p>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+	
+	<div>  
+    <noscript><h3>Tenant Network</h3></noscript>  
+    <table>
+    <tbody>
+    <tr>
+      <td class="actions"> 
+    <label for="id_net_name">Tenant Network Name :</label>
+    <div class="input">
+      <select id="network-name" name="networkname">
+       <option value="VxLAN-net1">VxLAN-net1</option>
+       <option value="Gre1">GRE1</option>
+      </select>
+    </div>
+    </td>
+    <td>
+    <p></p><p>Here, you can choose the target tenant network to create new defense.<br /></p>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+	
+	
+    </div>
+ </div>
+ 
+
+<script type="text/javascript">
+    (window.$ || window.addHorizonLoadEvent)(function () {
+      horizon.modals.init_wizard();
+    });
+</script>
+	
+<div class="modal-footer"> 
+      <div class="row-fluid">
+        <div class="span6 back">
+            <button type="button">&laquo; Back</button>
+        </div>
+        <div class="span6 next">
+            <button type="button">Next &raquo;</button>
+            <button type="submit">Apply</button>
+        </div>
+      </div>
+</div>
+	
+	
+</div>
+</div>
+
+<!-- activate tabs with JavaScript -->
+<script>
+  $(function() {
+
+      // get container for the wizard and initialize its exposing
+    var wizard = $("#wizard").expose({color: '#789', lazy: true});
+
+    // enable exposing on the wizard
+    wizard.click(function() {
+    $(this).expose().load();
+  });
+  
+        // enable tabs that are contained within the wizard
+      $("ul.wizard-tabs", wizard).tabs("div.panes > div", function(event, index) {
+
+      /* now we are inside the onBeforeClick event */
+
+      // ensure that the "terms" checkbox is checked.
+      var terms = $("#terms");
+      if (index > 0 && !terms.get(0).checked)  {
+      terms.parent().addClass("error");
+
+      // when false is returned, the user cannot advance to the next tab
+      return false;
+      }
+
+      // everything is ok. remove possible red highlight from the terms
+      terms.parent().removeClass("error");
+      });
+  
+        // get handle to the tabs API
+      var api = $("ul.wizard-tabs", wizard).data("tabs");
+
+      // "next tab" button
+      $("button.next", wizard).click(function() {
+      api.next();
+      });
+
+      // "previous tab" button
+      $("button.back", wizard).click(function() {
+      api.prev();
+      });
+    });
+</script>
+
+</body>
+</html>

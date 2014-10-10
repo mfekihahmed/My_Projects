@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Open NMS Slice 1</title>
+    <link rel="shortcut icon" href="opennms.ico" >
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      function drawTable() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Key');
+        data.addColumn('string', 'Value');
+		
+        data.addRows([
+          ['Name', 'Open NMS Slice 1'],
+		  ['Tenant vDC', 'vDC 1'],
+          ['DataPath ID', '000000000001'],
+		  ['Type', 'Open NMS Slice'],
+          ['Manufacturer', 'Synchromedia'],
+          ['Dedicated Tables', 'dp1 OpenFlow Table 1'],
+		  ['Shared Tables', 'dp1 OpenFlow Table 54'],
+		  ['Dedicated Group Tables', 'dp1 OpenFlow Group Table 1'],
+		  ['Shared Group Tables', 'dp1 OpenFlow Group Table 0'],
+		  ['Dedicated vPorts', 'dp1 OpenFlow Port 2, dp1 OpenFlow Port 3'],
+		  ['Shared vPorts', 'dp1 OpenFlow Port 1'],
+		  ['Allocated VMs', 'CSCF, HSS1']
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+		var options = {
+          'width': '300px'
+        };
+        table.draw(data, {showRowNumber: true}, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id='table_div'></div>
+  </body>
+</html>

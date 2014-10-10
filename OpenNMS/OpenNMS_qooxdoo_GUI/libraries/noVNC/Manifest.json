@@ -1,0 +1,34 @@
+{
+  "info" : 
+  {
+    "name" : "noVNC",
+
+    "summary" : "noVNC Wrapper",
+    "description" : "Integrate noVNC into qooxdoo.",
+    
+    "homepage" : "http://contrib.qooxdoo.org/project/noVNC",
+
+    "license" : "LGPL/EPL",
+    "authors" : 
+    [
+      {
+        "name" : "Mathieu Lemay (Inocybe Technologies inc.)",
+        "email" : "mlemay@inocybe.ca"
+      }
+    ],
+
+    "version" : "trunk",
+    "qooxdoo-versions": ["1.4","1.5"]
+  },
+  
+  "provides" : 
+  {
+    "namespace"   : "noVNC",
+    "encoding"    : "utf-8",
+    "class"       : "source/class",
+    "resource"    : "source/resource",
+    "translation" : "source/translation",
+    "type"        : "contribution"
+  }
+}
+

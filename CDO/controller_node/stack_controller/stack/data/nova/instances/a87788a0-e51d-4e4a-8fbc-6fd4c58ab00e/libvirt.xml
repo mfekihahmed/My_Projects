@@ -1,0 +1,79 @@
+<domain type="kvm">
+  <uuid>a87788a0-e51d-4e4a-8fbc-6fd4c58ab00e</uuid>
+  <name>instance-00000002</name>
+  <memory>524288</memory>
+  <vcpu>1</vcpu>
+  <sysinfo type="smbios">
+    <system>
+      <entry name="manufacturer">OpenStack Foundation</entry>
+      <entry name="product">OpenStack Nova</entry>
+      <entry name="version">2014.2</entry>
+      <entry name="serial">32303838-3430-3033-3034-423030303133</entry>
+      <entry name="uuid">a87788a0-e51d-4e4a-8fbc-6fd4c58ab00e</entry>
+    </system>
+  </sysinfo>
+  <os>
+    <type>hvm</type>
+    <kernel>/opt/stack/data/nova/instances/a87788a0-e51d-4e4a-8fbc-6fd4c58ab00e/kernel</kernel>
+    <initrd>/opt/stack/data/nova/instances/a87788a0-e51d-4e4a-8fbc-6fd4c58ab00e/ramdisk</initrd>
+    <cmdline>root=/dev/vda console=tty0 console=ttyS0</cmdline>
+    <smbios mode="sysinfo"/>
+  </os>
+  <features>
+    <acpi/>
+    <apic/>
+  </features>
+  <clock offset="utc">
+    <timer name="pit" tickpolicy="delay"/>
+    <timer name="rtc" tickpolicy="catchup"/>
+    <timer name="hpet" present="no"/>
+  </clock>
+  <cpu match="exact">
+    <arch>x86_64</arch>
+    <model>Westmere</model>
+    <vendor>Intel</vendor>
+    <feature name="acpi" policy="require"/>
+    <feature name="dca" policy="require"/>
+    <feature name="ds" policy="require"/>
+    <feature name="ds_cpl" policy="require"/>
+    <feature name="est" policy="require"/>
+    <feature name="ht" policy="require"/>
+    <feature name="monitor" policy="require"/>
+    <feature name="pbe" policy="require"/>
+    <feature name="pdpe1gb" policy="require"/>
+    <feature name="rdtscp" policy="require"/>
+    <feature name="ss" policy="require"/>
+    <feature name="tm" policy="require"/>
+    <feature name="tm2" policy="require"/>
+    <feature name="vme" policy="require"/>
+    <feature name="vmx" policy="require"/>
+    <feature name="xtpr" policy="require"/>
+  </cpu>
+  <devices>
+    <disk type="file" device="disk">
+      <driver name="qemu" type="qcow2" cache="none"/>
+      <source file="/opt/stack/data/nova/instances/a87788a0-e51d-4e4a-8fbc-6fd4c58ab00e/disk"/>
+      <target bus="virtio" dev="vda"/>
+    </disk>
+    <disk type="file" device="cdrom">
+      <driver name="qemu" type="raw" cache="none"/>
+      <source file="/opt/stack/data/nova/instances/a87788a0-e51d-4e4a-8fbc-6fd4c58ab00e/disk.config"/>
+      <target bus="ide" dev="hdd"/>
+    </disk>
+    <interface type="ethernet">
+      <mac address="fa:16:3e:95:1e:f0"/>
+      <model type="virtio"/>
+      <script path=""/>
+      <target dev="tap48af9280-06"/>
+    </interface>
+    <serial type="file">
+      <source path="/opt/stack/data/nova/instances/a87788a0-e51d-4e4a-8fbc-6fd4c58ab00e/console.log"/>
+    </serial>
+    <serial type="pty"/>
+    <input type="tablet" bus="usb"/>
+    <graphics type="vnc" autoport="yes" keymap="en-us" listen="0.0.0.0"/>
+    <video>
+      <model type="cirrus"/>
+    </video>
+  </devices>
+</domain>

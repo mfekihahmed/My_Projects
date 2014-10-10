@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>SDZ 2</title>
+    <link rel="shortcut icon" href="{{ STATIC_URL }}horizon/lib/favicon.ico" >
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      function drawTable() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Key');
+        data.addColumn('string', 'Value');
+		
+        data.addRows([
+          ['Name', 'SDZ 2'],
+		  ['Type', 'Ericsson GEP'],
+          ['Manufacturer', 'Ericsson'],
+		  ['OS version', 'Ubuntu 12.04 LTS'],
+          ['Address IP', '172.16.1.13'],
+		  ['Open vSwitch version', '2.9.30'],
+		  ['OpenStack Release', 'IceHouse'],
+		  ['Low Defense Cost', '300'],
+		  ['Meduim Defense Cost', '400'],
+		  ['High Defense Cost', '500']
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+		var options = {
+          'width': '300px'
+        };
+        table.draw(data, {showRowNumber: true}, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id='table_div'></div>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+
+edge: 0x1f,1,0x1,3,down output: 6a:44:9b:a3:1c:61
+32:83:0d:95:ac:fe
+ok
+
+edge: 0x1,3,0x1f,1,up output: 32:83:0d:95:ac:fe
+6a:44:9b:a3:1c:61
+ok
+
+edge: 0x15,2,0x1,2,down output: fe:8b:46:59:63:62
+ce:43:a2:a8:c3:4f
+ok
+
+edge: 0xb,1,0x1,1,down output: ce:93:9d:e5:22:0a
+22:28:2a:32:27:05
+ok
+
+edge: 0x1f,1,0x1,3,down output: 06:63:20:db:ea:d5
+5e:6a:42:5d:09:3a
+ok
+
+edge: 0x65,4,0xc9,2,down output: 42:4b:96:d2:d2:84
+76:13:ae:ec:c7:55
+ok
+
+edge: 0x65,4,0xc9,2,up output: 42:4b:96:d2:d2:84
+76:13:ae:ec:c7:55
+ok
+
+edge: 0x1,2,0x15,2,up output: ce:43:a2:a8:c3:4f
+fe:8b:46:59:63:62
+ok
+
+edge: 0x1,1,0xb,1,up output: 22:28:2a:32:27:05
+ce:93:9d:e5:22:0a
+ok
+
+edge: 0x1,3,0x1f,1,up output: 5e:6a:42:5d:09:3a
+06:63:20:db:ea:d5
+ok
+
+edge: 0x1,3,0x1f,1,down output: 5e:6a:42:5d:09:3a
+06:63:20:db:ea:d5
+ok
+
+edge: 0x1,2,0x15,2,down output: ce:43:a2:a8:c3:4f
+fe:8b:46:59:63:62
+ok
+
+edge: 0x15,1,0xb,2,down output: de:ac:d8:d4:29:e8
+9a:48:a9:87:a7:f0
+ok
+
+edge: 0x1,1,0xb,1,down output: 22:28:2a:32:27:05
+ce:93:9d:e5:22:0a
+ok
+
+edge: 0x1,1,0xb,1,up output: 22:28:2a:32:27:05
+ce:93:9d:e5:22:0a
+ok
+
+edge: 0xb,2,0x15,1,up output: 9a:48:a9:87:a7:f0
+de:ac:d8:d4:29:e8
+ok
+
+edge: 0x1,3,0x1f,1,up output: 5e:6a:42:5d:09:3a
+06:63:20:db:ea:d5
+ok
+
+edge: 0x1,2,0x15,2,up output: ce:43:a2:a8:c3:4f
+fe:8b:46:59:63:62
+ok
+
+edge: 0x6f,4,0xd3,2,down output: 4a:62:69:8e:6a:19
+52:f8:76:60:23:46
+ok
+
+edge: 0x6f,4,0xd3,2,down output: 4a:62:69:8e:6a:19
+52:f8:76:60:23:46
+ok
+
+edge: 0x6f,4,0xd3,2,up output: 4a:62:69:8e:6a:19
+52:f8:76:60:23:46
+ok
+
+edge: 0x1,3,0x1f,1,down output: 5e:6a:42:5d:09:3a
+06:63:20:db:ea:d5
+ok
+
+edge: 0x1f,1,0x1,3,down output: 
+
+err
+
+edge: 0x1f,3,0xb,3,down output: 
+
+err
+
+edge: 0x1f,3,0xb,3,down output: 4a:7a:5c:f5:a8:0a
+c6:e1:5d:0d:67:52
+ok
+
+edge: 0x1f,3,0xb,3,down output: 4a:7a:5c:f5:a8:0a
+c6:e1:5d:0d:67:52
+ok
+
+edge: 0x1f,3,0xb,3,down output: 4a:7a:5c:f5:a8:0a
+c6:e1:5d:0d:67:52
+ok
+
+edge: 0x1f,1,0x1,3,down output: c6:66:60:81:8a:27
+fe:39:be:30:52:ba
+ok
+
+edge: 0x15,2,0x1,2,down output: ba:eb:13:9e:b3:14
+46:5e:5b:cd:23:46
+ok
+
+edge: 0xb,2,0x15,1,down output: ae:c2:ed:4e:98:21
+f2:1b:8d:38:1c:d8
+ok
+
+edge: 0x15,3,0x1f,2,down output: 2a:b0:a2:a8:04:99
+22:7c:de:d1:e4:e0
+ok
+
+edge: 0xb,2,0x15,1,up output: ae:c2:ed:4e:98:21
+f2:1b:8d:38:1c:d8
+ok
+
+edge: 0x1,2,0x15,2,up output: 46:5e:5b:cd:23:46
+ba:eb:13:9e:b3:14
+ok
+
+edge: 0x1f,1,0x1,3,down output: 46:b9:81:3a:1b:ec
+e6:83:49:04:26:f3
+ok
+
+edge: 0x1,2,0x15,2,down output: 52:69:5e:b4:e7:e9
+9e:dc:d6:38:36:41
+ok
+
+edge: 0xb,2,0x15,1,down output: 0e:9e:73:5e:38:1e
+9a:3a:7b:8d:a2:bd
+ok
+
+edge: 0x1f,2,0x15,3,down output: e2:2e:c8:ce:42:2a
+46:0c:43:c0:c3:92
+ok
+
+edge: 0x1,2,0x15,2,up output: 52:69:5e:b4:e7:e9
+9e:dc:d6:38:36:41
+ok
+
+edge: 0x1,3,0x1f,1,up output: e6:83:49:04:26:f3
+46:b9:81:3a:1b:ec
+ok
+
+edge: 0xb,3,0x1f,3,down output: 5a:10:c9:11:bf:bf
+ba:b1:4d:64:7f:10
+ok
+
+edge: 0x15,3,0x1f,2,up output: 46:0c:43:c0:c3:92
+e2:2e:c8:ce:42:2a
+ok
+
+edge: 0xb,3,0x1f,3,up output: 5a:10:c9:11:bf:bf
+ba:b1:4d:64:7f:10
+ok
+
+edge: 0x1,2,0x15,2,down output: 52:69:5e:b4:e7:e9
+9e:dc:d6:38:36:41
+ok
+
+edge: 0x1,2,0x15,2,up output: 52:69:5e:b4:e7:e9
+9e:dc:d6:38:36:41
+ok
+
+edge: 0x1,2,0x15,2,down output: 52:69:5e:b4:e7:e9
+9e:dc:d6:38:36:41
+ok
+
+edge: 0x15,3,0x1f,2,down output: 46:0c:43:c0:c3:92
+e2:2e:c8:ce:42:2a
+ok
+
+edge: 0x6f,1,0x65,1,down output: d6:64:c4:2f:6a:40
+3e:98:92:73:62:dd
+ok
+
+edge: 0x65,1,0x6f,1,up output: 3e:98:92:73:62:dd
+d6:64:c4:2f:6a:40
+ok
+
+edge: 0x1,2,0x15,2,up output: 52:69:5e:b4:e7:e9
+9e:dc:d6:38:36:41
+ok
+
+edge: 0x15,3,0x1f,2,up output: 46:0c:43:c0:c3:92
+e2:2e:c8:ce:42:2a
+ok
+
+edge: 0xb,2,0x15,1,up output: 0e:9e:73:5e:38:1e
+9a:3a:7b:8d:a2:bd
+ok
+
+edge: "0xdf" -- "0x15" status:fail 
+edge: "0x79" -- "0xdf" status:fail 
+edge: "0xdf" -- "0x15" status:fail 
+edge: 0x1f,1,0x1,3,down output: c2:a8:40:4f:39:28
+f6:88:bf:21:64:34
+ok
+
+edge: 0x1,3,0x1f,1,up output: f6:88:bf:21:64:34
+c2:a8:40:4f:39:28
+ok

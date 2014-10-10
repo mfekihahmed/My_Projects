@@ -1,0 +1,34 @@
+{
+  "info" : 
+  {
+    "name" : "QxGraphEdit",
+
+    "summary" : "Qooxdoo Graphical Editor",
+    "description" : "Provide a Graphical Editor for Qooxdoo",
+    
+    "homepage" : "http://contrib.qooxdoo.org/project/qxgraphedit",
+
+    "license" : "LGPL/EPL",
+    "authors" : 
+    [
+      {
+        "name" : "Mathieu Lemay (Inocybe Technologies inc.)",
+        "email" : "mlemay@inocybe.ca"
+      }
+    ],
+
+    "version" : "trunk",
+    "qooxdoo-versions": ["1.4","1.5"]
+  },
+  
+  "provides" : 
+  {
+    "namespace"   : "ca.inocybe",
+    "encoding"    : "utf-8",
+    "class"       : "source/class",
+    "resource"    : "source/resource",
+    "translation" : "source/translation",
+    "type"        : "contribution"
+  }
+}
+

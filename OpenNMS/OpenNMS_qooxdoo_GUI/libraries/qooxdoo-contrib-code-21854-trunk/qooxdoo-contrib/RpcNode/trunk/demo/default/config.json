@@ -1,0 +1,68 @@
+{
+  "name"    : "RpcNode Demo",
+
+  "include" :
+  [
+    {
+      "path" : "${QOOXDOO_PATH}/tool/data/config/application.json"
+    }
+  ],
+
+  "export" :
+  [
+    "api",
+    "api-data",
+    "build",
+    "clean",
+    "distclean",
+    "fix",
+    "info",
+    "inspector",
+    "lint",
+    "migration",
+    "pretty",
+    "profiling",
+    "source",
+    "source-all",
+    "test",
+    "test-source",
+    "translation"
+  ],
+
+  "let" :
+  {
+    "APPLICATION"  : "rpcnode.demo",
+    "QOOXDOO_PATH" : "../../../../qooxdoo/1.3-pre",
+    "QXTHEME"      : "rpcnode.demo.theme.Theme",
+    "API_EXCLUDE"  : ["qx.*", "${APPLICATION}.theme.*", "${APPLICATION}.test.*"],
+    "API_INCLUDE"  : ["rpcnode.*"],
+    "LOCALES"      : [ "en" ],
+    "CACHE"        : "${TMPDIR}/cache",
+    "ROOT"         : "."
+  },
+
+  "jobs" :
+  {
+    "libraries" : 
+    {
+      "library" :
+      [
+        {
+          "manifest" : "../../Manifest.json"
+        },
+        {
+          "manifest" : "contrib://RpcConsole/trunk/Manifest.json"
+        }      
+      ]
+    },
+    
+    // download contrib code to location that is accessible to web server in source version
+    "source-script":
+    {
+      "cache" :
+      {
+        "downloads" : "cache-downloads"
+      }
+    } 
+  }
+}

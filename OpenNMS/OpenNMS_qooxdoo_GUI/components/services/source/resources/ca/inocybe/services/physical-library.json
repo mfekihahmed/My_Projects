@@ -1,0 +1,11 @@
+{
+	"resources": [
+		{
+			"resName": "NoviSwitch 100",
+			"resCategory": "Switch",
+			"resVendor": "Noviflow"
+		}
+	],
+	"owner": "noviflow",
+	"lastUpdated": "2012-03-21"
+}

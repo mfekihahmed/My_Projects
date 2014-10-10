@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Directed graph from data in DOT language</title>
+
+    <script type="text/javascript" src="../network.js"></script>
+
+    <style type="text/css">
+        body, html {
+            font: 10pt sans;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            color: #4d4d4d;
+        }
+
+        #frame {
+            width: 100%;
+            height: 99%;
+        }
+        #frame td {
+            padding: 10px;
+        }
+        #error {
+            color: red;
+        }
+
+        #data {
+            float: left;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #d3d3d3;
+        }
+
+        #network {
+            float: left;
+            width: 100%;
+            height: 100%;
+        }
+
+        textarea.example {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<table id="frame">
+    <col width="50%">
+    <col width="50%">
+    <tr>
+        <td colspan="2" style="height: 50px;">
+            <h1>Open NMS Topology + Multipath + Open IMS</h1>
+            <div>
+                <a href="javascript: drawExample('example2')">Ericsson Demonstration for August 14, 2012  </a>
+            </div>
+            <div>
+                <br>
+                <button id="draw">Topology Discovery</button>
+                <span id="error"></span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <textarea id="data"></textarea>
+        </td>
+        <td>
+            <div id="network"></div>
+        </td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+    var network, data;
+
+    var btnDraw = document.getElementById('draw');
+    var txtData = document.getElementById('data');
+    var txtError = document.getElementById('error');
+    var DIR = 'img/refresh-cl/Network-Pipe-icon.png';
+    btnDraw.onclick = draw;
+
+    // resize the network when window resizes
+    window.onresize = function () {
+        network.redraw()
+    };
+
+    // parse and draw the data
+    function draw () {
+        try {
+            // create a network graph
+            network = new links.Network(document.getElementById('network'));
+
+            txtError.innerHTML = '';
+
+            // parse the data from DOT-notation
+            data = links.Network.util.DOTToNetwork(txtData.value);
+
+            // draw the data in the network view
+            var options = data.options;
+            options.width = '100%';
+            //options.links.length = options.links.length;
+            options.height = '100%';
+            //options.nodes.radius = 20;
+            //options.links.width = 2;
+            network.draw(data.nodes, data.edges, options);
+        }
+        catch (err) {
+            // set the cursor at the position where the error occurred
+            var match = /\(char (.*)\)/.exec(err);
+            if (match) {
+                var pos = Number(match[1]);
+                if(txtData.setSelectionRange) {
+                    txtData.focus();
+                    txtData.setSelectionRange(pos, pos);
+                }
+            }
+
+            // show an error message
+            txtError.innerHTML =  err.toString();
+        }
+    }
+
+    /**
+     * Draw an example
+     * @param {String} id HTML id of the textarea containing the example code
+     */
+    function drawExample(id) {
+        txtData.value = document.getElementById(id).value;
+        draw();
+    }
+</script>
+
+
+
+<textarea id="example2" class="example">
+digraph topology
+{
+    node[shape=circle fontSize=12]
+    edge[length=170 fontSize=12]
+    "10.0.255.1" -> "10.0.255.3"[label="1.000"];
+    "10.0.255.1" -> "10.0.255.2"[label="1.000"];
+    "10.0.255.1" -> "10.0.255.2"[label="1.000"];
+    "10.0.255.1" -> "10.0.255.3"[label="1.000"];
+    "10.0.255.2" -> "10.0.255.1"[label="1.000"];
+    "10.0.255.2" -> "10.0.255.3"[label="1.000"];
+    "10.0.255.3" -> "10.0.255.1"[label="1.000"];
+    "10.0.255.3" -> "10.0.255.2"[label="1.000"];
+    "10.0.255.3" -> "10.0.3.0/24"[label="HNA", style=solid];
+    "10.0.3.0/24"[shape=rect];
+    "10.0.255.2" -> "10.0.2.0/24"[label="HNA"];
+    "10.0.2.0/24"[shape=rect];
+///[shape=rect label="<table> <tr> <td> <img src="vm.png"/> </td> </tr> </table>"];
+
+    "10.0.255.1" -> "10.0.1.0/24"[label="HNA"];
+    "10.0.1.0/24"[shape=rect];
+}
+</textarea>
+
+
+<script>
+      
+    // draw example2 now
+    drawExample('example2');
+</script>
+
+</body>
+</html>

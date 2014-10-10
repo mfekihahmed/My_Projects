@@ -1,0 +1,22 @@
+2008-12-09:
+  - added system library classes for bootstrapping
+2008-12-08:
+  - resolve Mixins
+2008-05-20:
+  - fix for NPE while reporting unused private method
+  - added all methods for properties, regarding a properties configuration 
+2008-05-15:
+  - included fix for bug 875 ("qx.html.Window" invalidates "window")
+2008-05-13:
+  - synchronized JSDT plug-ins with Eclipse CVS Head
+2008-05-06:
+  - Improved stability: no more runtime exceptions when inferring Qooxdoo class library.
+2008-04-29:
+  - validate "this.base()" (fixed bug 829)
+2008-04-28:
+  - validate "this" correctly in members (fixed Bug 828)
+2008-04-22:
+  - synchronized with Eclipse CVS Head 
+  - fixed bug 825 (include path incomplete) 
+2008-04-21:
+  - continuous build that publishes to an update site

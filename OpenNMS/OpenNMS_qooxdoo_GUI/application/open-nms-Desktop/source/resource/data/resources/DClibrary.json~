@@ -1,0 +1,12 @@
+{
+   "name": "EBS 1",
+   "description": "Ericsson Blade System",
+   "type": "Server",
+   "manufacturer": "Ericsson",
+   "ipAddress": "172.16.0.62/16",
+   "substrate": "EBS Switch",
+   "status": [
+       1,
+       100
+   ]
+}

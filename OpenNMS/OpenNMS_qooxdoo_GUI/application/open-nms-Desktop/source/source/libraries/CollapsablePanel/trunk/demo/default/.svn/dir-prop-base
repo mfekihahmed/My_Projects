@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 33
+sync.sh
+api
+build
+inspector
+test
+
+END

@@ -1,0 +1,57 @@
+{
+  "name"    : "Hijax",
+
+  "include" :
+  [
+    {
+      "path" : "${QOOXDOO_PATH}/tool/data/config/application.json"
+    }
+  ],
+
+  "export" :
+  [
+    "api",
+    "build",
+    "clean",
+    "distclean",
+    "fix",
+    "inspector",
+    "lint",
+    "migration",
+    "pretty",
+    "profiling",
+    "source",
+    "source-all",
+    "test",
+    "test-source",
+    "translation"
+  ],
+
+  "let" :
+  {
+    "APPLICATION"  : "hjx",
+    "APPLICATION_MAIN_CLASS" : "${APPLICATION}.demo.Demo",
+    "QOOXDOO_PATH" : "../../qooxdoo/trunk",
+    "QXTHEME"      : "qx.theme.Modern",
+    "API_EXCLUDE"  : ["qx.legacy.*", "qx.test.*", "hjx.demo.*"],
+    "LOCALES"      : [ "en" ],
+    "CACHE"        : "${TMPDIR}/cache",
+    "ROOT"         : "."
+  },
+
+  "jobs" :
+  {
+    // This is only for demonstration
+    // Hijax is offering a setting "hjx.settingsClass" to define the used
+    // settings by configuring it instead of hard coding it.
+    // Use this settings in your configuration to control it.
+    "common" : 
+    {
+      "settings" :
+      {
+        "hjx.settingsClass" : "hjx.demo.Settings"
+      }
+    }
+  }
+ 
+}

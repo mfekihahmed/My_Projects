@@ -1,0 +1,248 @@
+strict graph {
+	node [color=gray,
+		href="javascript:void(click_node('\N'))",
+		shape=circle
+	];
+	edge [color=gray,
+		href="javascript:void(click_edge('\E'))",
+		len="2.0"
+	];
+	{
+		graph [rank=same];
+		"0x1f"		 [color=green,
+			label=nwi0];
+		"0x83"		 [color=green,
+			label=nwi1];
+	}
+	{
+		graph [rank=same];
+		"0x1"		 [color=green,
+			label="scx0-1"];
+		"0xb"		 [color=green,
+			label="scx0-2"];
+		"0x15"		 [color=green,
+			label="scx0-3"];
+		"0x65"		 [color=green,
+			label="scx1-1"];
+		"0x6f"		 [color=green,
+			label="scx1-2"];
+		"0x79"		 [color=green,
+			label="scx1-3"];
+	}
+	{
+		graph [rank=same];
+                "EBS1"		 [color=green,
+			label=EBS1,
+			shape=box];
+		"0xc9"		 [color=green,
+			label=EBS3,
+			shape=box];
+		"0xd3"		 [color=green,
+			label=EBS2,
+			shape=box];
+		"0xdf"		 [color=green,
+			label=EBS4,
+			shape=box];
+	}
+        {
+		graph [rank=same];
+                "0x11"		 [color=darkorange,
+			label=OpenvSwitch9,
+			shape=octagon];
+		"0x12"		 [color=darkorange,
+			label=OpenvSwitch10,
+			shape=octagon];
+		"0x13"		 [color=darkorange,
+			label=OpenvSwitch11,
+			shape=octagon];
+	}
+        {
+		graph [rank=same];
+                "1"		 [color=blue3,
+			label=Tenant_Zone_1,
+			shape=doublecircle];
+		"2"		 [color=blue3,
+			label=Tenant_Zone_2,
+			shape=doublecircle];
+		"3"		 [color=blue3,
+			label=Tenant_Zone_3,
+			shape=doublecircle];
+                "4"		 [color=blue3,
+			label=Tenant_Zone_4,
+			shape=doublecircle];
+		"5"		 [color=blue3,
+			label=Tenant_Zone_5,
+			shape=doublecircle];
+	}
+        {
+		graph [rank=same];
+                "CFCFS"		 [color=darkorange4,
+			label=CFCFS,
+			shape=doubleoctagon];
+		"HSS1"		 [color=darkorange,
+			label=HSS1,
+			shape=doubleoctagon];
+                "HSS2"		 [color=darkorange,
+			label=HSS2,
+			shape=doubleoctagon];
+                "HSS3"		 [color=darkorange,
+			label=HSS3,
+			shape=doubleoctagon];
+                "HSS4"		 [color=darkorange,
+			label=HSS4,
+			shape=doubleoctagon];
+                "HSS5"		 [color=darkorange,
+			label=HSS5,
+			shape=doubleoctagon];
+                "HSS6"		 [color=darkorange,
+			label=HSS6,
+			shape=doubleoctagon];
+	}
+	"0x1f" -- "0xb"	 [color=green,
+		href="javascript:void(click_edge(\"0x1f,3,0xb,3,down\"))",
+		label=1,
+		style=solid,
+		tooltip="rx:0.0,0.0 tx:0.0,0.0"];
+	"0x1f" -- "0x15"	 [color=green,
+		href="javascript:void(click_edge(\"0x1f,2,0x15,3,down\"))",
+		label=1,
+		style=solid,
+		tooltip="rx:0.0,0.0 tx:0.0,0.0"];
+	"0x83" -- "0x65"	 [color=green,
+		href="javascript:void(click_edge(\"0x65,3,0x83,1,down\"))",
+		label=1,
+		style=solid,
+		tooltip="rx:0.0,0.0 tx:0.0,0.0"];
+	"0x83" -- "0x79"	 [color=green,
+		href="javascript:void(click_edge(\"0x83,2,0x79,3,down\"))",
+		label=1,
+		style=solid,
+		tooltip="rx:0.0,0.0 tx:0.0,0.0"];
+	"0x1" -- "0x1f"	 [color=green,
+		href="javascript:void(click_edge(\"0x1f,1,0x1,3,down\"))",
+		label=1,
+		style=solid,
+		tooltip="rx:0.0,0.0 tx:0.0,0.0"];
+	"0x1" -- "0xb"	 [color=green,
+		href="javascript:void(click_edge(\"0xb,1,0x1,1,down\"))",
+		label=5,
+		style=dotted,
+		tooltip="rx:660.0,0.0 tx:0.0,660.0"];
+	"0x1" -- "0x15"	 [color=green,
+		href="javascript:void(click_edge(\"0x15,2,0x1,2,down\"))",
+		label=5,
+		style=dotted,
+		tooltip="rx:0.0,660.0 tx:660.0,0.0"];
+	"0x1" -- "0xc9"	 [color=green,
+		href="javascript:void(click_edge(\"0x1,4,0xc9,1,down\"))",
+		label=15,
+		style=dotted,
+		tooltip="rx:0.0,660.0 tx:660.0,0.0"];
+	"0xb" -- "0x15"	 [color=green,
+		href="javascript:void(click_edge(\"0xb,2,0x15,1,down\"))",
+		label=5,
+		style=solid,
+		tooltip="rx:0.0,0.0 tx:0.0,0.0"];
+	"0x6f" -- "0x83"	 [color=green,
+		href="javascript:void(click_edge(\"0x83,3,0x6f,3,down\"))",
+		label=1,
+		style=solid,
+		tooltip="rx:0.0,0.0 tx:0.0,0.0"];
+	"0x6f" -- "0x65"	 [color=green,
+		href="javascript:void(click_edge(\"0x65,1,0x6f,1,down\"))",
+		label=5,
+		style=solid,
+		tooltip="rx:0.0,0.0 tx:0.0,0.0"];
+	"0x6f" -- "0x79"	 [color=green,
+		href="javascript:void(click_edge(\"0x6f,2,0x79,1,down\"))",
+		label=5,
+		style=solid,
+		tooltip="rx:0.0,0.0 tx:0.0,0.0"];
+	"0x79" -- "0x65"	 [color=green,
+		href="javascript:void(click_edge(\"0x79,2,0x65,2,down\"))",
+		label=5,
+		style=solid,
+		tooltip="rx:0.0,0.0 tx:0.0,0.0"];
+	"0x79" -- "0xdf"	 [color=green,
+		href="javascript:void(click_edge(\"0x79,4,0xdf,2,down\"))",
+		label=15,
+		style=solid,
+		tooltip="rx:0.0,0.0 tx:0.0,0.0"];
+	"0xc9" -- "0x65"	 [color=green,
+		href="javascript:void(click_edge(\"0xc9,2,0x65,4,down\"))",
+		label=15,
+		style=solid,
+		tooltip="rx:0.0,0.0 tx:0.0,0.0"];
+	"0xd3" -- "0xb"	 [color=green,
+		href="javascript:void(click_edge(\"0xb,4,0xd3,1,down\"))",
+		label=15,
+		style=dotted,
+		tooltip="rx:0.0,660.0 tx:660.0,0.0"];
+	"0xd3" -- "0x6f"	 [color=green,
+		href="javascript:void(click_edge(\"0x6f,4,0xd3,2,down\"))",
+		label=15,
+		style=solid,
+		tooltip="rx:0.0,0.0 tx:0.0,0.0"];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//med code
+        
+
+       "0x1" -- "EBS1"	 [color=green,
+		href="javascript:void(click_edge(\"0x1f,1,0x1,3,down\"))",
+		label=15,
+		style=solid,
+		tooltip="rx:0.0,0.0 tx:0.0,0.0"];
+       "0xd3" -- "0x11"	 [color=green,
+		sametail=3];
+        
+       "0xc9" -- "0x12"	 [color=green,
+		sametail=3];
+       "0xdf" -- "0x13"	 [color=green,
+		sametail=3];
+       "0x11" -- "1"	 [color=green, label=NoFLow, href="javascript:void(click_edge(\"No Flow\"))",
+		sametail=3];
+       "0x12" -- "4"	 [color=green, label=NoFLow, href="javascript:void(click_edge(\"No Flow\"))",
+		sametail=3];
+       "0x12" -- "5"	 [color=green, label=NoFLow, href="javascript:void(click_edge(\"No Flow\"))",
+		sametail=3];
+       "0x13" -- "2"	 [color=green, label=NoFLow, href="javascript:void(click_edge(\"No Flow\"))",
+		sametail=3];
+       "0x13" -- "3"	 [color=green, label=NoFLow, href="javascript:void(click_edge(\"No Flow\"))",
+		sametail=3];
+       "1" -- "CFCFS"	 [color=green,
+		sametail=3];
+       "1" -- "HSS1"	 [color=green,
+		sametail=3];
+       "2" -- "HSS2"	 [color=green,
+		sametail=3];
+       "2" -- "HSS3"	 [color=green,
+		sametail=3];
+       "3" -- "HSS4"	 [color=green,
+		sametail=3];
+       "4" -- "HSS5"	 [color=green,
+		sametail=3]; 
+       "5" -- "HSS6"	 [color=green,
+		sametail=3];
+        
+
+
+
+	
+}

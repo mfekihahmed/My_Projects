@@ -1,0 +1,20 @@
+<config>
+  <backend>
+    
+    <projectPath>
+      ....
+    </projectPath>
+
+  </backend>
+  <frontend>
+    
+    <backendURL>
+      ../../backend/
+    </backendURL>
+    
+    <projectURL>
+      file://...
+    </projectURL>
+    
+  </frontend>
+</config>

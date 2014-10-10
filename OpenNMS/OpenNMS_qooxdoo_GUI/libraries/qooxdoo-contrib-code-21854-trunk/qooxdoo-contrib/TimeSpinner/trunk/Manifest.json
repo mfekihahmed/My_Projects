@@ -1,0 +1,43 @@
+{
+  "info" : 
+  {
+    "name" : "TimeSpinner",
+
+    "summary" : "TimeSpinner",
+    "description" : "Provides a spinner widget for time.",
+
+    "keywords" : ["ui", "time", "timespinner", "spinner"],
+    "homepage" : "http://qooxdoo.org/contrib/project/timespinner",
+
+    "license" : "LGPL/EPL",
+    "authors" :
+    [
+      {
+        "name" : "Nathan Hadley",
+        "email" : "n.hadley@celcat.com"
+      },
+      {
+        "name" : "Matthew Gregory (noggin182)",
+        "email" : "matthew+qooxdoo@nogsnet.com"
+      },
+      {
+        "name" : "Johann Fridriksson",
+        "email" : "johann.fridriksson@gmail.com"
+      }
+    ],
+
+    "version" : "trunk",
+    "qooxdoo-versions": ["0.8"]
+  },
+
+  "provides" :
+  {
+    "namespace"   : "timespinner",
+    "encoding"    : "utf-8",
+    "class"       : "source/class",
+    "resource"    : "source/resource",
+    "translation" : "source/translation",
+    "type"        : "library"
+  }
+}
+

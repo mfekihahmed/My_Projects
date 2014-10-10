@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Open NMS vTopology</title>
+
+    <style>
+      body {font: 10pt arial;}
+    </style>
+                                                                        
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="../network.js"></script>
+    
+    <script type="text/javascript">
+      var nodesTable = null;
+      var linksTable = null;
+      var network = null;
+
+      var DIR = 'img/opennms/';
+
+      google.load('visualization', '1');
+      
+      // Set callback to run when API is loaded
+      google.setOnLoadCallback(drawVisualization); 
+
+      // Called when the Visualization API is loaded.
+      function drawVisualization() {
+        // Create a data table with nodes.
+        nodesTable = new google.visualization.DataTable();
+        nodesTable.addColumn('number', 'id');
+        nodesTable.addColumn('string', 'text');   // optional
+        nodesTable.addColumn('string', 'image');  // optional
+        nodesTable.addColumn('string', 'style');   // optional
+        
+        // Create a data table with links.
+        linksTable = new google.visualization.DataTable();
+        linksTable.addColumn('number', 'from');
+        linksTable.addColumn('number', 'to');
+        linksTable.addColumn('number', 'length'); // optional
+        var length1 = 350;
+        var length2 = 150;
+        var length3 = 100;
+        var length4 = 75;
+        var length5 = 40;
+        nodesTable.addRow([1, 'Internet', DIR + 'internet.png', 'image']);
+        nodesTable.addRow([2, 'Open NMS Controller', DIR + 'nox.png', 'image']);
+        nodesTable.addRow([3, 'Multi-path vSwitches', DIR + 'switch.png', 'image']);
+        linksTable.addRow([1, 3, length1]);
+        linksTable.addRow([2, 3, length1]);
+        
+        /*for (var i = 4; i <= 7; i++) {
+          nodesTable.addRow([i, 'Computer', DIR + 'Hardware-My-Computer-3-icon.png', 'image']);
+          linksTable.addRow([2, i, lengthSub]);
+        }*/
+        nodesTable.addRow([4, 'EBS 1', DIR + 'host.png', 'image']);
+        nodesTable.addRow([5, 'EBS 2', DIR + 'host.png', 'image']);
+        nodesTable.addRow([6, 'EBS 3', DIR + 'host.png', 'image']);
+        nodesTable.addRow([7, 'EBS 4', DIR + 'host.png', 'image']); 
+        linksTable.addRow([3, 4, length2]);
+        linksTable.addRow([3, 5, length2]);
+        linksTable.addRow([3, 6, length2]);
+        linksTable.addRow([3, 7, length2]);
+
+
+
+        nodesTable.addRow([8, 'Open vSwitch 9', DIR + 'ovs.png', 'image']);
+        nodesTable.addRow([9, 'Open vSwitch 10', DIR + 'ovs.png', 'image']);
+        nodesTable.addRow([10, 'Open vSwitch 11', DIR + 'ovs.png', 'image']);
+        linksTable.addRow([5, 8, length3]);
+        linksTable.addRow([6, 9, length3]);
+        linksTable.addRow([7, 10, length3]);
+         
+        nodesTable.addRow([11, 'Open NMS Slice 1', DIR + 'slice.png', 'image']);
+        nodesTable.addRow([12, 'Open NMS Slice 2', DIR + 'slice.png', 'image']);
+        nodesTable.addRow([13, 'Open NMS Slice 3', DIR + 'slice.png', 'image']);
+        nodesTable.addRow([14, 'Open NMS Slice 4', DIR + 'slice.png', 'image']);
+        nodesTable.addRow([15, 'Open NMS Slice 5', DIR + 'slice.png', 'image']);
+        linksTable.addRow([8, 11, length4]);
+        linksTable.addRow([10, 12, length4]);
+        linksTable.addRow([10, 13, length4]);
+        linksTable.addRow([9, 14, length4]);
+        linksTable.addRow([9, 15, length4]);
+
+
+
+
+nodesTable.addRow([16, 'CSCFS', DIR + 'vm.png', 'image']);
+nodesTable.addRow([17, 'HSS1', DIR + 'vm.png', 'image']);
+nodesTable.addRow([18, 'HSS2', DIR + 'vm.png', 'image']);
+nodesTable.addRow([19, 'HSS3', DIR + 'vm.png', 'image']);
+nodesTable.addRow([20, 'HSS4', DIR + 'vm.png', 'image']);
+nodesTable.addRow([21, 'HSS5', DIR + 'vm.png', 'image']);
+nodesTable.addRow([22, 'HSS6', DIR + 'vm.png', 'image']);
+linksTable.addRow([11, 16, length5]);
+linksTable.addRow([11, 17, length5]);
+
+linksTable.addRow([12, 18, length5]);
+linksTable.addRow([12, 19, length5]);
+
+
+linksTable.addRow([13, 20, length5]);
+linksTable.addRow([14, 21, length5]);
+linksTable.addRow([15, 22, length5]);
+
+        // specify options
+        var options = {
+          'width': '1400px', 
+          'height': '900px',
+          'stabilize': false   // stabilize positions before displaying
+        };
+
+        // Instantiate our graph object.
+        network = new links.Network(document.getElementById('opennms'));
+
+        // Draw our graph with the created data and options 
+        network.draw(nodesTable, linksTable, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="opennms"></div>
+  </body>
+</html>

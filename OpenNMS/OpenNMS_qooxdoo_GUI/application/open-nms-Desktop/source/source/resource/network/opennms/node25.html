@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>HSS4</title>
+    <link rel="shortcut icon" href="opennms.ico" >
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      function drawTable() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Key');
+        data.addColumn('string', 'Value');
+		
+        data.addRows([
+          ['Name', 'HSS4'],
+		  ['Tenant vDC', 'vDC 3'],
+          ['IP Address', '10.21.100.30'],
+		  ['Mac Address', '00:11:11:11:11:09'],
+		  ['Type', 'Virtual Machine'],
+          ['SE', 'Ubuntu 12.04 LTS'],
+		  ['Dedicated Open Flow Port', 'dp3 OpenFlow Port 4: dp3-br3']
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+		var options = {
+          'width': '300px'
+        };
+        table.draw(data, {showRowNumber: true}, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id='table_div'></div>
+  </body>
+</html>

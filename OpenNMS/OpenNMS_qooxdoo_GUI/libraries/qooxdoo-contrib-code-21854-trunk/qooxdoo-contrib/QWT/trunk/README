@@ -1,0 +1,21 @@
+===== QWT =====
+
+qooxdoo Web Toolkit
+
+CAUTION: this is early beta software.
+
+Building
+
+  mvn clean install
+
+
+Directory structure
+
+  sushi          gerneral purpose stuff, like apache commons
+  toolkit        qwt itself
+  application    example applications
+
+
+Homepage
+
+  http://qooxdoo.org/contrib/project/qwt

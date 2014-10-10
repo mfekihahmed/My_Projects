@@ -1,0 +1,3044 @@
+Script started on Fri 25 Feb 2011 01:26:47 PM EST
+ls
+]0;inocult@middleware-devel: ~/Projects/rmc/sourceinocult@middleware-devel:~/Projects/rmc/source$ ls
+[0m[01;34mclass[0m  index.html  [01;34mresource[0m  [01;34mscript[0m  [01;34mtranslation[0m  typescript
+]0;inocult@middleware-devel: ~/Projects/rmc/sourceinocult@middleware-devel:~/Projects/rmc/source$ cd sou[K[Kr[Kcript/
+]0;inocult@middleware-devel: ~/Projects/rmc/source/scriptinocult@middleware-devel:~/Projects/rmc/source/script$ ls
+rmc.js
+]0;inocult@middleware-devel: ~/Projects/rmc/source/scriptinocult@middleware-devel:~/Projects/rmc/source/script$ more rmc.js 
+(function(){
+
+if (!window.qx) window.qx = {};
+
+qx.$$start = new Date();
+  
+if (!window.qxsettings) qxsettings = {};
+var settings = {"qx.application":"rmc.Application","qx.theme":"rmc.theme.Theme",
+"qx.version":"1.3"};
+for (var k in settings) qxsettings[k] = settings[k];
+
+if (!window.qxvariants) qxvariants = {};
+var variants = {};
+for (var k in variants) qxvariants[k] = variants[k];
+
+if (!qx.$$libraries) qx.$$libraries = {};
+var libinfo = {"__out__":{"sourceUri":"script"},"qx":{"resourceUri":"../../../..
+/../opt/qooxdoo-1.3-sdk/framework/source/resource","sourceUri":"../../../../../o
+pt/qooxdoo-1.3-sdk/framework/source/class","version":"1.3"},"rmc":{"resourceUri"
+:"../source/resource","sourceUri":"../source/class","version":"trunk"}};
+for (var k in libinfo) qx.$$libraries[k] = libinfo[k];
+
+qx.$$resources = {"qx/decoration/Classic/arrows-combined.gif":[124,7,"gif","qx"]
+[7m--More--(0%)[27m,"qx/decoration/Classic/arrows/down-invert.gif":[7,4,"gif","qx","qx/decoration/C
+lassic/arrows-combined.gif",-38,0],"qx/decoration/Classic/arrows/down-small-inve
+rt.gif":[5,3,"gif","qx","qx/decoration/Classic/arrows-combined.gif",-87,0],"qx/d
+ecoration/Classic/arrows/down-small.gif":[5,3,"gif","qx","qx/decoration/Classic/
+arrows-combined.gif",-53,0],"qx/decoration/Classic/arrows/down.gif":[7,4,"gif","
+qx","qx/decoration/Classic/arrows-combined.gif",-113,0],"qx/decoration/Classic/a
+rrows/forward-invert.gif":[8,7,"gif","qx","qx/decoration/Classic/arrows-combined
+.gif",-30,0],"qx/decoration/Classic/arrows/forward.gif":[8,7,"gif","qx","qx/deco
+ration/Classic/arrows-combined.gif",-18,0],"qx/decoration/Classic/arrows/left-in
+vert.gif":[4,7,"gif","qx","qx/decoration/Classic/arrows-combined.gif",-92,0],"qx
+/decoration/Classic/arrows/left-small-invert.gif":[3,5,"gif","qx","qx/decoration
+/Classic/arrows-combined.gif",-58,0],"qx/decoration/Classic/arrows/left-small.gi
+f":[3,5,"gif","qx","qx/decoration/Classic/arrows-combined.gif",-15,0],"qx/decora
+tion/Classic/arrows/left.gif":[4,7,"gif","qx","qx/decoration/Classic/arrows-comb
+ined.gif",-120,0],"qx/decoration/Classic/arrows/next-invert.gif":[4,7,"gif","qx"
+,"qx/decoration/Classic/arrows-combined.gif",-80,0],"qx/decoration/Classic/arrow
+s/next.gif":[4,7,"gif","qx","qx/decoration/Classic/arrows-combined.gif",-109,0],
+"qx/decoration/Classic/arrows/previous-invert.gif":[4,7,"gif","qx","qx/decoratio
+n/Classic/arrows-combined.gif",-69,0],"qx/decoration/Classic/arrows/previous.gif
+":[4,7,"gif","qx","qx/decoration/Classic/arrows-combined.gif",-65,0],"qx/decorat
+ion/Classic/arrows/rewind-invert.gif":[8,7,"gif","qx","qx/decoration/Classic/arr
+ows-combined.gif",-45,0],"qx/decoration/Classic/arrows/rewind.gif":[8,7,"gif","q
+x","qx/decoration/Classic/arrows-combined.gif",-101,0],"qx/decoration/Classic/ar
+[7m--More--(2%)[27mrows/right-invert.gif":[4,7,"gif","qx","qx/decoration/Classic/arrows-combined.gi
+f",-61,0],"qx/decoration/Classic/arrows/right-small-invert.gif":[3,5,"gif","qx",
+"qx/decoration/Classic/arrows-combined.gif",0,0],"qx/decoration/Classic/arrows/r
+ight-small.gif":[3,5,"gif","qx","qx/decoration/Classic/arrows-combined.gif",-84,
+0],"qx/decoration/Classic/arrows/right.gif":[4,7,"gif","qx","qx/decoration/Class
+ic/arrows-combined.gif",-26,0],"qx/decoration/Classic/arrows/up-invert.gif":[7,4
+,"gif","qx","qx/decoration/Classic/arrows-combined.gif",-73,0],"qx/decoration/Cl
+assic/arrows/up-small-invert.gif":[5,3,"gif","qx","qx/decoration/Classic/arrows-
+combined.gif",-96,0],"qx/decoration/Classic/arrows/up-small.gif":[5,3,"gif","qx"
+,"qx/decoration/Classic/arrows-combined.gif",-3,0],"qx/decoration/Classic/arrows
+/up.gif":[7,4,"gif","qx","qx/decoration/Classic/arrows-combined.gif",-8,0],"qx/d
+ecoration/Classic/checkbox-radiobutton-combined.png":[504,14,"png","qx"],"qx/dec
+oration/Classic/colorselector-combined.gif":[46,11,"gif","qx"],"qx/decoration/Cl
+assic/colorselector/brightness-field.png":[19,256,"png","qx"],"qx/decoration/Cla
+ssic/colorselector/brightness-handle.gif":[35,11,"gif","qx","qx/decoration/Class
+ic/colorselector-combined.gif",-11,0],"qx/decoration/Classic/colorselector/huesa
+turation-field.jpg":[256,256,"jpeg","qx"],"qx/decoration/Classic/colorselector/h
+uesaturation-handle.gif":[11,11,"gif","qx","qx/decoration/Classic/colorselector-
+combined.gif",0,0],"qx/decoration/Classic/cursors-combined.gif":[71,20,"gif","qx
+"],"qx/decoration/Classic/cursors/alias.gif":[19,15,"gif","qx","qx/decoration/Cl
+assic/cursors-combined.gif",-52,0],"qx/decoration/Classic/cursors/copy.gif":[19,
+15,"gif","qx","qx/decoration/Classic/cursors-combined.gif",-20,0],"qx/decoration
+/Classic/cursors/move.gif":[13,9,"gif","qx","qx/decoration/Classic/cursors-combi
+[7m--More--(4%)[27mned.gif",-39,0],"qx/decoration/Classic/cursors/nodrop.gif":[20,20,"gif","qx","qx
+/decoration/Classic/cursors-combined.gif",0,0],"qx/decoration/Classic/datechoose
+r/last-month-invert.png":[16,16,"png","qx"],"qx/decoration/Classic/datechooser/l
+ast-month.png":[16,16,"png","qx"],"qx/decoration/Classic/datechooser/last-year-i
+nvert.png":[16,16,"png","qx"],"qx/decoration/Classic/datechooser/last-year.png":
+[16,16,"png","qx"],"qx/decoration/Classic/datechooser/next-month-invert.png":[16
+,16,"png","qx"],"qx/decoration/Classic/datechooser/next-month.png":[16,16,"png",
+"qx"],"qx/decoration/Classic/datechooser/next-year-invert.png":[16,16,"png","qx"
+],"qx/decoration/Classic/datechooser/next-year.png":[16,16,"png","qx"],"qx/decor
+ation/Classic/form/checkbox-checked-disabled.png":[14,14,"png","qx","qx/decorati
+on/Classic/checkbox-radiobutton-combined.png",-336,0],"qx/decoration/Classic/for
+m/checkbox-checked-focused-invalid.png":[14,14,"png","qx","qx/decoration/Classic
+/checkbox-radiobutton-combined.png",-28,0],"qx/decoration/Classic/form/checkbox-
+checked-focused.png":[14,14,"png","qx","qx/decoration/Classic/checkbox-radiobutt
+on-combined.png",-462,0],"qx/decoration/Classic/form/checkbox-checked-hovered-in
+valid.png":[14,14,"png","qx","qx/decoration/Classic/checkbox-radiobutton-combine
+d.png",-112,0],"qx/decoration/Classic/form/checkbox-checked-hovered.png":[14,14,
+"png","qx","qx/decoration/Classic/checkbox-radiobutton-combined.png",-140,0],"qx
+/decoration/Classic/form/checkbox-checked-invalid.png":[14,14,"png","qx","qx/dec
+oration/Classic/checkbox-radiobutton-combined.png",-98,0],"qx/decoration/Classic
+/form/checkbox-checked-pressed-invalid.png":[14,14,"png","qx","qx/decoration/Cla
+ssic/checkbox-radiobutton-combined.png",-308,0],"qx/decoration/Classic/form/chec
+kbox-checked-pressed.png":[14,14,"png","qx","qx/decoration/Classic/checkbox-radi
+[7m--More--(6%)[27mobutton-combined.png",0,0],"qx/decoration/Classic/form/checkbox-checked.png":[14
+,14,"png","qx","qx/decoration/Classic/checkbox-radiobutton-combined.png",-266,0]
+,"qx/decoration/Classic/form/checkbox-disabled.png":[14,14,"png","qx","qx/decora
+tion/Classic/checkbox-radiobutton-combined.png",-84,0],"qx/decoration/Classic/fo
+rm/checkbox-focused-invalid.png":[14,14,"png","qx","qx/decoration/Classic/checkb
+ox-radiobutton-combined.png",-476,0],"qx/decoration/Classic/form/checkbox-focuse
+d.png":[14,14,"png","qx","qx/decoration/Classic/checkbox-radiobutton-combined.pn
+g",-392,0],"qx/decoration/Classic/form/checkbox-hovered-invalid.png":[14,14,"png
+","qx","qx/decoration/Classic/checkbox-radiobutton-combined.png",-196,0],"qx/dec
+oration/Classic/form/checkbox-hovered.png":[14,14,"png","qx","qx/decoration/Clas
+sic/checkbox-radiobutton-combined.png",-154,0],"qx/decoration/Classic/form/check
+box-invalid.png":[14,14,"png","qx","qx/decoration/Classic/checkbox-radiobutton-c
+ombined.png",-350,0],"qx/decoration/Classic/form/checkbox-pressed-invalid.png":[
+14,14,"png","qx","qx/decoration/Classic/checkbox-radiobutton-combined.png",-448,
+0],"qx/decoration/Classic/form/checkbox-pressed.png":[14,14,"png","qx","qx/decor
+ation/Classic/checkbox-radiobutton-combined.png",-70,0],"qx/decoration/Classic/f
+orm/checkbox-undetermined-disabled.png":[14,14,"png","qx"],"qx/decoration/Classi
+c/form/checkbox-undetermined-focused-invalid.png":[14,14,"png","qx"],"qx/decorat
+ion/Classic/form/checkbox-undetermined-focused.png":[14,14,"png","qx"],"qx/decor
+ation/Classic/form/checkbox-undetermined-hovered-invalid.png":[14,14,"png","qx"]
+,"qx/decoration/Classic/form/checkbox-undetermined-hovered.png":[14,14,"png","qx
+"],"qx/decoration/Classic/form/checkbox-undetermined-invalid.png":[14,14,"png","
+qx"],"qx/decoration/Classic/form/checkbox-undetermined.png":[14,14,"png","qx"],"
+[7m--More--(8%)[27mqx/decoration/Classic/form/checkbox.png":[14,14,"png","qx","qx/decoration/Classi
+c/checkbox-radiobutton-combined.png",-490,0],"qx/decoration/Classic/form/radiobu
+tton-checked-disabled.png":[14,14,"png","qx","qx/decoration/Classic/checkbox-rad
+iobutton-combined.png",-210,0],"qx/decoration/Classic/form/radiobutton-checked-f
+ocused-invalid.png":[14,14,"png","qx","qx/decoration/Classic/checkbox-radiobutto
+n-combined.png",-406,0],"qx/decoration/Classic/form/radiobutton-checked-focused.
+png":[14,14,"png","qx","qx/decoration/Classic/checkbox-radiobutton-combined.png"
+,-378,0],"qx/decoration/Classic/form/radiobutton-checked-hovered-invalid.png":[1
+4,14,"png","qx","qx/decoration/Classic/checkbox-radiobutton-combined.png",-252,0
+],"qx/decoration/Classic/form/radiobutton-checked-hovered.png":[14,14,"png","qx"
+,"qx/decoration/Classic/checkbox-radiobutton-combined.png",-182,0],"qx/decoratio
+n/Classic/form/radiobutton-checked-invalid.png":[14,14,"png","qx","qx/decoration
+/Classic/checkbox-radiobutton-combined.png",-294,0],"qx/decoration/Classic/form/
+radiobutton-checked-pressed-invalid.png":[14,14,"png","qx","qx/decoration/Classi
+c/checkbox-radiobutton-combined.png",-420,0],"qx/decoration/Classic/form/radiobu
+tton-checked-pressed.png":[14,14,"png","qx","qx/decoration/Classic/checkbox-radi
+obutton-combined.png",-56,0],"qx/decoration/Classic/form/radiobutton-checked.png
+":[14,14,"png","qx","qx/decoration/Classic/checkbox-radiobutton-combined.png",-3
+22,0],"qx/decoration/Classic/form/radiobutton-disabled.png":[14,14,"png","qx","q
+x/decoration/Classic/checkbox-radiobutton-combined.png",-364,0],"qx/decoration/C
+lassic/form/radiobutton-focused-invalid.png":[14,14,"png","qx","qx/decoration/Cl
+assic/checkbox-radiobutton-combined.png",-434,0],"qx/decoration/Classic/form/rad
+iobutton-focused.png":[14,14,"png","qx","qx/decoration/Classic/checkbox-radiobut
+[7m--More--(10%)[27mton-combined.png",-168,0],"qx/decoration/Classic/form/radiobutton-hovered-invali
+d.png":[14,14,"png","qx","qx/decoration/Classic/checkbox-radiobutton-combined.pn
+g",-126,0],"qx/decoration/Classic/form/radiobutton-hovered.png":[14,14,"png","qx
+","qx/decoration/Classic/checkbox-radiobutton-combined.png",-42,0],"qx/decoratio
+n/Classic/form/radiobutton-invalid.png":[14,14,"png","qx","qx/decoration/Classic
+/checkbox-radiobutton-combined.png",-280,0],"qx/decoration/Classic/form/radiobut
+ton-pressed-invalid.png":[14,14,"png","qx","qx/decoration/Classic/checkbox-radio
+button-combined.png",-238,0],"qx/decoration/Classic/form/radiobutton-pressed.png
+":[14,14,"png","qx","qx/decoration/Classic/checkbox-radiobutton-combined.png",-1
+4,0],"qx/decoration/Classic/form/radiobutton.png":[14,14,"png","qx","qx/decorati
+on/Classic/checkbox-radiobutton-combined.png",-224,0],"qx/decoration/Classic/men
+u-combined.gif":[64,7,"gif","qx"],"qx/decoration/Classic/menu/checkbox-invert.gi
+f":[16,7,"gif","qx","qx/decoration/Classic/menu-combined.gif",-16,0],"qx/decorat
+ion/Classic/menu/checkbox.gif":[16,7,"gif","qx","qx/decoration/Classic/menu-comb
+ined.gif",-32,0],"qx/decoration/Classic/menu/radiobutton-invert.gif":[16,5,"gif"
+,"qx","qx/decoration/Classic/menu-combined.gif",0,0],"qx/decoration/Classic/menu
+/radiobutton.gif":[16,5,"gif","qx","qx/decoration/Classic/menu-combined.gif",-48
+,0],"qx/decoration/Classic/shadow-lr-combined.png":[30,382,"png","qx"],"qx/decor
+ation/Classic/shadow-small-lr-combined.png":[10,136,"png","qx"],"qx/decoration/C
+lassic/shadow-small-tb-combined.png":[5,30,"png","qx"],"qx/decoration/Classic/sh
+adow-tb-combined.png":[15,90,"png","qx"],"qx/decoration/Classic/shadow/shadow-b.
+png":[15,15,"png","qx","qx/decoration/Classic/shadow-tb-combined.png",0,-30],"qx
+/decoration/Classic/shadow/shadow-bl.png":[15,15,"png","qx","qx/decoration/Class
+[7m--More--(12%)[27mic/shadow-tb-combined.png",0,0],"qx/decoration/Classic/shadow/shadow-br.png":[15
+,15,"png","qx","qx/decoration/Classic/shadow-tb-combined.png",0,-60],"qx/decorat
+ion/Classic/shadow/shadow-c.png":[40,382,"png","qx"],"qx/decoration/Classic/shad
+ow/shadow-l.png":[15,382,"png","qx","qx/decoration/Classic/shadow-lr-combined.pn
+g",-15,0],"qx/decoration/Classic/shadow/shadow-r.png":[15,382,"png","qx","qx/dec
+oration/Classic/shadow-lr-combined.png",0,0],"qx/decoration/Classic/shadow/shado
+w-small-b.png":[5,5,"png","qx","qx/decoration/Classic/shadow-small-tb-combined.p
+ng",0,-25],"qx/decoration/Classic/shadow/shadow-small-bl.png":[5,5,"png","qx","q
+x/decoration/Classic/shadow-small-tb-combined.png",0,-20],"qx/decoration/Classic
+/shadow/shadow-small-br.png":[5,5,"png","qx","qx/decoration/Classic/shadow-small
+-tb-combined.png",0,0],"qx/decoration/Classic/shadow/shadow-small-c.png":[40,136
+,"png","qx"],"qx/decoration/Classic/shadow/shadow-small-l.png":[5,136,"png","qx"
+,"qx/decoration/Classic/shadow-small-lr-combined.png",0,0],"qx/decoration/Classi
+c/shadow/shadow-small-r.png":[5,136,"png","qx","qx/decoration/Classic/shadow-sma
+ll-lr-combined.png",-5,0],"qx/decoration/Classic/shadow/shadow-small-t.png":[5,5
+,"png","qx","qx/decoration/Classic/shadow-small-tb-combined.png",0,-5],"qx/decor
+ation/Classic/shadow/shadow-small-tl.png":[5,5,"png","qx","qx/decoration/Classic
+/shadow-small-tb-combined.png",0,-15],"qx/decoration/Classic/shadow/shadow-small
+-tr.png":[5,5,"png","qx","qx/decoration/Classic/shadow-small-tb-combined.png",0,
+-10],"qx/decoration/Classic/shadow/shadow-small.png":[114,146,"png","qx"],"qx/de
+coration/Classic/shadow/shadow-t.png":[15,15,"png","qx","qx/decoration/Classic/s
+hadow-tb-combined.png",0,-75],"qx/decoration/Classic/shadow/shadow-tl.png":[15,1
+5,"png","qx","qx/decoration/Classic/shadow-tb-combined.png",0,-45],"qx/decoratio
+[7m--More--(13%)[27mn/Classic/shadow/shadow-tr.png":[15,15,"png","qx","qx/decoration/Classic/shadow-
+tb-combined.png",0,-15],"qx/decoration/Classic/shadow/shadow.png":[381,412,"png"
+,"qx"],"qx/decoration/Classic/splitpane/knob-horizontal.png":[4,15,"png","qx"],"
+qx/decoration/Classic/splitpane/knob-vertical.png":[15,4,"png","qx"],"qx/decorat
+ion/Classic/table-combined.png":[72,11,"png","qx"],"qx/decoration/Classic/table/
+ascending-invert.png":[10,10,"png","qx","qx/decoration/Classic/table-combined.pn
+g",-62,0],"qx/decoration/Classic/table/ascending.png":[10,10,"png","qx","qx/deco
+ration/Classic/table-combined.png",-52,0],"qx/decoration/Classic/table/boolean-f
+alse.png":[11,11,"png","qx","qx/decoration/Classic/table-combined.png",-31,0],"q
+x/decoration/Classic/table/boolean-true.png":[11,11,"png","qx","qx/decoration/Cl
+assic/table-combined.png",-10,0],"qx/decoration/Classic/table/descending-invert.
+png":[10,10,"png","qx","qx/decoration/Classic/table-combined.png",-42,0],"qx/dec
+oration/Classic/table/descending.png":[10,10,"png","qx","qx/decoration/Classic/t
+able-combined.png",0,0],"qx/decoration/Classic/table/select-column-order.png":[1
+0,9,"png","qx","qx/decoration/Classic/table-combined.png",-21,0],"qx/decoration/
+Classic/tree/minus.gif":[19,16,"gif","qx"],"qx/decoration/Classic/tree/plus.gif"
+:[19,16,"gif","qx"],"qx/decoration/Classic/treevirtual/cross.gif":[19,16,"gif","
+qx"],"qx/decoration/Classic/treevirtual/cross_minus.gif":[19,16,"gif","qx"],"qx/
+decoration/Classic/treevirtual/cross_plus.gif":[19,16,"gif","qx"],"qx/decoration
+/Classic/treevirtual/end.gif":[19,16,"gif","qx"],"qx/decoration/Classic/treevirt
+ual/end_minus.gif":[19,16,"gif","qx"],"qx/decoration/Classic/treevirtual/end_plu
+s.gif":[19,16,"gif","qx"],"qx/decoration/Classic/treevirtual/line.gif":[19,16,"g
+if","qx"],"qx/decoration/Classic/treevirtual/only_minus.gif":[19,16,"gif","qx"],
+[7m--More--(15%)[27m"qx/decoration/Classic/treevirtual/only_plus.gif":[19,16,"gif","qx"],"qx/decorat
+ion/Classic/treevirtual/start.gif":[19,16,"gif","qx"],"qx/decoration/Classic/tre
+evirtual/start_minus.gif":[19,16,"gif","qx"],"qx/decoration/Classic/treevirtual/
+start_plus.gif":[19,16,"gif","qx"],"qx/decoration/Classic/window-captionbar-butt
+ons-combined.gif":[36,9,"gif","qx"],"qx/decoration/Classic/window/close.gif":[10
+,9,"gif","qx","qx/decoration/Classic/window-captionbar-buttons-combined.gif",0,0
+],"qx/decoration/Classic/window/maximize.gif":[9,9,"gif","qx","qx/decoration/Cla
+ssic/window-captionbar-buttons-combined.gif",-10,0],"qx/decoration/Classic/windo
+w/minimize.gif":[9,9,"gif","qx","qx/decoration/Classic/window-captionbar-buttons
+-combined.gif",-19,0],"qx/decoration/Classic/window/restore.gif":[8,9,"gif","qx"
+,"qx/decoration/Classic/window-captionbar-buttons-combined.gif",-28,0],"qx/decor
+ation/Modern/app-header.png":[110,20,"png","qx"],"qx/decoration/Modern/arrows-co
+mbined.png":[87,8,"png","qx"],"qx/decoration/Modern/arrows/down-invert.png":[8,5
+,"png","qx","qx/decoration/Modern/arrows-combined.png",-74,0],"qx/decoration/Mod
+ern/arrows/down-small-invert.png":[5,3,"png","qx","qx/decoration/Modern/arrows-c
+ombined.png",-69,0],"qx/decoration/Modern/arrows/down-small.png":[5,3,"png","qx"
+,"qx/decoration/Modern/arrows-combined.png",-49,0],"qx/decoration/Modern/arrows/
+down.png":[8,5,"png","qx","qx/decoration/Modern/arrows-combined.png",-20,0],"qx/
+decoration/Modern/arrows/forward.png":[10,8,"png","qx","qx/decoration/Modern/arr
+ows-combined.png",-59,0],"qx/decoration/Modern/arrows/left-invert.png":[5,8,"png
+","qx","qx/decoration/Modern/arrows-combined.png",0,0],"qx/decoration/Modern/arr
+ows/left.png":[5,8,"png","qx","qx/decoration/Modern/arrows-combined.png",-44,0],
+"qx/decoration/Modern/arrows/rewind.png":[10,8,"png","qx","qx/decoration/Modern/
+[7m--More--(17%)[27marrows-combined.png",-10,0],"qx/decoration/Modern/arrows/right-invert.png":[5,8,
+"png","qx","qx/decoration/Modern/arrows-combined.png",-5,0],"qx/decoration/Moder
+n/arrows/right.png":[5,8,"png","qx","qx/decoration/Modern/arrows-combined.png",-
+54,0],"qx/decoration/Modern/arrows/up-invert.png":[8,5,"png","qx","qx/decoration
+/Modern/arrows-combined.png",-28,0],"qx/decoration/Modern/arrows/up-small.png":[
+5,3,"png","qx","qx/decoration/Modern/arrows-combined.png",-82,0],"qx/decoration/
+Modern/arrows/up.png":[8,5,"png","qx","qx/decoration/Modern/arrows-combined.png"
+,-36,0],"qx/decoration/Modern/button-lr-combined.png":[72,52,"png","qx"],"qx/dec
+oration/Modern/button-tb-combined.png":[4,216,"png","qx"],"qx/decoration/Modern/
+checkradio-combined.png":[504,14,"png","qx"],"qx/decoration/Modern/colorselector
+-combined.gif":[46,11,"gif","qx"],"qx/decoration/Modern/colorselector/brightness
+-field.png":[19,256,"png","qx"],"qx/decoration/Modern/colorselector/brightness-h
+andle.gif":[35,11,"gif","qx","qx/decoration/Modern/colorselector-combined.gif",0
+,0],"qx/decoration/Modern/colorselector/huesaturation-field.jpg":[256,256,"jpeg"
+,"qx"],"qx/decoration/Modern/colorselector/huesaturation-handle.gif":[11,11,"gif
+","qx","qx/decoration/Modern/colorselector-combined.gif",-35,0],"qx/decoration/M
+odern/cursors-combined.gif":[71,20,"gif","qx"],"qx/decoration/Modern/cursors/ali
+as.gif":[19,15,"gif","qx","qx/decoration/Modern/cursors-combined.gif",-52,0],"qx
+/decoration/Modern/cursors/copy.gif":[19,15,"gif","qx","qx/decoration/Modern/cur
+sors-combined.gif",-33,0],"qx/decoration/Modern/cursors/move.gif":[13,9,"gif","q
+x","qx/decoration/Modern/cursors-combined.gif",-20,0],"qx/decoration/Modern/curs
+ors/nodrop.gif":[20,20,"gif","qx","qx/decoration/Modern/cursors-combined.gif",0,
+0],"qx/decoration/Modern/form/button-b.png":[4,4,"png","qx","qx/decoration/Moder
+[7m--More--(19%)[27mn/button-tb-combined.png",0,-72],"qx/decoration/Modern/form/button-bl.png":[4,4,
+"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-204],"qx/decoration/
+Modern/form/button-br.png":[4,4,"png","qx","qx/decoration/Modern/button-tb-combi
+ned.png",0,-188],"qx/decoration/Modern/form/button-c.png":[40,52,"png","qx"],"qx
+/decoration/Modern/form/button-checked-b.png":[4,4,"png","qx","qx/decoration/Mod
+ern/button-tb-combined.png",0,-36],"qx/decoration/Modern/form/button-checked-bl.
+png":[4,4,"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-84],"qx/de
+coration/Modern/form/button-checked-br.png":[4,4,"png","qx","qx/decoration/Moder
+n/button-tb-combined.png",0,-184],"qx/decoration/Modern/form/button-checked-c.pn
+g":[40,52,"png","qx"],"qx/decoration/Modern/form/button-checked-focused-b.png":[
+4,4,"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-156],"qx/decorat
+ion/Modern/form/button-checked-focused-bl.png":[4,4,"png","qx","qx/decoration/Mo
+dern/button-tb-combined.png",0,-208],"qx/decoration/Modern/form/button-checked-f
+ocused-br.png":[4,4,"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-
+160],"qx/decoration/Modern/form/button-checked-focused-c.png":[40,52,"png","qx"]
+,"qx/decoration/Modern/form/button-checked-focused-l.png":[4,52,"png","qx","qx/d
+ecoration/Modern/button-lr-combined.png",-40,0],"qx/decoration/Modern/form/butto
+n-checked-focused-r.png":[4,52,"png","qx","qx/decoration/Modern/button-lr-combin
+ed.png",-32,0],"qx/decoration/Modern/form/button-checked-focused-t.png":[4,4,"pn
+g","qx","qx/decoration/Modern/button-tb-combined.png",0,-28],"qx/decoration/Mode
+rn/form/button-checked-focused-tl.png":[4,4,"png","qx","qx/decoration/Modern/but
+ton-tb-combined.png",0,-24],"qx/decoration/Modern/form/button-checked-focused-tr
+.png":[4,4,"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-48],"qx/d
+[7m--More--(21%)[27mecoration/Modern/form/button-checked-focused.png":[80,60,"png","qx"],"qx/decorat
+ion/Modern/form/button-checked-l.png":[4,52,"png","qx","qx/decoration/Modern/but
+ton-lr-combined.png",-16,0],"qx/decoration/Modern/form/button-checked-r.png":[4,
+52,"png","qx","qx/decoration/Modern/button-lr-combined.png",-60,0],"qx/decoratio
+n/Modern/form/button-checked-t.png":[4,4,"png","qx","qx/decoration/Modern/button
+-tb-combined.png",0,-140],"qx/decoration/Modern/form/button-checked-tl.png":[4,4
+,"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-56],"qx/decoration/
+Modern/form/button-checked-tr.png":[4,4,"png","qx","qx/decoration/Modern/button-
+tb-combined.png",0,-112],"qx/decoration/Modern/form/button-checked.png":[80,60,"
+png","qx"],"qx/decoration/Modern/form/button-disabled-b.png":[4,4,"png","qx","qx
+/decoration/Modern/button-tb-combined.png",0,-40],"qx/decoration/Modern/form/but
+ton-disabled-bl.png":[4,4,"png","qx","qx/decoration/Modern/button-tb-combined.pn
+g",0,-136],"qx/decoration/Modern/form/button-disabled-br.png":[4,4,"png","qx","q
+x/decoration/Modern/button-tb-combined.png",0,-16],"qx/decoration/Modern/form/bu
+tton-disabled-c.png":[40,52,"png","qx"],"qx/decoration/Modern/form/button-disabl
+ed-l.png":[4,52,"png","qx","qx/decoration/Modern/button-lr-combined.png",-68,0],
+"qx/decoration/Modern/form/button-disabled-r.png":[4,52,"png","qx","qx/decoratio
+n/Modern/button-lr-combined.png",-4,0],"qx/decoration/Modern/form/button-disable
+d-t.png":[4,4,"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-116],"
+qx/decoration/Modern/form/button-disabled-tl.png":[4,4,"png","qx","qx/decoration
+/Modern/button-tb-combined.png",0,-168],"qx/decoration/Modern/form/button-disabl
+ed-tr.png":[4,4,"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-60],
+"qx/decoration/Modern/form/button-disabled.png":[80,60,"png","qx"],"qx/decoratio
+[7m--More--(23%)[27mn/Modern/form/button-focused-b.png":[4,4,"png","qx","qx/decoration/Modern/button
+-tb-combined.png",0,-68],"qx/decoration/Modern/form/button-focused-bl.png":[4,4,
+"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-144],"qx/decoration/
+Modern/form/button-focused-br.png":[4,4,"png","qx","qx/decoration/Modern/button-
+tb-combined.png",0,-8],"qx/decoration/Modern/form/button-focused-c.png":[40,52,"
+png","qx"],"qx/decoration/Modern/form/button-focused-l.png":[4,52,"png","qx","qx
+/decoration/Modern/button-lr-combined.png",-24,0],"qx/decoration/Modern/form/but
+ton-focused-r.png":[4,52,"png","qx","qx/decoration/Modern/button-lr-combined.png
+",-44,0],"qx/decoration/Modern/form/button-focused-t.png":[4,4,"png","qx","qx/de
+coration/Modern/button-tb-combined.png",0,-192],"qx/decoration/Modern/form/butto
+n-focused-tl.png":[4,4,"png","qx","qx/decoration/Modern/button-tb-combined.png",
+0,-148],"qx/decoration/Modern/form/button-focused-tr.png":[4,4,"png","qx","qx/de
+coration/Modern/button-tb-combined.png",0,-104],"qx/decoration/Modern/form/butto
+n-focused.png":[80,60,"png","qx"],"qx/decoration/Modern/form/button-hovered-b.pn
+g":[4,4,"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-108],"qx/dec
+oration/Modern/form/button-hovered-bl.png":[4,4,"png","qx","qx/decoration/Modern
+/button-tb-combined.png",0,-32],"qx/decoration/Modern/form/button-hovered-br.png
+":[4,4,"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-128],"qx/deco
+ration/Modern/form/button-hovered-c.png":[40,52,"png","qx"],"qx/decoration/Moder
+n/form/button-hovered-l.png":[4,52,"png","qx","qx/decoration/Modern/button-lr-co
+mbined.png",-20,0],"qx/decoration/Modern/form/button-hovered-r.png":[4,52,"png",
+"qx","qx/decoration/Modern/button-lr-combined.png",-48,0],"qx/decoration/Modern/
+form/button-hovered-t.png":[4,4,"png","qx","qx/decoration/Modern/button-tb-combi
+[7m--More--(25%)[27mned.png",0,-44],"qx/decoration/Modern/form/button-hovered-tl.png":[4,4,"png","qx
+","qx/decoration/Modern/button-tb-combined.png",0,-76],"qx/decoration/Modern/for
+m/button-hovered-tr.png":[4,4,"png","qx","qx/decoration/Modern/button-tb-combine
+d.png",0,-88],"qx/decoration/Modern/form/button-hovered.png":[80,60,"png","qx"],
+"qx/decoration/Modern/form/button-l.png":[4,52,"png","qx","qx/decoration/Modern/
+button-lr-combined.png",-56,0],"qx/decoration/Modern/form/button-preselected-b.p
+ng":[4,4,"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-124],"qx/de
+coration/Modern/form/button-preselected-bl.png":[4,4,"png","qx","qx/decoration/M
+odern/button-tb-combined.png",0,-176],"qx/decoration/Modern/form/button-preselec
+ted-br.png":[4,4,"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-200
+],"qx/decoration/Modern/form/button-preselected-c.png":[40,52,"png","qx"],"qx/de
+coration/Modern/form/button-preselected-focused-b.png":[4,4,"png","qx","qx/decor
+ation/Modern/button-tb-combined.png",0,0],"qx/decoration/Modern/form/button-pres
+elected-focused-bl.png":[4,4,"png","qx","qx/decoration/Modern/button-tb-combined
+.png",0,-4],"qx/decoration/Modern/form/button-preselected-focused-br.png":[4,4,"
+png","qx","qx/decoration/Modern/button-tb-combined.png",0,-152],"qx/decoration/M
+odern/form/button-preselected-focused-c.png":[40,52,"png","qx"],"qx/decoration/M
+odern/form/button-preselected-focused-l.png":[4,52,"png","qx","qx/decoration/Mod
+ern/button-lr-combined.png",-28,0],"qx/decoration/Modern/form/button-preselected
+-focused-r.png":[4,52,"png","qx","qx/decoration/Modern/button-lr-combined.png",-
+36,0],"qx/decoration/Modern/form/button-preselected-focused-t.png":[4,4,"png","q
+x","qx/decoration/Modern/button-tb-combined.png",0,-196],"qx/decoration/Modern/f
+orm/button-preselected-focused-tl.png":[4,4,"png","qx","qx/decoration/Modern/but
+[7m--More--(26%)[27mton-tb-combined.png",0,-164],"qx/decoration/Modern/form/button-preselected-focus
+ed-tr.png":[4,4,"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-212]
+,"qx/decoration/Modern/form/button-preselected-focused.png":[80,60,"png","qx"],"
+qx/decoration/Modern/form/button-preselected-l.png":[4,52,"png","qx","qx/decorat
+ion/Modern/button-lr-combined.png",-8,0],"qx/decoration/Modern/form/button-prese
+lected-r.png":[4,52,"png","qx","qx/decoration/Modern/button-lr-combined.png",-64
+,0],"qx/decoration/Modern/form/button-preselected-t.png":[4,4,"png","qx","qx/dec
+oration/Modern/button-tb-combined.png",0,-96],"qx/decoration/Modern/form/button-
+preselected-tl.png":[4,4,"png","qx","qx/decoration/Modern/button-tb-combined.png
+",0,-80],"qx/decoration/Modern/form/button-preselected-tr.png":[4,4,"png","qx","
+qx/decoration/Modern/button-tb-combined.png",0,-132],"qx/decoration/Modern/form/
+button-preselected.png":[80,60,"png","qx"],"qx/decoration/Modern/form/button-pre
+ssed-b.png":[4,4,"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-12]
+,"qx/decoration/Modern/form/button-pressed-bl.png":[4,4,"png","qx","qx/decoratio
+n/Modern/button-tb-combined.png",0,-52],"qx/decoration/Modern/form/button-presse
+d-br.png":[4,4,"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-20],"
+qx/decoration/Modern/form/button-pressed-c.png":[40,52,"png","qx"],"qx/decoratio
+n/Modern/form/button-pressed-l.png":[4,52,"png","qx","qx/decoration/Modern/butto
+n-lr-combined.png",-52,0],"qx/decoration/Modern/form/button-pressed-r.png":[4,52
+,"png","qx","qx/decoration/Modern/button-lr-combined.png",-12,0],"qx/decoration/
+Modern/form/button-pressed-t.png":[4,4,"png","qx","qx/decoration/Modern/button-t
+b-combined.png",0,-100],"qx/decoration/Modern/form/button-pressed-tl.png":[4,4,"
+png","qx","qx/decoration/Modern/button-tb-combined.png",0,-172],"qx/decoration/M
+[7m--More--(28%)[27modern/form/button-pressed-tr.png":[4,4,"png","qx","qx/decoration/Modern/button-t
+b-combined.png",0,-64],"qx/decoration/Modern/form/button-pressed.png":[80,60,"pn
+g","qx"],"qx/decoration/Modern/form/button-r.png":[4,52,"png","qx","qx/decoratio
+n/Modern/button-lr-combined.png",0,0],"qx/decoration/Modern/form/button-t.png":[
+4,4,"png","qx","qx/decoration/Modern/button-tb-combined.png",0,-92],"qx/decorati
+on/Modern/form/button-tl.png":[4,4,"png","qx","qx/decoration/Modern/button-tb-co
+mbined.png",0,-120],"qx/decoration/Modern/form/button-tr.png":[4,4,"png","qx","q
+x/decoration/Modern/button-tb-combined.png",0,-180],"qx/decoration/Modern/form/b
+utton.png":[80,60,"png","qx"],"qx/decoration/Modern/form/checkbox-checked-disabl
+ed.png":[14,14,"png","qx","qx/decoration/Modern/checkradio-combined.png",-126,0]
+,"qx/decoration/Modern/form/checkbox-checked-focused-invalid.png":[14,14,"png","
+qx","qx/decoration/Modern/checkradio-combined.png",-322,0],"qx/decoration/Modern
+/form/checkbox-checked-focused.png":[14,14,"png","qx","qx/decoration/Modern/chec
+kradio-combined.png",-294,0],"qx/decoration/Modern/form/checkbox-checked-hovered
+-invalid.png":[14,14,"png","qx","qx/decoration/Modern/checkradio-combined.png",-
+364,0],"qx/decoration/Modern/form/checkbox-checked-hovered.png":[14,14,"png","qx
+","qx/decoration/Modern/checkradio-combined.png",-490,0],"qx/decoration/Modern/f
+orm/checkbox-checked-invalid.png":[14,14,"png","qx","qx/decoration/Modern/checkr
+adio-combined.png",-224,0],"qx/decoration/Modern/form/checkbox-checked-pressed-i
+nvalid.png":[14,14,"png","qx","qx/decoration/Modern/checkradio-combined.png",-37
+8,0],"qx/decoration/Modern/form/checkbox-checked-pressed.png":[14,14,"png","qx",
+"qx/decoration/Modern/checkradio-combined.png",-84,0],"qx/decoration/Modern/form
+/checkbox-checked.png":[14,14,"png","qx","qx/decoration/Modern/checkradio-combin
+[7m--More--(30%)[27med.png",-182,0],"qx/decoration/Modern/form/checkbox-disabled.png":[14,14,"png","
+qx","qx/decoration/Modern/checkradio-combined.png",-42,0],"qx/decoration/Modern/
+form/checkbox-focused-invalid.png":[14,14,"png","qx","qx/decoration/Modern/check
+radio-combined.png",-392,0],"qx/decoration/Modern/form/checkbox-focused.png":[14
+,14,"png","qx","qx/decoration/Modern/checkradio-combined.png",-210,0],"qx/decora
+tion/Modern/form/checkbox-hovered-invalid.png":[14,14,"png","qx","qx/decoration/
+Modern/checkradio-combined.png",-14,0],"qx/decoration/Modern/form/checkbox-hover
+ed.png":[14,14,"png","qx","qx/decoration/Modern/checkradio-combined.png",-238,0]
+,"qx/decoration/Modern/form/checkbox-invalid.png":[14,14,"png","qx","qx/decorati
+on/Modern/checkradio-combined.png",-462,0],"qx/decoration/Modern/form/checkbox-p
+ressed-invalid.png":[14,14,"png","qx","qx/decoration/Modern/checkradio-combined.
+png",-112,0],"qx/decoration/Modern/form/checkbox-pressed.png":[14,14,"png","qx",
+"qx/decoration/Modern/checkradio-combined.png",-448,0],"qx/decoration/Modern/for
+m/checkbox-undetermined-disabled.png":[14,14,"png","qx"],"qx/decoration/Modern/f
+orm/checkbox-undetermined-focused-invalid.png":[14,14,"png","qx"],"qx/decoration
+/Modern/form/checkbox-undetermined-focused.png":[14,14,"png","qx"],"qx/decoratio
+n/Modern/form/checkbox-undetermined-hovered-invalid.png":[14,14,"png","qx"],"qx/
+decoration/Modern/form/checkbox-undetermined-hovered.png":[14,14,"png","qx"],"qx
+/decoration/Modern/form/checkbox-undetermined-invalid.png":[14,14,"png","qx"],"q
+x/decoration/Modern/form/checkbox-undetermined.png":[14,14,"png","qx"],"qx/decor
+ation/Modern/form/checkbox.png":[14,14,"png","qx","qx/decoration/Modern/checkrad
+io-combined.png",-140,0],"qx/decoration/Modern/form/input-focused.png":[40,12,"p
+ng","qx"],"qx/decoration/Modern/form/input.png":[84,12,"png","qx"],"qx/decoratio
+[7m--More--(32%)[27mn/Modern/form/radiobutton-checked-disabled.png":[14,14,"png","qx","qx/decoration
+/Modern/checkradio-combined.png",-196,0],"qx/decoration/Modern/form/radiobutton-
+checked-focused-invalid.png":[14,14,"png","qx","qx/decoration/Modern/checkradio-
+combined.png",-168,0],"qx/decoration/Modern/form/radiobutton-checked-focused.png
+":[14,14,"png","qx","qx/decoration/Modern/checkradio-combined.png",-98,0],"qx/de
+coration/Modern/form/radiobutton-checked-hovered-invalid.png":[14,14,"png","qx",
+"qx/decoration/Modern/checkradio-combined.png",-308,0],"qx/decoration/Modern/for
+m/radiobutton-checked-hovered.png":[14,14,"png","qx","qx/decoration/Modern/check
+radio-combined.png",-406,0],"qx/decoration/Modern/form/radiobutton-checked-inval
+id.png":[14,14,"png","qx","qx/decoration/Modern/checkradio-combined.png",-28,0],
+"qx/decoration/Modern/form/radiobutton-checked-pressed-invalid.png":[14,14,"png"
+,"qx","qx/decoration/Modern/checkradio-combined.png",-350,0],"qx/decoration/Mode
+rn/form/radiobutton-checked-pressed.png":[14,14,"png","qx","qx/decoration/Modern
+/checkradio-combined.png",-266,0],"qx/decoration/Modern/form/radiobutton-checked
+.png":[14,14,"png","qx","qx/decoration/Modern/checkradio-combined.png",-252,0],"
+qx/decoration/Modern/form/radiobutton-disabled.png":[14,14,"png","qx","qx/decora
+tion/Modern/checkradio-combined.png",-336,0],"qx/decoration/Modern/form/radiobut
+ton-focused-invalid.png":[14,14,"png","qx","qx/decoration/Modern/checkradio-comb
+ined.png",-476,0],"qx/decoration/Modern/form/radiobutton-focused.png":[14,14,"pn
+g","qx","qx/decoration/Modern/checkradio-combined.png",-420,0],"qx/decoration/Mo
+dern/form/radiobutton-hovered-invalid.png":[14,14,"png","qx","qx/decoration/Mode
+rn/checkradio-combined.png",-56,0],"qx/decoration/Modern/form/radiobutton-hovere
+d.png":[14,14,"png","qx","qx/decoration/Modern/checkradio-combined.png",0,0],"qx
+[7m--More--(34%)[27m/decoration/Modern/form/radiobutton-invalid.png":[14,14,"png","qx","qx/decoratio
+n/Modern/checkradio-combined.png",-154,0],"qx/decoration/Modern/form/radiobutton
+-pressed-invalid.png":[14,14,"png","qx","qx/decoration/Modern/checkradio-combine
+d.png",-434,0],"qx/decoration/Modern/form/radiobutton-pressed.png":[14,14,"png",
+"qx","qx/decoration/Modern/checkradio-combined.png",-280,0],"qx/decoration/Moder
+n/form/radiobutton.png":[14,14,"png","qx","qx/decoration/Modern/checkradio-combi
+ned.png",-70,0],"qx/decoration/Modern/form/tooltip-error-arrow.png":[11,14,"png"
+,"qx"],"qx/decoration/Modern/form/tooltip-error-b.png":[6,6,"png","qx","qx/decor
+ation/Modern/tooltip-error-tb-combined.png",0,-30],"qx/decoration/Modern/form/to
+oltip-error-bl.png":[6,6,"png","qx","qx/decoration/Modern/tooltip-error-tb-combi
+ned.png",0,-24],"qx/decoration/Modern/form/tooltip-error-br.png":[6,6,"png","qx"
+,"qx/decoration/Modern/tooltip-error-tb-combined.png",0,0],"qx/decoration/Modern
+/form/tooltip-error-c.png":[40,18,"png","qx"],"qx/decoration/Modern/form/tooltip
+-error-l.png":[6,18,"png","qx","qx/decoration/Modern/tooltip-error-lr-combined.p
+ng",-6,0],"qx/decoration/Modern/form/tooltip-error-r.png":[6,18,"png","qx","qx/d
+ecoration/Modern/tooltip-error-lr-combined.png",0,0],"qx/decoration/Modern/form/
+tooltip-error-t.png":[6,6,"png","qx","qx/decoration/Modern/tooltip-error-tb-comb
+ined.png",0,-6],"qx/decoration/Modern/form/tooltip-error-tl.png":[6,6,"png","qx"
+,"qx/decoration/Modern/tooltip-error-tb-combined.png",0,-18],"qx/decoration/Mode
+rn/form/tooltip-error-tr.png":[6,6,"png","qx","qx/decoration/Modern/tooltip-erro
+r-tb-combined.png",0,-12],"qx/decoration/Modern/form/tooltip-error.png":[127,30,
+"png","qx"],"qx/decoration/Modern/group-item.png":[110,20,"png","qx"],"qx/decora
+tion/Modern/groupbox-lr-combined.png":[8,51,"png","qx"],"qx/decoration/Modern/gr
+[7m--More--(36%)[27moupbox-tb-combined.png":[4,24,"png","qx"],"qx/decoration/Modern/groupbox/groupbo
+x-b.png":[4,4,"png","qx","qx/decoration/Modern/groupbox-tb-combined.png",0,-12],
+"qx/decoration/Modern/groupbox/groupbox-bl.png":[4,4,"png","qx","qx/decoration/M
+odern/groupbox-tb-combined.png",0,-16],"qx/decoration/Modern/groupbox/groupbox-b
+r.png":[4,4,"png","qx","qx/decoration/Modern/groupbox-tb-combined.png",0,-8],"qx
+/decoration/Modern/groupbox/groupbox-c.png":[40,51,"png","qx"],"qx/decoration/Mo
+dern/groupbox/groupbox-l.png":[4,51,"png","qx","qx/decoration/Modern/groupbox-lr
+-combined.png",-4,0],"qx/decoration/Modern/groupbox/groupbox-r.png":[4,51,"png",
+"qx","qx/decoration/Modern/groupbox-lr-combined.png",0,0],"qx/decoration/Modern/
+groupbox/groupbox-t.png":[4,4,"png","qx","qx/decoration/Modern/groupbox-tb-combi
+ned.png",0,-4],"qx/decoration/Modern/groupbox/groupbox-tl.png":[4,4,"png","qx","
+qx/decoration/Modern/groupbox-tb-combined.png",0,0],"qx/decoration/Modern/groupb
+ox/groupbox-tr.png":[4,4,"png","qx","qx/decoration/Modern/groupbox-tb-combined.p
+ng",0,-20],"qx/decoration/Modern/groupbox/groupbox.png":[255,59,"png","qx"],"qx/
+decoration/Modern/menu-background-combined.png":[80,49,"png","qx"],"qx/decoratio
+n/Modern/menu-checkradio-combined.gif":[64,7,"gif","qx"],"qx/decoration/Modern/m
+enu/background.png":[40,49,"png","qx","qx/decoration/Modern/menu-background-comb
+ined.png",-40,0],"qx/decoration/Modern/menu/bar-background.png":[40,20,"png","qx
+","qx/decoration/Modern/menu-background-combined.png",0,0],"qx/decoration/Modern
+/menu/checkbox-invert.gif":[16,7,"gif","qx","qx/decoration/Modern/menu-checkradi
+o-combined.gif",-16,0],"qx/decoration/Modern/menu/checkbox.gif":[16,7,"gif","qx"
+,"qx/decoration/Modern/menu-checkradio-combined.gif",-48,0],"qx/decoration/Moder
+n/menu/radiobutton-invert.gif":[16,5,"gif","qx","qx/decoration/Modern/menu-check
+[7m--More--(38%)[27mradio-combined.gif",-32,0],"qx/decoration/Modern/menu/radiobutton.gif":[16,5,"gi
+f","qx","qx/decoration/Modern/menu-checkradio-combined.gif",0,0],"qx/decoration/
+Modern/pane-lr-combined.png":[12,238,"png","qx"],"qx/decoration/Modern/pane-tb-c
+ombined.png":[6,36,"png","qx"],"qx/decoration/Modern/pane/pane-b.png":[6,6,"png"
+,"qx","qx/decoration/Modern/pane-tb-combined.png",0,-30],"qx/decoration/Modern/p
+ane/pane-bl.png":[6,6,"png","qx","qx/decoration/Modern/pane-tb-combined.png",0,-
+18],"qx/decoration/Modern/pane/pane-br.png":[6,6,"png","qx","qx/decoration/Moder
+n/pane-tb-combined.png",0,-12],"qx/decoration/Modern/pane/pane-c.png":[40,238,"p
+ng","qx"],"qx/decoration/Modern/pane/pane-l.png":[6,238,"png","qx","qx/decoratio
+n/Modern/pane-lr-combined.png",0,0],"qx/decoration/Modern/pane/pane-r.png":[6,23
+8,"png","qx","qx/decoration/Modern/pane-lr-combined.png",-6,0],"qx/decoration/Mo
+dern/pane/pane-t.png":[6,6,"png","qx","qx/decoration/Modern/pane-tb-combined.png
+",0,0],"qx/decoration/Modern/pane/pane-tl.png":[6,6,"png","qx","qx/decoration/Mo
+dern/pane-tb-combined.png",0,-24],"qx/decoration/Modern/pane/pane-tr.png":[6,6,"
+png","qx","qx/decoration/Modern/pane-tb-combined.png",0,-6],"qx/decoration/Moder
+n/pane/pane.png":[185,250,"png","qx"],"qx/decoration/Modern/scrollbar-combined.p
+ng":[54,12,"png","qx"],"qx/decoration/Modern/scrollbar/scrollbar-bg-horizontal.p
+ng":[76,15,"png","qx"],"qx/decoration/Modern/scrollbar/scrollbar-bg-pressed-hori
+zontal.png":[19,10,"png","qx"],"qx/decoration/Modern/scrollbar/scrollbar-bg-pres
+sed-vertical.png":[10,19,"png","qx"],"qx/decoration/Modern/scrollbar/scrollbar-b
+g-vertical.png":[15,76,"png","qx"],"qx/decoration/Modern/scrollbar/scrollbar-but
+ton-bg-horizontal.png":[12,10,"png","qx","qx/decoration/Modern/scrollbar-combine
+d.png",-34,0],"qx/decoration/Modern/scrollbar/scrollbar-button-bg-vertical.png":
+[7m--More--(39%)[27m[10,12,"png","qx","qx/decoration/Modern/scrollbar-combined.png",-6,0],"qx/decora
+tion/Modern/scrollbar/scrollbar-down.png":[6,4,"png","qx","qx/decoration/Modern/
+scrollbar-combined.png",-28,0],"qx/decoration/Modern/scrollbar/scrollbar-left.pn
+g":[4,6,"png","qx","qx/decoration/Modern/scrollbar-combined.png",-50,0],"qx/deco
+ration/Modern/scrollbar/scrollbar-right.png":[4,6,"png","qx","qx/decoration/Mode
+rn/scrollbar-combined.png",-46,0],"qx/decoration/Modern/scrollbar/scrollbar-up.p
+ng":[6,4,"png","qx","qx/decoration/Modern/scrollbar-combined.png",0,0],"qx/decor
+ation/Modern/scrollbar/slider-knob-background.png":[12,10,"png","qx","qx/decorat
+ion/Modern/scrollbar-combined.png",-16,0],"qx/decoration/Modern/selection.png":[
+110,20,"png","qx"],"qx/decoration/Modern/shadow-lr-combined.png":[30,382,"png","
+qx"],"qx/decoration/Modern/shadow-small-lr-combined.png":[10,136,"png","qx"],"qx
+/decoration/Modern/shadow-small-tb-combined.png":[5,30,"png","qx"],"qx/decoratio
+n/Modern/shadow-tb-combined.png":[15,90,"png","qx"],"qx/decoration/Modern/shadow
+/shadow-b.png":[15,15,"png","qx","qx/decoration/Modern/shadow-tb-combined.png",0
+,-30],"qx/decoration/Modern/shadow/shadow-bl.png":[15,15,"png","qx","qx/decorati
+on/Modern/shadow-tb-combined.png",0,-15],"qx/decoration/Modern/shadow/shadow-br.
+png":[15,15,"png","qx","qx/decoration/Modern/shadow-tb-combined.png",0,-45],"qx/
+decoration/Modern/shadow/shadow-c.png":[40,382,"png","qx"],"qx/decoration/Modern
+/shadow/shadow-l.png":[15,382,"png","qx","qx/decoration/Modern/shadow-lr-combine
+d.png",0,0],"qx/decoration/Modern/shadow/shadow-r.png":[15,382,"png","qx","qx/de
+coration/Modern/shadow-lr-combined.png",-15,0],"qx/decoration/Modern/shadow/shad
+ow-small-b.png":[5,5,"png","qx","qx/decoration/Modern/shadow-small-tb-combined.p
+ng",0,-20],"qx/decoration/Modern/shadow/shadow-small-bl.png":[5,5,"png","qx","qx
+[7m--More--(41%)[27m/decoration/Modern/shadow-small-tb-combined.png",0,-15],"qx/decoration/Modern/sh
+adow/shadow-small-br.png":[5,5,"png","qx","qx/decoration/Modern/shadow-small-tb-
+combined.png",0,-10],"qx/decoration/Modern/shadow/shadow-small-c.png":[40,136,"p
+ng","qx"],"qx/decoration/Modern/shadow/shadow-small-l.png":[5,136,"png","qx","qx
+/decoration/Modern/shadow-small-lr-combined.png",0,0],"qx/decoration/Modern/shad
+ow/shadow-small-r.png":[5,136,"png","qx","qx/decoration/Modern/shadow-small-lr-c
+ombined.png",-5,0],"qx/decoration/Modern/shadow/shadow-small-t.png":[5,5,"png","
+qx","qx/decoration/Modern/shadow-small-tb-combined.png",0,-5],"qx/decoration/Mod
+ern/shadow/shadow-small-tl.png":[5,5,"png","qx","qx/decoration/Modern/shadow-sma
+ll-tb-combined.png",0,0],"qx/decoration/Modern/shadow/shadow-small-tr.png":[5,5,
+"png","qx","qx/decoration/Modern/shadow-small-tb-combined.png",0,-25],"qx/decora
+tion/Modern/shadow/shadow-small.png":[114,146,"png","qx"],"qx/decoration/Modern/
+shadow/shadow-t.png":[15,15,"png","qx","qx/decoration/Modern/shadow-tb-combined.
+png",0,-60],"qx/decoration/Modern/shadow/shadow-tl.png":[15,15,"png","qx","qx/de
+coration/Modern/shadow-tb-combined.png",0,-75],"qx/decoration/Modern/shadow/shad
+ow-tr.png":[15,15,"png","qx","qx/decoration/Modern/shadow-tb-combined.png",0,0],
+"qx/decoration/Modern/shadow/shadow.png":[381,412,"png","qx"],"qx/decoration/Mod
+ern/splitpane-knobs-combined.png":[8,9,"png","qx"],"qx/decoration/Modern/splitpa
+ne/knob-horizontal.png":[1,8,"png","qx","qx/decoration/Modern/splitpane-knobs-co
+mbined.png",0,-1],"qx/decoration/Modern/splitpane/knob-vertical.png":[8,1,"png",
+"qx","qx/decoration/Modern/splitpane-knobs-combined.png",0,0],"qx/decoration/Mod
+ern/table-combined.png":[94,18,"png","qx"],"qx/decoration/Modern/table/ascending
+.png":[8,5,"png","qx","qx/decoration/Modern/table-combined.png",0,0],"qx/decorat
+[7m--More--(43%)[27mion/Modern/table/boolean-false.png":[14,14,"png","qx","qx/decoration/Modern/tabl
+e-combined.png",-80,0],"qx/decoration/Modern/table/boolean-true.png":[14,14,"png
+","qx","qx/decoration/Modern/table-combined.png",-26,0],"qx/decoration/Modern/ta
+ble/descending.png":[8,5,"png","qx","qx/decoration/Modern/table-combined.png",-1
+8,0],"qx/decoration/Modern/table/header-cell.png":[40,18,"png","qx","qx/decorati
+on/Modern/table-combined.png",-40,0],"qx/decoration/Modern/table/select-column-o
+rder.png":[10,9,"png","qx","qx/decoration/Modern/table-combined.png",-8,0],"qx/d
+ecoration/Modern/tabview-button-bottom-active-lr-combined.png":[10,14,"png","qx"
+],"qx/decoration/Modern/tabview-button-bottom-active-tb-combined.png":[5,30,"png
+","qx"],"qx/decoration/Modern/tabview-button-bottom-inactive-b-combined.png":[3,
+9,"png","qx"],"qx/decoration/Modern/tabview-button-bottom-inactive-lr-combined.p
+ng":[6,15,"png","qx"],"qx/decoration/Modern/tabview-button-bottom-inactive-t-com
+bined.png":[3,9,"png","qx"],"qx/decoration/Modern/tabview-button-left-active-lr-
+combined.png":[10,37,"png","qx"],"qx/decoration/Modern/tabview-button-left-activ
+e-tb-combined.png":[5,30,"png","qx"],"qx/decoration/Modern/tabview-button-left-i
+nactive-b-combined.png":[3,9,"png","qx"],"qx/decoration/Modern/tabview-button-le
+ft-inactive-lr-combined.png":[6,39,"png","qx"],"qx/decoration/Modern/tabview-but
+ton-left-inactive-t-combined.png":[3,9,"png","qx"],"qx/decoration/Modern/tabview
+-button-right-active-lr-combined.png":[10,37,"png","qx"],"qx/decoration/Modern/t
+abview-button-right-active-tb-combined.png":[5,30,"png","qx"],"qx/decoration/Mod
+ern/tabview-button-right-inactive-b-combined.png":[3,9,"png","qx"],"qx/decoratio
+n/Modern/tabview-button-right-inactive-lr-combined.png":[6,39,"png","qx"],"qx/de
+coration/Modern/tabview-button-right-inactive-t-combined.png":[3,9,"png","qx"],"
+[7m--More--(45%)[27mqx/decoration/Modern/tabview-button-top-active-lr-combined.png":[10,12,"png","qx
+"],"qx/decoration/Modern/tabview-button-top-active-tb-combined.png":[5,30,"png",
+"qx"],"qx/decoration/Modern/tabview-button-top-inactive-b-combined.png":[3,9,"pn
+g","qx"],"qx/decoration/Modern/tabview-button-top-inactive-lr-combined.png":[6,1
+5,"png","qx"],"qx/decoration/Modern/tabview-button-top-inactive-t-combined.png":
+[3,9,"png","qx"],"qx/decoration/Modern/tabview-pane-lr-combined.png":[60,2,"png"
+,"qx"],"qx/decoration/Modern/tabview-pane-tb-combined.png":[30,180,"png","qx"],"
+qx/decoration/Modern/tabview/tab-button-bottom-active-b.png":[5,5,"png","qx","qx
+/decoration/Modern/tabview-button-bottom-active-tb-combined.png",0,-10],"qx/deco
+ration/Modern/tabview/tab-button-bottom-active-bl.png":[5,5,"png","qx","qx/decor
+ation/Modern/tabview-button-bottom-active-tb-combined.png",0,-15],"qx/decoration
+/Modern/tabview/tab-button-bottom-active-br.png":[5,5,"png","qx","qx/decoration/
+Modern/tabview-button-bottom-active-tb-combined.png",0,-5],"qx/decoration/Modern
+/tabview/tab-button-bottom-active-c.png":[40,14,"png","qx"],"qx/decoration/Moder
+n/tabview/tab-button-bottom-active-l.png":[5,14,"png","qx","qx/decoration/Modern
+/tabview-button-bottom-active-lr-combined.png",0,0],"qx/decoration/Modern/tabvie
+w/tab-button-bottom-active-r.png":[5,14,"png","qx","qx/decoration/Modern/tabview
+-button-bottom-active-lr-combined.png",-5,0],"qx/decoration/Modern/tabview/tab-b
+utton-bottom-active-t.png":[5,5,"png","qx","qx/decoration/Modern/tabview-button-
+bottom-active-tb-combined.png",0,-20],"qx/decoration/Modern/tabview/tab-button-b
+ottom-active-tl.png":[5,5,"png","qx","qx/decoration/Modern/tabview-button-bottom
+-active-tb-combined.png",0,-25],"qx/decoration/Modern/tabview/tab-button-bottom-
+active-tr.png":[5,5,"png","qx","qx/decoration/Modern/tabview-button-bottom-activ
+[7m--More--(47%)[27me-tb-combined.png",0,0],"qx/decoration/Modern/tabview/tab-button-bottom-active.p
+ng":[49,24,"png","qx"],"qx/decoration/Modern/tabview/tab-button-bottom-inactive-
+b.png":[3,3,"png","qx","qx/decoration/Modern/tabview-button-bottom-inactive-b-co
+mbined.png",0,0],"qx/decoration/Modern/tabview/tab-button-bottom-inactive-bl.png
+":[3,3,"png","qx","qx/decoration/Modern/tabview-button-bottom-inactive-b-combine
+d.png",0,-6],"qx/decoration/Modern/tabview/tab-button-bottom-inactive-br.png":[3
+,3,"png","qx","qx/decoration/Modern/tabview-button-bottom-inactive-b-combined.pn
+g",0,-3],"qx/decoration/Modern/tabview/tab-button-bottom-inactive-c.png":[40,15,
+"png","qx"],"qx/decoration/Modern/tabview/tab-button-bottom-inactive-l.png":[3,1
+5,"png","qx","qx/decoration/Modern/tabview-button-bottom-inactive-lr-combined.pn
+g",-3,0],"qx/decoration/Modern/tabview/tab-button-bottom-inactive-r.png":[3,15,"
+png","qx","qx/decoration/Modern/tabview-button-bottom-inactive-lr-combined.png",
+0,0],"qx/decoration/Modern/tabview/tab-button-bottom-inactive-t.png":[3,3,"png",
+"qx","qx/decoration/Modern/tabview-button-bottom-inactive-t-combined.png",0,-3],
+"qx/decoration/Modern/tabview/tab-button-bottom-inactive-tl.png":[3,3,"png","qx"
+,"qx/decoration/Modern/tabview-button-bottom-inactive-t-combined.png",0,0],"qx/d
+ecoration/Modern/tabview/tab-button-bottom-inactive-tr.png":[3,3,"png","qx","qx/
+decoration/Modern/tabview-button-bottom-inactive-t-combined.png",0,-6],"qx/decor
+ation/Modern/tabview/tab-button-bottom-inactive.png":[45,21,"png","qx"],"qx/deco
+ration/Modern/tabview/tab-button-left-active-b.png":[5,5,"png","qx","qx/decorati
+on/Modern/tabview-button-left-active-tb-combined.png",0,-5],"qx/decoration/Moder
+n/tabview/tab-button-left-active-bl.png":[5,5,"png","qx","qx/decoration/Modern/t
+abview-button-left-active-tb-combined.png",0,0],"qx/decoration/Modern/tabview/ta
+[7m--More--(49%)[27mb-button-left-active-br.png":[5,5,"png","qx","qx/decoration/Modern/tabview-butto
+n-left-active-tb-combined.png",0,-25],"qx/decoration/Modern/tabview/tab-button-l
+eft-active-c.png":[40,37,"png","qx"],"qx/decoration/Modern/tabview/tab-button-le
+ft-active-l.png":[5,37,"png","qx","qx/decoration/Modern/tabview-button-left-acti
+ve-lr-combined.png",0,0],"qx/decoration/Modern/tabview/tab-button-left-active-r.
+png":[5,37,"png","qx","qx/decoration/Modern/tabview-button-left-active-lr-combin
+ed.png",-5,0],"qx/decoration/Modern/tabview/tab-button-left-active-t.png":[5,5,"
+png","qx","qx/decoration/Modern/tabview-button-left-active-tb-combined.png",0,-1
+5],"qx/decoration/Modern/tabview/tab-button-left-active-tl.png":[5,5,"png","qx",
+"qx/decoration/Modern/tabview-button-left-active-tb-combined.png",0,-10],"qx/dec
+oration/Modern/tabview/tab-button-left-active-tr.png":[5,5,"png","qx","qx/decora
+tion/Modern/tabview-button-left-active-tb-combined.png",0,-20],"qx/decoration/Mo
+dern/tabview/tab-button-left-active.png":[22,47,"png","qx"],"qx/decoration/Moder
+n/tabview/tab-button-left-inactive-b.png":[3,3,"png","qx","qx/decoration/Modern/
+tabview-button-left-inactive-b-combined.png",0,0],"qx/decoration/Modern/tabview/
+tab-button-left-inactive-bl.png":[3,3,"png","qx","qx/decoration/Modern/tabview-b
+utton-left-inactive-b-combined.png",0,-6],"qx/decoration/Modern/tabview/tab-butt
+on-left-inactive-br.png":[3,3,"png","qx","qx/decoration/Modern/tabview-button-le
+ft-inactive-b-combined.png",0,-3],"qx/decoration/Modern/tabview/tab-button-left-
+inactive-c.png":[40,39,"png","qx"],"qx/decoration/Modern/tabview/tab-button-left
+-inactive-l.png":[3,39,"png","qx","qx/decoration/Modern/tabview-button-left-inac
+tive-lr-combined.png",-3,0],"qx/decoration/Modern/tabview/tab-button-left-inacti
+ve-r.png":[3,39,"png","qx","qx/decoration/Modern/tabview-button-left-inactive-lr
+[7m--More--(51%)[27m-combined.png",0,0],"qx/decoration/Modern/tabview/tab-button-left-inactive-t.png
+":[3,3,"png","qx","qx/decoration/Modern/tabview-button-left-inactive-t-combined.
+png",0,-3],"qx/decoration/Modern/tabview/tab-button-left-inactive-tl.png":[3,3,"
+png","qx","qx/decoration/Modern/tabview-button-left-inactive-t-combined.png",0,0
+],"qx/decoration/Modern/tabview/tab-button-left-inactive-tr.png":[3,3,"png","qx"
+,"qx/decoration/Modern/tabview-button-left-inactive-t-combined.png",0,-6],"qx/de
+coration/Modern/tabview/tab-button-left-inactive.png":[20,45,"png","qx"],"qx/dec
+oration/Modern/tabview/tab-button-right-active-b.png":[5,5,"png","qx","qx/decora
+tion/Modern/tabview-button-right-active-tb-combined.png",0,-25],"qx/decoration/M
+odern/tabview/tab-button-right-active-bl.png":[5,5,"png","qx","qx/decoration/Mod
+ern/tabview-button-right-active-tb-combined.png",0,0],"qx/decoration/Modern/tabv
+iew/tab-button-right-active-br.png":[5,5,"png","qx","qx/decoration/Modern/tabvie
+w-button-right-active-tb-combined.png",0,-20],"qx/decoration/Modern/tabview/tab-
+button-right-active-c.png":[40,37,"png","qx"],"qx/decoration/Modern/tabview/tab-
+button-right-active-l.png":[5,37,"png","qx","qx/decoration/Modern/tabview-button
+-right-active-lr-combined.png",0,0],"qx/decoration/Modern/tabview/tab-button-rig
+ht-active-r.png":[5,37,"png","qx","qx/decoration/Modern/tabview-button-right-act
+ive-lr-combined.png",-5,0],"qx/decoration/Modern/tabview/tab-button-right-active
+-t.png":[5,5,"png","qx","qx/decoration/Modern/tabview-button-right-active-tb-com
+bined.png",0,-5],"qx/decoration/Modern/tabview/tab-button-right-active-tl.png":[
+5,5,"png","qx","qx/decoration/Modern/tabview-button-right-active-tb-combined.png
+",0,-15],"qx/decoration/Modern/tabview/tab-button-right-active-tr.png":[5,5,"png
+","qx","qx/decoration/Modern/tabview-button-right-active-tb-combined.png",0,-10]
+[7m--More--(52%)[27m,"qx/decoration/Modern/tabview/tab-button-right-active.png":[22,47,"png","qx"],"
+qx/decoration/Modern/tabview/tab-button-right-inactive-b.png":[3,3,"png","qx","q
+x/decoration/Modern/tabview-button-right-inactive-b-combined.png",0,-3],"qx/deco
+ration/Modern/tabview/tab-button-right-inactive-bl.png":[3,3,"png","qx","qx/deco
+ration/Modern/tabview-button-right-inactive-b-combined.png",0,0],"qx/decoration/
+Modern/tabview/tab-button-right-inactive-br.png":[3,3,"png","qx","qx/decoration/
+Modern/tabview-button-right-inactive-b-combined.png",0,-6],"qx/decoration/Modern
+/tabview/tab-button-right-inactive-c.png":[40,39,"png","qx"],"qx/decoration/Mode
+rn/tabview/tab-button-right-inactive-l.png":[3,39,"png","qx","qx/decoration/Mode
+rn/tabview-button-right-inactive-lr-combined.png",0,0],"qx/decoration/Modern/tab
+view/tab-button-right-inactive-r.png":[3,39,"png","qx","qx/decoration/Modern/tab
+view-button-right-inactive-lr-combined.png",-3,0],"qx/decoration/Modern/tabview/
+tab-button-right-inactive-t.png":[3,3,"png","qx","qx/decoration/Modern/tabview-b
+utton-right-inactive-t-combined.png",0,0],"qx/decoration/Modern/tabview/tab-butt
+on-right-inactive-tl.png":[3,3,"png","qx","qx/decoration/Modern/tabview-button-r
+ight-inactive-t-combined.png",0,-3],"qx/decoration/Modern/tabview/tab-button-rig
+ht-inactive-tr.png":[3,3,"png","qx","qx/decoration/Modern/tabview-button-right-i
+nactive-t-combined.png",0,-6],"qx/decoration/Modern/tabview/tab-button-right-ina
+ctive.png":[20,45,"png","qx"],"qx/decoration/Modern/tabview/tab-button-top-activ
+e-b.png":[5,5,"png","qx","qx/decoration/Modern/tabview-button-top-active-tb-comb
+ined.png",0,-20],"qx/decoration/Modern/tabview/tab-button-top-active-bl.png":[5,
+5,"png","qx","qx/decoration/Modern/tabview-button-top-active-tb-combined.png",0,
+-15],"qx/decoration/Modern/tabview/tab-button-top-active-br.png":[5,5,"png","qx"
+[7m--More--(54%)[27m,"qx/decoration/Modern/tabview-button-top-active-tb-combined.png",0,-10],"qx/dec
+oration/Modern/tabview/tab-button-top-active-c.png":[40,14,"png","qx"],"qx/decor
+ation/Modern/tabview/tab-button-top-active-l.png":[5,12,"png","qx","qx/decoratio
+n/Modern/tabview-button-top-active-lr-combined.png",0,0],"qx/decoration/Modern/t
+abview/tab-button-top-active-r.png":[5,12,"png","qx","qx/decoration/Modern/tabvi
+ew-button-top-active-lr-combined.png",-5,0],"qx/decoration/Modern/tabview/tab-bu
+tton-top-active-t.png":[5,5,"png","qx","qx/decoration/Modern/tabview-button-top-
+active-tb-combined.png",0,0],"qx/decoration/Modern/tabview/tab-button-top-active
+-tl.png":[5,5,"png","qx","qx/decoration/Modern/tabview-button-top-active-tb-comb
+ined.png",0,-25],"qx/decoration/Modern/tabview/tab-button-top-active-tr.png":[5,
+5,"png","qx","qx/decoration/Modern/tabview-button-top-active-tb-combined.png",0,
+-5],"qx/decoration/Modern/tabview/tab-button-top-active.png":[48,22,"png","qx"],
+"qx/decoration/Modern/tabview/tab-button-top-inactive-b.png":[3,3,"png","qx","qx
+/decoration/Modern/tabview-button-top-inactive-b-combined.png",0,-6],"qx/decorat
+ion/Modern/tabview/tab-button-top-inactive-bl.png":[3,3,"png","qx","qx/decoratio
+n/Modern/tabview-button-top-inactive-b-combined.png",0,-3],"qx/decoration/Modern
+/tabview/tab-button-top-inactive-br.png":[3,3,"png","qx","qx/decoration/Modern/t
+abview-button-top-inactive-b-combined.png",0,0],"qx/decoration/Modern/tabview/ta
+b-button-top-inactive-c.png":[40,15,"png","qx"],"qx/decoration/Modern/tabview/ta
+b-button-top-inactive-l.png":[3,15,"png","qx","qx/decoration/Modern/tabview-butt
+on-top-inactive-lr-combined.png",0,0],"qx/decoration/Modern/tabview/tab-button-t
+op-inactive-r.png":[3,15,"png","qx","qx/decoration/Modern/tabview-button-top-ina
+ctive-lr-combined.png",-3,0],"qx/decoration/Modern/tabview/tab-button-top-inacti
+[7m--More--(56%)[27mve-t.png":[3,3,"png","qx","qx/decoration/Modern/tabview-button-top-inactive-t-co
+mbined.png",0,-3],"qx/decoration/Modern/tabview/tab-button-top-inactive-tl.png":
+[3,3,"png","qx","qx/decoration/Modern/tabview-button-top-inactive-t-combined.png
+",0,0],"qx/decoration/Modern/tabview/tab-button-top-inactive-tr.png":[3,3,"png",
+"qx","qx/decoration/Modern/tabview-button-top-inactive-t-combined.png",0,-6],"qx
+/decoration/Modern/tabview/tab-button-top-inactive.png":[45,21,"png","qx"],"qx/d
+ecoration/Modern/tabview/tabview-pane-b.png":[30,30,"png","qx","qx/decoration/Mo
+dern/tabview-pane-tb-combined.png",0,-60],"qx/decoration/Modern/tabview/tabview-
+pane-bl.png":[30,30,"png","qx","qx/decoration/Modern/tabview-pane-tb-combined.pn
+g",0,0],"qx/decoration/Modern/tabview/tabview-pane-br.png":[30,30,"png","qx","qx
+/decoration/Modern/tabview-pane-tb-combined.png",0,-120],"qx/decoration/Modern/t
+abview/tabview-pane-c.png":[40,120,"png","qx"],"qx/decoration/Modern/tabview/tab
+view-pane-l.png":[30,2,"png","qx","qx/decoration/Modern/tabview-pane-lr-combined
+.png",0,0],"qx/decoration/Modern/tabview/tabview-pane-r.png":[30,2,"png","qx","q
+x/decoration/Modern/tabview-pane-lr-combined.png",-30,0],"qx/decoration/Modern/t
+abview/tabview-pane-t.png":[30,30,"png","qx","qx/decoration/Modern/tabview-pane-
+tb-combined.png",0,-150],"qx/decoration/Modern/tabview/tabview-pane-tl.png":[30,
+30,"png","qx","qx/decoration/Modern/tabview-pane-tb-combined.png",0,-30],"qx/dec
+oration/Modern/tabview/tabview-pane-tr.png":[30,30,"png","qx","qx/decoration/Mod
+ern/tabview-pane-tb-combined.png",0,-90],"qx/decoration/Modern/tabview/tabview-p
+ane.png":[185,250,"png","qx"],"qx/decoration/Modern/toolbar-combined.png":[80,13
+0,"png","qx"],"qx/decoration/Modern/toolbar/toolbar-gradient-blue.png":[40,130,"
+png","qx","qx/decoration/Modern/toolbar-combined.png",-40,0],"qx/decoration/Mode
+[7m--More--(58%)[27mrn/toolbar/toolbar-gradient.png":[40,130,"png","qx","qx/decoration/Modern/toolba
+r-combined.png",0,0],"qx/decoration/Modern/toolbar/toolbar-handle-knob.gif":[1,8
+,"gif","qx"],"qx/decoration/Modern/toolbar/toolbar-part.gif":[7,1,"gif","qx"],"q
+x/decoration/Modern/tooltip-error-lr-combined.png":[12,18,"png","qx"],"qx/decora
+tion/Modern/tooltip-error-tb-combined.png":[6,36,"png","qx"],"qx/decoration/Mode
+rn/tree-combined.png":[32,8,"png","qx"],"qx/decoration/Modern/tree/closed-select
+ed.png":[8,8,"png","qx","qx/decoration/Modern/tree-combined.png",-24,0],"qx/deco
+ration/Modern/tree/closed.png":[8,8,"png","qx","qx/decoration/Modern/tree-combin
+ed.png",-16,0],"qx/decoration/Modern/tree/open-selected.png":[8,8,"png","qx","qx
+/decoration/Modern/tree-combined.png",-8,0],"qx/decoration/Modern/tree/open.png"
+:[8,8,"png","qx","qx/decoration/Modern/tree-combined.png",0,0],"qx/decoration/Mo
+dern/window-captionbar-buttons-combined.png":[108,9,"png","qx"],"qx/decoration/M
+odern/window-captionbar-lr-active-combined.png":[12,9,"png","qx"],"qx/decoration
+/Modern/window-captionbar-lr-inactive-combined.png":[12,9,"png","qx"],"qx/decora
+tion/Modern/window-captionbar-tb-active-combined.png":[6,36,"png","qx"],"qx/deco
+ration/Modern/window-captionbar-tb-inactive-combined.png":[6,36,"png","qx"],"qx/
+decoration/Modern/window-statusbar-lr-combined.png":[8,7,"png","qx"],"qx/decorat
+ion/Modern/window-statusbar-tb-combined.png":[4,24,"png","qx"],"qx/decoration/Mo
+dern/window/captionbar-active-b.png":[6,6,"png","qx","qx/decoration/Modern/windo
+w-captionbar-tb-active-combined.png",0,-18],"qx/decoration/Modern/window/caption
+bar-active-bl.png":[6,6,"png","qx","qx/decoration/Modern/window-captionbar-tb-ac
+tive-combined.png",0,-24],"qx/decoration/Modern/window/captionbar-active-br.png"
+:[6,6,"png","qx","qx/decoration/Modern/window-captionbar-tb-active-combined.png"
+[7m--More--(60%)[27m,0,-12],"qx/decoration/Modern/window/captionbar-active-c.png":[40,9,"png","qx"],
+"qx/decoration/Modern/window/captionbar-active-l.png":[6,9,"png","qx","qx/decora
+tion/Modern/window-captionbar-lr-active-combined.png",-6,0],"qx/decoration/Moder
+n/window/captionbar-active-r.png":[6,9,"png","qx","qx/decoration/Modern/window-c
+aptionbar-lr-active-combined.png",0,0],"qx/decoration/Modern/window/captionbar-a
+ctive-t.png":[6,6,"png","qx","qx/decoration/Modern/window-captionbar-tb-active-c
+ombined.png",0,-6],"qx/decoration/Modern/window/captionbar-active-tl.png":[6,6,"
+png","qx","qx/decoration/Modern/window-captionbar-tb-active-combined.png",0,0],"
+qx/decoration/Modern/window/captionbar-active-tr.png":[6,6,"png","qx","qx/decora
+tion/Modern/window-captionbar-tb-active-combined.png",0,-30],"qx/decoration/Mode
+rn/window/captionbar-active.png":[69,21,"png","qx"],"qx/decoration/Modern/window
+/captionbar-inactive-b.png":[6,6,"png","qx","qx/decoration/Modern/window-caption
+bar-tb-inactive-combined.png",0,-24],"qx/decoration/Modern/window/captionbar-ina
+ctive-bl.png":[6,6,"png","qx","qx/decoration/Modern/window-captionbar-tb-inactiv
+e-combined.png",0,-6],"qx/decoration/Modern/window/captionbar-inactive-br.png":[
+6,6,"png","qx","qx/decoration/Modern/window-captionbar-tb-inactive-combined.png"
+,0,-30],"qx/decoration/Modern/window/captionbar-inactive-c.png":[40,9,"png","qx"
+],"qx/decoration/Modern/window/captionbar-inactive-l.png":[6,9,"png","qx","qx/de
+coration/Modern/window-captionbar-lr-inactive-combined.png",0,0],"qx/decoration/
+Modern/window/captionbar-inactive-r.png":[6,9,"png","qx","qx/decoration/Modern/w
+indow-captionbar-lr-inactive-combined.png",-6,0],"qx/decoration/Modern/window/ca
+ptionbar-inactive-t.png":[6,6,"png","qx","qx/decoration/Modern/window-captionbar
+-tb-inactive-combined.png",0,0],"qx/decoration/Modern/window/captionbar-inactive
+[7m--More--(62%)[27m-tl.png":[6,6,"png","qx","qx/decoration/Modern/window-captionbar-tb-inactive-com
+bined.png",0,-12],"qx/decoration/Modern/window/captionbar-inactive-tr.png":[6,6,
+"png","qx","qx/decoration/Modern/window-captionbar-tb-inactive-combined.png",0,-
+18],"qx/decoration/Modern/window/captionbar-inactive.png":[69,21,"png","qx"],"qx
+/decoration/Modern/window/close-active-hovered.png":[9,9,"png","qx","qx/decorati
+on/Modern/window-captionbar-buttons-combined.png",-27,0],"qx/decoration/Modern/w
+indow/close-active.png":[9,9,"png","qx","qx/decoration/Modern/window-captionbar-
+buttons-combined.png",-9,0],"qx/decoration/Modern/window/close-inactive.png":[9,
+9,"png","qx","qx/decoration/Modern/window-captionbar-buttons-combined.png",-90,0
+],"qx/decoration/Modern/window/maximize-active-hovered.png":[9,9,"png","qx","qx/
+decoration/Modern/window-captionbar-buttons-combined.png",-18,0],"qx/decoration/
+Modern/window/maximize-active.png":[9,9,"png","qx","qx/decoration/Modern/window-
+captionbar-buttons-combined.png",-81,0],"qx/decoration/Modern/window/maximize-in
+active.png":[9,9,"png","qx","qx/decoration/Modern/window-captionbar-buttons-comb
+ined.png",-54,0],"qx/decoration/Modern/window/minimize-active-hovered.png":[9,9,
+"png","qx","qx/decoration/Modern/window-captionbar-buttons-combined.png",-63,0],
+"qx/decoration/Modern/window/minimize-active.png":[9,9,"png","qx","qx/decoration
+/Modern/window-captionbar-buttons-combined.png",-72,0],"qx/decoration/Modern/win
+dow/minimize-inactive.png":[9,9,"png","qx","qx/decoration/Modern/window-captionb
+ar-buttons-combined.png",-36,0],"qx/decoration/Modern/window/restore-active-hove
+red.png":[9,8,"png","qx","qx/decoration/Modern/window-captionbar-buttons-combine
+d.png",0,0],"qx/decoration/Modern/window/restore-active.png":[9,8,"png","qx","qx
+/decoration/Modern/window-captionbar-buttons-combined.png",-99,0],"qx/decoration
+[7m--More--(63%)[27m/Modern/window/restore-inactive.png":[9,8,"png","qx","qx/decoration/Modern/windo
+w-captionbar-buttons-combined.png",-45,0],"qx/decoration/Modern/window/statusbar
+-b.png":[4,4,"png","qx","qx/decoration/Modern/window-statusbar-tb-combined.png",
+0,-16],"qx/decoration/Modern/window/statusbar-bl.png":[4,4,"png","qx","qx/decora
+tion/Modern/window-statusbar-tb-combined.png",0,-20],"qx/decoration/Modern/windo
+w/statusbar-br.png":[4,4,"png","qx","qx/decoration/Modern/window-statusbar-tb-co
+mbined.png",0,-4],"qx/decoration/Modern/window/statusbar-c.png":[40,7,"png","qx"
+],"qx/decoration/Modern/window/statusbar-l.png":[4,7,"png","qx","qx/decoration/M
+odern/window-statusbar-lr-combined.png",-4,0],"qx/decoration/Modern/window/statu
+sbar-r.png":[4,7,"png","qx","qx/decoration/Modern/window-statusbar-lr-combined.p
+ng",0,0],"qx/decoration/Modern/window/statusbar-t.png":[4,4,"png","qx","qx/decor
+ation/Modern/window-statusbar-tb-combined.png",0,0],"qx/decoration/Modern/window
+/statusbar-tl.png":[4,4,"png","qx","qx/decoration/Modern/window-statusbar-tb-com
+bined.png",0,-8],"qx/decoration/Modern/window/statusbar-tr.png":[4,4,"png","qx",
+"qx/decoration/Modern/window-statusbar-tb-combined.png",0,-12],"qx/decoration/Mo
+dern/window/statusbar.png":[369,15,"png","qx"],"qx/icon/Oxygen/16/actions/dialog
+-cancel.png":[16,16,"png","qx"],"qx/icon/Oxygen/16/actions/dialog-ok.png":[16,16
+,"png","qx"],"qx/icon/Oxygen/16/actions/view-refresh.png":[16,16,"png","qx"],"qx
+/icon/Oxygen/16/actions/window-close.png":[16,16,"png","qx"],"qx/icon/Oxygen/16/
+apps/office-calendar.png":[16,16,"png","qx"],"qx/icon/Oxygen/16/mimetypes/text-p
+lain.png":[16,16,"png","qx"],"qx/icon/Oxygen/16/places/folder-open.png":[16,16,"
+png","qx"],"qx/icon/Oxygen/16/places/folder.png":[16,16,"png","qx"],"qx/icon/Tan
+go/16/actions/dialog-cancel.png":[16,16,"png","qx"],"qx/icon/Tango/16/actions/di
+[7m--More--(65%)[27malog-ok.png":[16,16,"png","qx"],"qx/icon/Tango/16/actions/view-refresh.png":[16,
+16,"png","qx"],"qx/icon/Tango/16/actions/window-close.png":[16,16,"png","qx"],"q
+x/icon/Tango/16/apps/office-calendar.png":[16,16,"png","qx"],"qx/icon/Tango/16/a
+pps/utilities-color-chooser.png":[16,16,"png","qx"],"qx/icon/Tango/16/mimetypes/
+office-document.png":[16,16,"png","qx"],"qx/icon/Tango/16/places/folder-open.png
+":[16,16,"png","qx"],"qx/icon/Tango/16/places/folder.png":[16,16,"png","qx"],"qx
+/icon/Tango/22/mimetypes/office-document.png":[22,22,"png","qx"],"qx/icon/Tango/
+22/places/folder-open.png":[22,22,"png","qx"],"qx/icon/Tango/22/places/folder.pn
+g":[22,22,"png","qx"],"qx/icon/Tango/32/mimetypes/office-document.png":[32,32,"p
+ng","qx"],"qx/icon/Tango/32/places/folder-open.png":[32,32,"png","qx"],"qx/icon/
+Tango/32/places/folder.png":[32,32,"png","qx"],"qx/static/blank.gif":[1,1,"gif",
+"qx"],"qx/static/blank.html":"qx","qx/test/xmlhttp/php_version.php":"qx","rmc/te
+st.png":[32,32,"png","rmc"]};
+qx.$$translations = {"C":{},"en":{}};
+qx.$$locales = {"C":{"alternateQuotationEnd":"’","alternateQuotationStart":"‘","
+cldr_am":"AM","cldr_date_format_full":"EEEE, MMMM d, y","cldr_date_format_long":
+"MMMM d, y","cldr_date_format_medium":"MMM d, y","cldr_date_format_short":"M/d/y
+y","cldr_date_time_format_EEEd":"d EEE","cldr_date_time_format_Hm":"H:mm","cldr_
+date_time_format_Hms":"H:mm:ss","cldr_date_time_format_M":"L","cldr_date_time_fo
+rmat_MEd":"E, M/d","cldr_date_time_format_MMM":"LLL","cldr_date_time_format_MMME
+d":"E, MMM d","cldr_date_time_format_MMMMEd":"E, MMMM d","cldr_date_time_format_
+MMMMd":"MMMM d","cldr_date_time_format_MMMd":"MMM d","cldr_date_time_format_Md":
+"M/d","cldr_date_time_format_d":"d","cldr_date_time_format_hm":"h:mm a","cldr_da
+[7m--More--(67%)[27mte_time_format_ms":"mm:ss","cldr_date_time_format_y":"y","cldr_date_time_format_
+yM":"M/yyyy","cldr_date_time_format_yMEd":"EEE, M/d/yyyy","cldr_date_time_format
+_yMMM":"MMM y","cldr_date_time_format_yMMMEd":"EEE, MMM d, y","cldr_date_time_fo
+rmat_yMMMM":"MMMM y","cldr_date_time_format_yQ":"Q yyyy","cldr_date_time_format_
+yQQQ":"QQQ y","cldr_day_format_abbreviated_fri":"Fri","cldr_day_format_abbreviat
+ed_mon":"Mon","cldr_day_format_abbreviated_sat":"Sat","cldr_day_format_abbreviat
+ed_sun":"Sun","cldr_day_format_abbreviated_thu":"Thu","cldr_day_format_abbreviat
+ed_tue":"Tue","cldr_day_format_abbreviated_wed":"Wed","cldr_day_format_narrow_fr
+i":"F","cldr_day_format_narrow_mon":"M","cldr_day_format_narrow_sat":"S","cldr_d
+ay_format_narrow_sun":"S","cldr_day_format_narrow_thu":"T","cldr_day_format_narr
+ow_tue":"T","cldr_day_format_narrow_wed":"W","cldr_day_format_wide_fri":"Friday"
+,"cldr_day_format_wide_mon":"Monday","cldr_day_format_wide_sat":"Saturday","cldr
+_day_format_wide_sun":"Sunday","cldr_day_format_wide_thu":"Thursday","cldr_day_f
+ormat_wide_tue":"Tuesday","cldr_day_format_wide_wed":"Wednesday","cldr_day_stand
+-alone_abbreviated_fri":"Fri","cldr_day_stand-alone_abbreviated_mon":"Mon","cldr
+_day_stand-alone_abbreviated_sat":"Sat","cldr_day_stand-alone_abbreviated_sun":"
+Sun","cldr_day_stand-alone_abbreviated_thu":"Thu","cldr_day_stand-alone_abbrevia
+ted_tue":"Tue","cldr_day_stand-alone_abbreviated_wed":"Wed","cldr_day_stand-alon
+e_narrow_fri":"F","cldr_day_stand-alone_narrow_mon":"M","cldr_day_stand-alone_na
+rrow_sat":"S","cldr_day_stand-alone_narrow_sun":"S","cldr_day_stand-alone_narrow
+_thu":"T","cldr_day_stand-alone_narrow_tue":"T","cldr_day_stand-alone_narrow_wed
+":"W","cldr_day_stand-alone_wide_fri":"Friday","cldr_day_stand-alone_wide_mon":"
+Monday","cldr_day_stand-alone_wide_sat":"Saturday","cldr_day_stand-alone_wide_su
+[7m--More--(69%)[27mn":"Sunday","cldr_day_stand-alone_wide_thu":"Thursday","cldr_day_stand-alone_wid
+e_tue":"Tuesday","cldr_day_stand-alone_wide_wed":"Wednesday","cldr_month_format_
+abbreviated_1":"Jan","cldr_month_format_abbreviated_10":"Oct","cldr_month_format
+_abbreviated_11":"Nov","cldr_month_format_abbreviated_12":"Dec","cldr_month_form
+at_abbreviated_2":"Feb","cldr_month_format_abbreviated_3":"Mar","cldr_month_form
+at_abbreviated_4":"Apr","cldr_month_format_abbreviated_5":"May","cldr_month_form
+at_abbreviated_6":"Jun","cldr_month_format_abbreviated_7":"Jul","cldr_month_form
+at_abbreviated_8":"Aug","cldr_month_format_abbreviated_9":"Sep","cldr_month_form
+at_wide_1":"January","cldr_month_format_wide_10":"October","cldr_month_format_wi
+de_11":"November","cldr_month_format_wide_12":"December","cldr_month_format_wide
+_2":"February","cldr_month_format_wide_3":"March","cldr_month_format_wide_4":"Ap
+ril","cldr_month_format_wide_5":"May","cldr_month_format_wide_6":"June","cldr_mo
+nth_format_wide_7":"July","cldr_month_format_wide_8":"August","cldr_month_format
+_wide_9":"September","cldr_month_stand-alone_narrow_1":"J","cldr_month_stand-alo
+ne_narrow_10":"O","cldr_month_stand-alone_narrow_11":"N","cldr_month_stand-alone
+_narrow_12":"D","cldr_month_stand-alone_narrow_2":"F","cldr_month_stand-alone_na
+rrow_3":"M","cldr_month_stand-alone_narrow_4":"A","cldr_month_stand-alone_narrow
+_5":"M","cldr_month_stand-alone_narrow_6":"J","cldr_month_stand-alone_narrow_7":
+"J","cldr_month_stand-alone_narrow_8":"A","cldr_month_stand-alone_narrow_9":"S",
+"cldr_number_decimal_separator":".","cldr_number_group_separator":",","cldr_numb
+er_percent_format":"#,##0%","cldr_pm":"PM","cldr_time_format_full":"h:mm:ss a zz
+zz","cldr_time_format_long":"h:mm:ss a z","cldr_time_format_medium":"h:mm:ss a",
+"cldr_time_format_short":"h:mm a","quotationEnd":"”","quotationStart":"“"},"en":
+[7m--More--(71%)[27m{"alternateQuotationEnd":"’","alternateQuotationStart":"‘","cldr_am":"AM","cldr_
+date_format_full":"EEEE, MMMM d, y","cldr_date_format_long":"MMMM d, y","cldr_da
+te_format_medium":"MMM d, y","cldr_date_format_short":"M/d/yy","cldr_date_time_f
+ormat_EEEd":"d EEE","cldr_date_time_format_Hm":"H:mm","cldr_date_time_format_Hms
+":"H:mm:ss","cldr_date_time_format_M":"L","cldr_date_time_format_MEd":"E, M/d","
+cldr_date_time_format_MMM":"LLL","cldr_date_time_format_MMMEd":"E, MMM d","cldr_
+date_time_format_MMMMEd":"E, MMMM d","cldr_date_time_format_MMMMd":"MMMM d","cld
+r_date_time_format_MMMd":"MMM d","cldr_date_time_format_Md":"M/d","cldr_date_tim
+e_format_d":"d","cldr_date_time_format_hm":"h:mm a","cldr_date_time_format_ms":"
+mm:ss","cldr_date_time_format_y":"y","cldr_date_time_format_yM":"M/yyyy","cldr_d
+ate_time_format_yMEd":"EEE, M/d/yyyy","cldr_date_time_format_yMMM":"MMM y","cldr
+_date_time_format_yMMMEd":"EEE, MMM d, y","cldr_date_time_format_yMMMM":"MMMM y"
+,"cldr_date_time_format_yQ":"Q yyyy","cldr_date_time_format_yQQQ":"QQQ y","cldr_
+day_format_abbreviated_fri":"Fri","cldr_day_format_abbreviated_mon":"Mon","cldr_
+day_format_abbreviated_sat":"Sat","cldr_day_format_abbreviated_sun":"Sun","cldr_
+day_format_abbreviated_thu":"Thu","cldr_day_format_abbreviated_tue":"Tue","cldr_
+day_format_abbreviated_wed":"Wed","cldr_day_format_narrow_fri":"F","cldr_day_for
+mat_narrow_mon":"M","cldr_day_format_narrow_sat":"S","cldr_day_format_narrow_sun
+":"S","cldr_day_format_narrow_thu":"T","cldr_day_format_narrow_tue":"T","cldr_da
+y_format_narrow_wed":"W","cldr_day_format_wide_fri":"Friday","cldr_day_format_wi
+de_mon":"Monday","cldr_day_format_wide_sat":"Saturday","cldr_day_format_wide_sun
+":"Sunday","cldr_day_format_wide_thu":"Thursday","cldr_day_format_wide_tue":"Tue
+sday","cldr_day_format_wide_wed":"Wednesday","cldr_day_stand-alone_abbreviated_f
+[7m--More--(73%)[27mri":"Fri","cldr_day_stand-alone_abbreviated_mon":"Mon","cldr_day_stand-alone_abb
+reviated_sat":"Sat","cldr_day_stand-alone_abbreviated_sun":"Sun","cldr_day_stand
+-alone_abbreviated_thu":"Thu","cldr_day_stand-alone_abbreviated_tue":"Tue","cldr
+_day_stand-alone_abbreviated_wed":"Wed","cldr_day_stand-alone_narrow_fri":"F","c
+ldr_day_stand-alone_narrow_mon":"M","cldr_day_stand-alone_narrow_sat":"S","cldr_
+day_stand-alone_narrow_sun":"S","cldr_day_stand-alone_narrow_thu":"T","cldr_day_
+stand-alone_narrow_tue":"T","cldr_day_stand-alone_narrow_wed":"W","cldr_day_stan
+d-alone_wide_fri":"Friday","cldr_day_stand-alone_wide_mon":"Monday","cldr_day_st
+and-alone_wide_sat":"Saturday","cldr_day_stand-alone_wide_sun":"Sunday","cldr_da
+y_stand-alone_wide_thu":"Thursday","cldr_day_stand-alone_wide_tue":"Tuesday","cl
+dr_day_stand-alone_wide_wed":"Wednesday","cldr_month_format_abbreviated_1":"Jan"
+,"cldr_month_format_abbreviated_10":"Oct","cldr_month_format_abbreviated_11":"No
+v","cldr_month_format_abbreviated_12":"Dec","cldr_month_format_abbreviated_2":"F
+eb","cldr_month_format_abbreviated_3":"Mar","cldr_month_format_abbreviated_4":"A
+pr","cldr_month_format_abbreviated_5":"May","cldr_month_format_abbreviated_6":"J
+un","cldr_month_format_abbreviated_7":"Jul","cldr_month_format_abbreviated_8":"A
+ug","cldr_month_format_abbreviated_9":"Sep","cldr_month_format_wide_1":"January"
+,"cldr_month_format_wide_10":"October","cldr_month_format_wide_11":"November","c
+ldr_month_format_wide_12":"December","cldr_month_format_wide_2":"February","cldr
+_month_format_wide_3":"March","cldr_month_format_wide_4":"April","cldr_month_for
+mat_wide_5":"May","cldr_month_format_wide_6":"June","cldr_month_format_wide_7":"
+July","cldr_month_format_wide_8":"August","cldr_month_format_wide_9":"September"
+,"cldr_month_stand-alone_narrow_1":"J","cldr_month_stand-alone_narrow_10":"O","c
+[7m--More--(75%)[27mldr_month_stand-alone_narrow_11":"N","cldr_month_stand-alone_narrow_12":"D","cld
+r_month_stand-alone_narrow_2":"F","cldr_month_stand-alone_narrow_3":"M","cldr_mo
+nth_stand-alone_narrow_4":"A","cldr_month_stand-alone_narrow_5":"M","cldr_month_
+stand-alone_narrow_6":"J","cldr_month_stand-alone_narrow_7":"J","cldr_month_stan
+d-alone_narrow_8":"A","cldr_month_stand-alone_narrow_9":"S","cldr_number_decimal
+_separator":".","cldr_number_group_separator":",","cldr_number_percent_format":"
+#,##0%","cldr_pm":"PM","cldr_time_format_full":"h:mm:ss a zzzz","cldr_time_forma
+t_long":"h:mm:ss a z","cldr_time_format_medium":"h:mm:ss a","cldr_time_format_sh
+ort":"h:mm a","quotationEnd":"”","quotationStart":"“"}};
+qx.$$packageData = {};
+
+qx.$$loader = {
+  parts : {"boot":[0]},
+  uris : [["qx:qx/Bootstrap.js","qx:qx/core/Setting.js","qx:qx/bom/client/Engine
+.js","qx:qx/core/Variant.js","qx:qx/Theme.js","qx:qx/theme/icon/Tango.js","qx:qx
+/Interface.js","qx:qx/ui/decoration/IDecorator.js","qx:qx/Mixin.js","qx:qx/core/
+Aspect.js","qx:qx/lang/Core.js","qx:qx/core/Property.js","qx:qx/Class.js","qx:qx
+/data/MBinding.js","qx:qx/core/ObjectRegistry.js","qx:qx/lang/Array.js","qx:qx/l
+ang/Function.js","qx:qx/data/IListData.js","qx:qx/lang/Type.js","qx:qx/core/Asse
+rt.js","qx:qx/core/MAssert.js","qx:qx/dom/Node.js","qx:qx/bom/Event.js","qx:qx/e
+vent/Manager.js","qx:qx/event/Registration.js","qx:qx/lang/String.js","qx:qx/lan
+g/RingBuffer.js","qx:qx/log/appender/RingBuffer.js","qx:qx/dev/StackTrace.js","q
+x:qx/log/Logger.js","qx:qx/core/Object.js","qx:qx/ui/decoration/Abstract.js","qx
+[7m--More--(76%)[27m:qx/ui/decoration/MBackgroundImage.js","qx:qx/ui/decoration/Single.js","qx:qx/ui
+/decoration/Background.js","qx:qx/ui/decoration/Beveled.js","qx:qx/ui/decoration
+/Uniform.js","qx:qx/ui/decoration/Grid.js","qx:qx/theme/modern/Decoration.js","r
+mc:rmc/theme/Decoration.js","qx:qx/bom/client/Platform.js","qx:qx/bom/client/Sys
+tem.js","qx:qx/theme/modern/Font.js","rmc:rmc/theme/Font.js","qx:qx/theme/modern
+/Color.js","rmc:rmc/theme/Color.js","qx:qx/theme/modern/Appearance.js","rmc:rmc/
+theme/Appearance.js","rmc:rmc/theme/Theme.js","qx:qx/event/type/Event.js","qx:qx
+/event/type/Data.js","qx:qx/data/SingleValueBinding.js","qx:qx/type/BaseError.js
+","qx:qx/core/AssertionError.js","qx:qx/lang/JsonImpl.js","qx:qx/core/GlobalErro
+r.js","qx:qx/event/GlobalError.js","qx:qx/lang/Json.js","qx:qx/core/WindowError.
+js","qx:qx/lang/Date.js","qx:qx/core/ValidationError.js","qx:qx/event/IEventHand
+ler.js","qx:qx/util/ObjectPool.js","qx:qx/event/Pool.js","qx:qx/util/DisposeUtil
+.js","qx:qx/event/IEventDispatcher.js","qx:qx/event/dispatch/Direct.js","qx:qx/e
+vent/handler/Object.js","qx:qx/lang/Generics.js","qx:qx/util/ValueManager.js","q
+x:qx/util/AliasManager.js","qx:qx/bom/element/Decoration.js","qx:qx/bom/client/F
+eature.js","qx:qx/util/ResourceManager.js","qx:qx/bom/element/Overflow.js","qx:q
+x/bom/element/Clip.js","qx:qx/bom/element/Opacity.js","qx:qx/bom/element/Cursor.
+js","qx:qx/bom/element/BoxSizing.js","qx:qx/bom/element/Style.js","qx:qx/bom/Doc
+ument.js","qx:qx/bom/Viewport.js","qx:qx/io/ImageLoader.js","qx:qx/bom/element/B
+ackground.js","qx:qx/theme/manager/Color.js","qx:qx/util/ColorUtil.js","qx:qx/ui
+/decoration/css3/BorderImage.js","qx:qx/ui/decoration/GridDiv.js","qx:qx/event/h
+andler/Application.js","qx:qx/event/handler/Window.js","qx:qx/core/Init.js","qx:
+qx/application/IApplication.js","qx:qx/locale/MTranslation.js","qx:qx/applicatio
+[7m--More--(78%)[27mn/AbstractGui.js","qx:qx/application/Standalone.js","rmc:rmc/Application.js","qx
+:qx/event/type/Native.js","qx:qx/theme/manager/Meta.js","qx:qx/theme/manager/Dec
+oration.js","qx:qx/theme/manager/Font.js","qx:qx/bom/Font.js","qx:qx/lang/Object
+.js","qx:qx/theme/manager/Icon.js","qx:qx/theme/manager/Appearance.js","qx:qx/ui
+/tooltip/Manager.js","qx:qx/event/Timer.js","qx:qx/ui/core/MPlacement.js","qx:qx
+/ui/core/MChildrenHandling.js","qx:qx/ui/core/MLayoutHandling.js","qx:qx/ui/core
+/LayoutItem.js","qx:qx/ui/core/DecoratorFactory.js","qx:qx/ui/core/Widget.js","q
+x:qx/ui/container/Composite.js","qx:qx/ui/popup/Popup.js","qx:qx/ui/tooltip/Tool
+Tip.js","qx:qx/event/Idle.js","qx:qx/bom/element/Location.js","qx:qx/util/placem
+ent/Placement.js","qx:qx/util/placement/AbstractAxis.js","qx:qx/util/placement/D
+irectAxis.js","qx:qx/util/placement/KeepAlignAxis.js","qx:qx/util/placement/Best
+FitAxis.js","qx:qx/ui/core/queue/Layout.js","qx:qx/util/DeferredCallManager.js",
+"qx:qx/util/DeferredCall.js","qx:qx/html/Element.js","qx:qx/event/handler/UserAc
+tion.js","qx:qx/ui/core/queue/Manager.js","qx:qx/event/handler/Element.js","qx:q
+x/event/handler/Orientation.js","qx:qx/event/handler/Touch.js","qx:qx/event/hand
+ler/Capture.js","qx:qx/event/handler/Mouse.js","qx:qx/event/handler/Keyboard.js"
+,"qx:qx/event/handler/DragDrop.js","qx:qx/event/handler/Appear.js","qx:qx/event/
+dispatch/AbstractBubbling.js","qx:qx/event/dispatch/DomBubbling.js","qx:qx/bom/E
+lement.js","qx:qx/event/type/Orientation.js","qx:qx/event/type/Dom.js","qx:qx/ev
+ent/type/Touch.js","qx:qx/event/type/Tap.js","qx:qx/event/type/Swipe.js","qx:qx/
+event/type/Mouse.js","qx:qx/event/type/MouseWheel.js","qx:qx/bom/client/Browser.
+js","qx:qx/dom/Hierarchy.js","qx:qx/event/type/KeyInput.js","qx:qx/event/type/Ke
+ySequence.js","qx:qx/event/handler/Focus.js","qx:qx/bom/Selection.js","qx:qx/bom
+[7m--More--(80%)[27m/Range.js","qx:qx/util/StringSplit.js","qx:qx/event/type/Focus.js","qx:qx/bom/el
+ement/Attribute.js","qx:qx/event/type/Drag.js","qx:qx/event/dispatch/MouseCaptur
+e.js","qx:qx/bom/Selector.js","qx:qx/xml/Document.js","qx:qx/bom/element/Scroll.
+js","qx:qx/ui/core/queue/Widget.js","qx:qx/ui/core/queue/Visibility.js","qx:qx/u
+i/core/queue/Appearance.js","qx:qx/ui/core/queue/Dispose.js","qx:qx/html/Decorat
+or.js","qx:qx/ui/core/EventHandler.js","qx:qx/ui/layout/Abstract.js","qx:qx/bom/
+client/Locale.js","qx:qx/type/BaseString.js","qx:qx/locale/LocalizedString.js","
+qx:qx/locale/Manager.js","qx:qx/html/Image.js","qx:qx/ui/basic/Image.js","qx:qx/
+ui/core/DragDropCursor.js","qx:qx/ui/popup/Manager.js","qx:qx/ui/layout/Grow.js"
+,"qx:qx/ui/basic/Atom.js","qx:qx/ui/layout/Atom.js","qx:qx/ui/layout/Util.js","q
+x:qx/ui/form/IStringForm.js","qx:qx/ui/basic/Label.js","qx:qx/html/Label.js","qx
+:qx/bom/Label.js","qx:qx/bom/element/Dimension.js","qx:qx/ui/form/IForm.js","qx:
+qx/ui/window/MDesktop.js","qx:qx/ui/core/MBlocker.js","qx:qx/ui/root/Abstract.js
+","qx:qx/ui/root/Application.js","qx:qx/ui/core/Blocker.js","qx:qx/html/Blocker.
+js","qx:qx/ui/core/FocusHandler.js","qx:qx/bom/Stylesheet.js","qx:qx/ui/layout/C
+anvas.js","qx:qx/html/Root.js","qx:qx/log/appender/Util.js","qx:qx/log/appender/
+Native.js","qx:qx/log/appender/Console.js","qx:qx/ui/form/IExecutable.js","qx:qx
+/ui/core/MExecutable.js","qx:qx/ui/form/Button.js","qx:qx/ui/form/MModelSelectio
+n.js","qx:qx/ui/form/IModelSelection.js","qx:qx/ui/core/ISingleSelection.js","qx
+:qx/ui/core/MSingleSelectionHandling.js","qx:qx/ui/form/RadioGroup.js","qx:qx/da
+ta/marshal/MEventBubbling.js","qx:qx/data/Array.js","qx:qx/ui/core/SingleSelecti
+onManager.js","qx:qx/ui/core/ISingleSelectionProvider.js","qx:qx/io/PartLoader.j
+s","qx:qx/io/ScriptLoader.js","qx:qx/Part.js","qx:qx/io/part/Package.js","qx:qx/
+[7m--More--(82%)[27mio/part/Part.js","qx:qx/io/part/ClosurePart.js","qx:qx/ui/treevirtual/MTreePrimi
+tive.js","qx:qx/ui/table/ITableModel.js","qx:qx/ui/table/model/Abstract.js","qx:
+qx/ui/treevirtual/SimpleTreeDataModel.js","qx:qx/ui/table/Table.js","qx:qx/ui/ta
+ble/selection/Model.js","qx:qx/ui/treevirtual/TreeVirtual.js","qx:qx/ui/layout/V
+Box.js","qx:qx/ui/layout/HBox.js","qx:qx/ui/table/IRowRenderer.js","qx:qx/ui/tab
+le/rowrenderer/Default.js","qx:qx/ui/table/IColumnMenuButton.js","qx:qx/ui/form/
+MenuButton.js","qx:qx/ui/table/columnmenu/Button.js","qx:qx/ui/menu/Manager.js",
+"qx:qx/ui/core/MRemoteChildrenHandling.js","qx:qx/ui/menu/Menu.js","qx:qx/ui/men
+u/Layout.js","qx:qx/ui/menu/Separator.js","qx:qx/ui/menu/AbstractButton.js","qx:
+qx/ui/menu/ButtonLayout.js","qx:qx/ui/core/MRemoteLayoutHandling.js","qx:qx/ui/c
+ontainer/SlideBar.js","qx:qx/ui/menu/MenuSlideBar.js","qx:qx/ui/form/RepeatButto
+n.js","qx:qx/event/AcceleratingTimer.js","qx:qx/ui/core/scroll/ScrollPane.js","q
+x:qx/ui/form/HoverButton.js","qx:qx/ui/menubar/Button.js","qx:qx/ui/toolbar/Tool
+Bar.js","qx:qx/ui/core/Spacer.js","qx:qx/ui/toolbar/Separator.js","qx:qx/ui/tool
+bar/Part.js","qx:qx/ui/toolbar/PartContainer.js","qx:qx/ui/menu/Button.js","qx:q
+x/ui/table/IColumnMenuItem.js","qx:qx/ui/form/IBooleanForm.js","qx:qx/ui/menu/Ch
+eckBox.js","qx:qx/ui/table/columnmenu/MenuItem.js","qx:qx/ui/table/selection/Man
+ager.js","qx:qx/ui/table/ICellEditorFactory.js","qx:qx/ui/table/celleditor/Abstr
+actField.js","qx:qx/ui/table/celleditor/TextField.js","qx:qx/ui/table/IHeaderRen
+derer.js","qx:qx/ui/table/headerrenderer/Default.js","qx:qx/ui/table/ICellRender
+er.js","qx:qx/ui/table/cellrenderer/Abstract.js","qx:qx/ui/table/cellrenderer/De
+fault.js","qx:qx/ui/table/columnmodel/Basic.js","qx:qx/ui/form/MForm.js","qx:qx/
+ui/form/AbstractField.js","qx:qx/ui/form/TextField.js","qx:qx/html/Input.js","qx
+[7m--More--(84%)[27m:qx/event/handler/Input.js","qx:qx/bom/Input.js","qx:qx/ui/table/headerrenderer/
+HeaderCell.js","qx:qx/ui/layout/Grid.js","qx:qx/bom/String.js","qx:qx/util/Strin
+gEscape.js","qx:qx/util/format/IFormat.js","qx:qx/util/format/NumberFormat.js","
+qx:qx/locale/Number.js","qx:qx/util/format/DateFormat.js","qx:qx/locale/Date.js"
+,"qx:qx/ui/table/pane/Pane.js","qx:qx/ui/table/pane/Header.js","qx:qx/ui/core/sc
+roll/MScrollBarFactory.js","qx:qx/ui/table/pane/Scroller.js","qx:qx/ui/core/scro
+ll/IScrollBar.js","qx:qx/ui/core/scroll/NativeScrollBar.js","qx:qx/ui/core/scrol
+l/ScrollBar.js","qx:qx/ui/form/IRange.js","qx:qx/ui/form/INumberForm.js","qx:qx/
+ui/form/Slider.js","qx:qx/ui/core/scroll/ScrollSlider.js","qx:qx/ui/table/pane/C
+lipper.js","qx:qx/ui/table/pane/FocusIndicator.js","qx:qx/ui/table/pane/CellEven
+t.js","qx:qx/lang/Number.js","qx:qx/ui/window/IWindowManager.js","qx:qx/ui/windo
+w/Manager.js","qx:qx/ui/core/MResizable.js","qx:qx/ui/core/MMovable.js","qx:qx/u
+i/core/MContentPadding.js","qx:qx/ui/window/Window.js","qx:qx/ui/window/IDesktop
+.js","qx:qx/ui/table/pane/Model.js","qx:qx/ui/table/model/Simple.js","qx:qx/them
+e/classic/Appearance.js","qx:qx/ui/decoration/Double.js","qx:qx/theme/classic/De
+coration.js","qx:qx/theme/icon/Oxygen.js","qx:qx/theme/classic/Color.js","qx:qx/
+theme/classic/Font.js","qx:qx/theme/Classic.js","qx:qx/theme/Modern.js","qx:qx/u
+i/treevirtual/SimpleTreeDataCellRenderer.js","qx:qx/ui/treevirtual/DefaultDataCe
+llRenderer.js","qx:qx/ui/treevirtual/SimpleTreeDataRowRenderer.js","qx:qx/ui/tre
+evirtual/SelectionManager.js","qx:qx/ui/table/columnmodel/Resize.js","qx:qx/ui/c
+ore/ColumnData.js","qx:qx/ui/table/columnmodel/resizebehavior/Abstract.js","qx:q
+x/ui/table/columnmodel/resizebehavior/Default.js","qx:qx/util/TimerManager.js","
+qx:qx/event/message/Bus.js","qx:qx/event/message/Message.js","qx:qx/ui/virtual/c
+[7m--More--(85%)[27mell/IWidgetCell.js","qx:qx/ui/form/RadioButtonGroup.js","qx:qx/fx/Base.js","qx:q
+x/fx/effect/combination/Grow.js","qx:qx/fx/queue/Manager.js","qx:qx/fx/queue/Que
+ue.js","qx:qx/fx/Transition.js","qx:qx/fx/effect/core/Move.js","qx:qx/fx/effect/
+core/Scale.js","qx:qx/fx/effect/core/Parallel.js","qx:qx/io/remote/Exchange.js",
+"qx:qx/io/remote/transport/Abstract.js","qx:qx/io/remote/transport/Iframe.js","q
+x:qx/event/handler/Iframe.js","qx:qx/bom/Iframe.js","qx:qx/dom/Element.js","qx:q
+x/util/Json.js","qx:qx/io/remote/transport/Script.js","qx:qx/io/remote/transport
+/XmlHttp.js","qx:qx/io/remote/Response.js","qx:qx/fx/effect/combination/ColorFlo
+w.js","qx:qx/fx/effect/core/Highlight.js","qx:qx/ui/core/selection/Abstract.js",
+"qx:qx/ui/virtual/selection/Abstract.js","qx:qx/ui/virtual/selection/Row.js","qx
+:qx/ui/virtual/selection/Column.js","qx:qx/ui/virtual/core/Pane.js","qx:qx/ui/vi
+rtual/core/Axis.js","qx:qx/ui/virtual/core/ILayer.js","qx:qx/ui/virtual/core/Cel
+lEvent.js","qx:qx/type/BaseArray.js","qx:qx/ui/virtual/cell/ICell.js","qx:qx/ui/
+virtual/cell/Abstract.js","qx:qx/ui/virtual/cell/Cell.js","qx:qx/ui/virtual/cell
+/Date.js","qx:qx/ui/virtual/cell/CellStylesheet.js","qx:qx/util/PropertyUtil.js"
+,"qx:qx/ui/form/IColorForm.js","qx:qx/ui/control/ColorSelector.js","qx:qx/ui/gro
+upbox/GroupBox.js","qx:qx/ui/form/Spinner.js","qx:qx/ui/embed/AbstractIframe.js"
+,"qx:qx/ui/embed/ThemedIframe.js","qx:qx/ui/embed/Iframe.js","qx:qx/html/Iframe.
+js","qx:qx/xml/String.js","qx:qx/bom/element/Class.js","qx:qx/ui/list/provider/I
+ListProvider.js","qx:qx/ui/list/core/MWidgetController.js","qx:qx/ui/virtual/cor
+e/IWidgetCellProvider.js","qx:qx/ui/list/provider/WidgetProvider.js","qx:qx/ui/v
+irtual/layer/Abstract.js","qx:qx/ui/virtual/layer/WidgetCell.js","qx:qx/util/Del
+egate.js","qx:qx/ui/form/IModel.js","qx:qx/ui/form/MModelProperty.js","qx:qx/ui/
+[7m--More--(87%)[27mform/ListItem.js","qx:qx/ui/virtual/cell/AbstractWidget.js","qx:qx/ui/virtual/ce
+ll/WidgetCell.js","qx:qx/data/marshal/IMarshaler.js","qx:qx/data/marshal/Json.js
+","qx:qx/ui/core/scroll/AbstractScrollArea.js","qx:qx/ui/virtual/core/Scroller.j
+s","qx:qx/ui/list/core/MSelectionHandling.js","qx:qx/ui/list/List.js","qx:qx/ui/
+virtual/layer/AbstractBackground.js","qx:qx/ui/virtual/layer/Row.js","qx:qx/ui/c
+ore/selection/Widget.js","qx:qx/dev/unit/TestFunction.js","qx:qx/ui/table/model/
+Filtered.js","qx:qx/dev/unit/AbstractTestSuite.js","qx:qx/dev/unit/TestClass.js"
+,"qx:qx/dev/unit/TestCase.js","qx:qx/dev/unit/AsyncWrapper.js","qx:qx/ui/form/ID
+ateForm.js","qx:qx/ui/control/DateChooser.js","qx:qx/ui/toolbar/Button.js","qx:q
+x/data/store/Json.js","qx:qx/data/store/Jsonp.js","qx:qx/io/remote/Request.js","
+qx:qx/bom/client/Transport.js","qx:qx/io/remote/RequestQueue.js","qx:qx/ui/progr
+essive/renderer/table/cell/Abstract.js","qx:qx/ui/progressive/renderer/table/cel
+l/String.js","qx:qx/ui/splitpane/Blocker.js","qx:qx/dev/Profile.js","qx:qx/ui/fo
+rm/renderer/IFormRenderer.js","qx:qx/fx/effect/core/Fade.js","qx:qx/ui/splitpane
+/Pane.js","qx:qx/ui/splitpane/Slider.js","qx:qx/ui/splitpane/Splitter.js","qx:qx
+/ui/splitpane/VLayout.js","qx:qx/ui/splitpane/HLayout.js","qx:qx/ui/virtual/laye
+r/HtmlCell.js","qx:qx/ui/virtual/core/IHtmlCellProvider.js","qx:qx/ui/form/IRadi
+oItem.js","qx:qx/ui/groupbox/RadioGroupBox.js","qx:qx/ui/form/RadioButton.js","q
+x:qx/log/appender/RhinoConsole.js","qx:qx/ui/menubar/MenuBar.js","qx:qx/ui/form/
+SplitButton.js","qx:qx/ui/toolbar/SplitButton.js","qx:qx/ui/toolbar/MenuButton.j
+s","qx:qx/ui/core/selection/ScrollArea.js","qx:qx/ui/tree/SelectionManager.js","
+qx:qx/ui/tree/AbstractTreeItem.js","qx:qx/ui/tree/FolderOpenButton.js","qx:qx/ui
+/form/AbstractSelectBox.js","qx:qx/ui/form/ComboBox.js","qx:qx/ui/core/MMultiSel
+[7m--More--(89%)[27mectionHandling.js","qx:qx/ui/core/IMultiSelection.js","qx:qx/ui/form/List.js","q
+x:qx/ui/virtual/layer/CellSpanManager.js","qx:qx/ui/table/cellrenderer/Condition
+al.js","qx:qx/ui/table/cellrenderer/Replace.js","qx:qx/ui/progressive/model/Abst
+ract.js","qx:qx/ui/core/Command.js","qx:qx/bom/Shortcut.js","qx:qx/locale/Key.js
+","qx:qx/ui/form/Resetter.js","qx:qx/ui/embed/HtmlArea.js","qx:qx/bom/htmlarea/H
+tmlArea.js","qx:qx/bom/htmlarea/manager/Command.js","qx:qx/bom/htmlarea/manager/
+UndoRedo.js","qx:qx/event/handler/ElementResize.js","qx:qx/ui/core/MNativeOverfl
+ow.js","qx:qx/ui/table/headerrenderer/Icon.js","qx:qx/ui/form/validation/Manager
+.js","qx:qx/ui/form/validation/AsyncValidator.js","qx:qx/log/appender/Element.js
+","qx:qx/ui/form/renderer/AbstractRenderer.js","qx:qx/ui/form/renderer/Single.js
+","qx:qx/ui/menu/RadioButton.js","qx:qx/ui/tabview/TabView.js","qx:qx/ui/contain
+er/Stack.js","qx:qx/ui/tabview/Page.js","qx:qx/ui/tabview/TabButton.js","qx:qx/u
+i/form/renderer/SinglePlaceholder.js","qx:qx/ui/decoration/BoxDiv.js","qx:qx/ui/
+layout/LineSizeIterator.js","qx:qx/ui/form/SelectBox.js","qx:qx/bom/Request.js",
+"qx:qx/ui/form/ToggleButton.js","qx:qx/ui/container/Scroll.js","qx:qx/ui/virtual
+/cell/Number.js","qx:qx/bom/Lifecycle.js","qx:qx/ui/progressive/renderer/Abstrac
+t.js","qx:qx/fx/effect/core/Consecutive.js","qx:qx/bom/History.js","qx:qx/bom/Na
+tiveHistory.js","qx:qx/bom/IframeHistory.js","qx:qx/fx/effect/combination/Pulsat
+e.js","qx:qx/core/MBindTo.js","qx:qx/data/controller/MSelection.js","qx:qx/data/
+controller/List.js","qx:qx/html/Flash.js","qx:qx/bom/Flash.js","qx:qx/ui/virtual
+/form/List.js","qx:qx/ui/virtual/form/ListItemCell.js","qx:qx/ui/virtual/layer/G
+ridLines.js","qx:qx/fx/effect/combination/Shrink.js","qx:qx/ui/progressive/rende
+rer/table/cell/Icon.js","qx:qx/ui/progressive/renderer/table/cell/Image.js","qx:
+[7m--More--(91%)[27mqx/fx/effect/combination/Shake.js","qx:qx/ui/treevirtual/MNode.js","qx:qx/ui/tre
+evirtual/MFamily.js","qx:qx/dev/unit/TestResult.js","qx:qx/ui/progressive/render
+er/table/cell/Conditional.js","qx:qx/xml/Element.js","qx:qx/ui/virtual/form/ILis
+tDelegate.js","qx:qx/fx/effect/combination/Switch.js","qx:qx/bom/Html.js","qx:qx
+/ui/table/cellrenderer/Html.js","qx:qx/ui/virtual/cell/IWidgetCellDelegate.js","
+qx:qx/ui/embed/Canvas.js","qx:qx/html/Canvas.js","qx:qx/ui/virtual/cell/Html.js"
+,"qx:qx/ui/virtual/cell/AbstractImage.js","qx:qx/ui/virtual/cell/Boolean.js","qx
+:qx/ui/progressive/headfoot/Abstract.js","qx:qx/ui/progressive/headfoot/TableHea
+ding.js","qx:qx/ui/root/Page.js","qx:qx/ui/layout/Basic.js","qx:qx/fx/effect/com
+bination/Drop.js","qx:qx/dev/unit/RequirementError.js","qx:qx/ui/table/MTableCon
+textMenu.js","qx:qx/data/marshal/IMarshalerDelegate.js","qx:qx/data/store/IStore
+Delegate.js","qx:qx/ui/embed/Flash.js","qx:qx/ui/virtual/form/ListController.js"
+,"qx:qx/ui/form/renderer/Double.js","qx:qx/ui/table/model/Remote.js","qx:qx/fx/e
+ffect/core/Style.js","qx:qx/ui/form/CheckBox.js","qx:qx/ui/embed/Html.js","qx:qx
+/ui/layout/Flow.js","qx:qx/data/controller/IControllerDelegate.js","qx:qx/ui/pro
+gressive/renderer/table/Row.js","qx:qx/ui/progressive/renderer/table/cell/Defaul
+t.js","qx:qx/ui/virtual/layer/HtmlCellSpan.js","qx:qx/ui/control/ColorPopup.js",
+"qx:qx/ui/progressive/headfoot/Null.js","qx:qx/ui/window/Desktop.js","qx:qx/ui/f
+orm/DateField.js","qx:qx/util/fsm/State.js","qx:qx/util/fsm/FiniteStateMachine.j
+s","qx:qx/util/fsm/Transition.js","qx:qx/fx/effect/core/Scroll.js","qx:qx/ui/tab
+le/cellrenderer/String.js","qx:qx/ui/progressive/structure/Abstract.js","qx:qx/f
+x/effect/combination/Fold.js","qx:qx/ui/tree/Tree.js","qx:qx/ui/table/celleditor
+/ComboBox.js","qx:qx/bom/Cookie.js","qx:qx/fx/effect/combination/Puff.js","qx:qx
+[7m--More--(93%)[27m/util/ExtendedColor.js","qx:qx/ui/decoration/AbstractBox.js","qx:qx/ui/decoratio
+n/HBox.js","qx:qx/ui/virtual/selection/CellRectangle.js","qx:qx/ui/virtual/selec
+tion/CellLines.js","qx:qx/locale/String.js","qx:qx/util/StringBuilder.js","qx:qx
+/ui/progressive/structure/Default.js","qx:qx/application/Inline.js","qx:qx/data/
+store/Yql.js","qx:qx/ui/progressive/Progressive.js","qx:qx/ui/progressive/State.
+js","qx:qx/ui/table/cellrenderer/AbstractImage.js","qx:qx/ui/table/cellrenderer/
+Image.js","qx:qx/type/Array.js","qx:qx/dev/unit/MRequirements.js","qx:qx/applica
+tion/Native.js","qx:qx/bom/client/Flash.js","qx:qx/data/controller/Form.js","qx:
+qx/data/controller/Object.js","qx:qx/ui/container/Resizer.js","qx:qx/ui/progress
+ive/renderer/table/cell/Boolean.js","qx:qx/ui/progressive/model/Default.js","qx:
+qx/util/Serializer.js","qx:qx/ui/progressive/renderer/table/cell/Html.js","qx:qx
+/util/Validate.js","qx:qx/ui/toolbar/CheckBox.js","qx:qx/ui/toolbar/RadioButton.
+js","qx:qx/bom/Vml.js","qx:qx/ui/tree/TreeFolder.js","qx:qx/ui/layout/Dock.js","
+qx:qx/util/EditDistance.js","qx:qx/ui/table/cellrenderer/Number.js","qx:qx/ui/li
+st/core/IListDelegate.js","qx:qx/ui/table/cellrenderer/Dynamic.js","qx:qx/ui/gro
+upbox/CheckGroupBox.js","qx:qx/dev/ObjectSummary.js","qx:qx/dev/unit/JsUnitTestR
+esult.js","qx:qx/bom/Collection.js","qx:qx/ui/form/TextArea.js","qx:qx/ui/progre
+ssive/renderer/table/Widths.js","qx:qx/ui/virtual/layer/WidgetCellSpan.js","qx:q
+x/ui/tree/TreeFile.js","qx:qx/data/Conversion.js","qx:qx/ui/virtual/cell/Image.j
+s","qx:qx/dev/Pollution.js","qx:qx/ui/virtual/behavior/Prefetch.js","qx:qx/ui/ta
+ble/cellrenderer/Date.js","qx:qx/dev/unit/TestLoader.js","qx:qx/dev/unit/TestSui
+te.js","qx:qx/ui/table/celleditor/Dynamic.js","qx:qx/dev/unit/TestLoaderNative.j
+s","qx:qx/ui/form/Form.js","qx:qx/ui/virtual/cell/String.js","qx:qx/ui/indicator
+[7m--More--(95%)[27m/ProgressBar.js","qx:qx/util/Template.js","qx:qx/io/HttpRequest.js","qx:qx/util/
+Base64.js","qx:qx/fx/effect/core/Custom.js","qx:qx/ui/table/celleditor/CheckBox.
+js","qx:qx/ui/virtual/layer/Column.js","qx:qx/fx/effect/core/Property.js","qx:qx
+/ui/progressive/renderer/FunctionCaller.js","qx:qx/ui/decoration/VBox.js","qx:qx
+/util/Permutation.js","qx:qx/ui/table/celleditor/PasswordField.js","qx:qx/ui/for
+m/PasswordField.js","qx:qx/dev/unit/TestLoaderInline.js","qx:qx/log/appender/Pho
+neGap.js","qx:qx/ui/progressive/headfoot/Progress.js","qx:qx/ui/table/cellrender
+er/Boolean.js","qx:qx/bom/Blocker.js","qx:qx/bom/client/Version.js","qx:qx/io/re
+mote/Rpc.js","qx:qx/ui/virtual/selection/ISelectionDelegate.js","qx:qx/ui/table/
+cellrenderer/Debug.js","qx:qx/dev/Debug.js","qx:qx/ui/table/cellrenderer/Passwor
+d.js","qx:qx/data/controller/Tree.js","qx:qx/bom/client/Multimedia.js","qx:qx/de
+v/Tokenizer.js","qx:qx/bom/Window.js","qx:qx/ui/table/celleditor/SelectBox.js","
+qx:qx/ui/root/Inline.js"]],
+  urisBefore : [],
+  packageHashes : {"0":"0"},
+  boot : "boot",
+  closureParts : {},
+  bootIsInline : false,
+  addNoCacheParam : true,
+  
+  decodeUris : function(compressedUris)
+  {
+    var libs = qx.$$libraries;
+[7m--More--(96%)[27m    var uris = [];
+    for (var i=0; i<compressedUris.length; i++)
+    {
+      var uri = compressedUris[i].split(":");
+      var euri;
+      if (uri.length==2 && uri[0] in libs) {
+        var prefix = libs[uri[0]].sourceUri;
+        euri = prefix + "/" + uri[1];
+      } else {
+        euri = compressedUris[i];
+      }
+      if (qx.$$loader.addNoCacheParam) {
+        euri += "?nocache=" + Math.random();
+      }
+      
+      uris.push(euri);
+    }
+    return uris;      
+  }
+};  
+
+function loadScript(uri, callback) {
+  var elem = document.createElement("script");
+[7m--More--(96%)[27m  elem.charset = "utf-8";
+  elem.src = uri;
+  elem.onreadystatechange = elem.onload = function()
+  {
+    if (!this.readyState || this.readyState == "loaded" || this.readyState == "c
+omplete")
+    {
+      elem.onreadystatechange = elem.onload = null;
+      callback();
+    }
+  };
+  var head = document.getElementsByTagName("head")[0];
+  head.appendChild(elem);
+}
+
+var isWebkit = /AppleWebKit\/([^ ]+)/.test(navigator.userAgent);
+
+function loadScriptList(list, callback) {
+  if (list.length == 0) {
+    callback();
+    return;
+  }
+  loadScript(list.shift(), function() {
+[7m--More--(97%)[27m    if (isWebkit) {
+      // force asynchronous load
+      // Safari fails with an "maximum recursion depth exceeded" error if it is
+      // called sync.      
+      window.setTimeout(function() {
+        loadScriptList(list, callback);
+      }, 0);
+    } else {
+      loadScriptList(list, callback);
+    }
+  });
+}
+
+var fireContentLoadedEvent = function() {
+  qx.$$domReady = true;
+  document.removeEventListener('DOMContentLoaded', fireContentLoadedEvent, false
+);
+};
+if (document.addEventListener) {
+  document.addEventListener('DOMContentLoaded', fireContentLoadedEvent, false);
+}
+
+qx.$$loader.importPackageData = function (dataMap) {
+[7m--More--(98%)[27m  if (dataMap["resources"]){
+    var resMap = dataMap["resources"];
+    for (var k in resMap) qx.$$resources[k] = resMap[k];
+  }
+  if (dataMap["locales"]){
+    var locMap = dataMap["locales"];
+    var qxlocs = qx.$$locales;
+    for (var lang in locMap){
+      if (!qxlocs[lang]) qxlocs[lang] = locMap[lang];
+      else 
+        for (var k in locMap[lang]) qxlocs[lang][k] = locMap[lang][k];
+    }
+  }
+  if (dataMap["translations"]){
+    var trMap   = dataMap["translations"];
+    var qxtrans = qx.$$translations;
+    for (var lang in trMap){
+      if (!qxtrans[lang]) qxtrans[lang] = trMap[lang];
+      else 
+        for (var k in trMap[lang]) qxtrans[lang][k] = trMap[lang][k];
+    }
+  }
+}
+[7m--More--(98%)[27m[K
+qx.$$loader.signalStartup = function () 
+{
+  qx.$$loader.scriptLoaded = true;
+  if (window.qx && qx.event && qx.event.handler && qx.event.handler.Application)
+ {
+    qx.event.handler.Application.onScriptLoaded();
+    qx.$$loader.applicationHandlerReady = true; 
+  } else {
+    qx.$$loader.applicationHandlerReady = false;
+  }
+}
+
+qx.$$loader.init = function(){
+  var l=qx.$$loader;
+  if (l.urisBefore.length>0){
+    loadScriptList(l.urisBefore, function(){
+      l.initUris();
+    });
+  } else {
+    l.initUris();
+  }
+}
+[7m--More--(99%)[27m[K
+qx.$$loader.initUris = function(){
+  var l=qx.$$loader;
+  var bootPackageHash=l.packageHashes[l.parts[l.boot][0]];
+  if (l.bootIsInline){
+    l.importPackageData(qx.$$packageData[bootPackageHash]);
+    l.signalStartup();
+  } else {
+    loadScriptList(l.decodeUris(l.uris[l.parts[l.boot]]), function(){
+      // Opera needs this extra time to parse the scripts
+      window.setTimeout(function(){
+        l.importPackageData(qx.$$packageData[bootPackageHash] || {});
+        l.signalStartup();
+      }, 0);
+    });
+  }
+}
+})();
+
+qx.$$packageData['0']={};
+
+
+qx.$$loader.init();
+[7m--More--(99%)[27m[K
+]0;inocult@middleware-devel: ~/Projects/rmc/source/scriptinocult@middleware-devel:~/Projects/rmc/source/script$ cd ..
+]0;inocult@middleware-devel: ~/Projects/rmc/sourceinocult@middleware-devel:~/Projects/rmc/source$ ls
+[0m[01;34mclass[0m  index.html  [01;34mresource[0m  [01;34mscript[0m  [01;34mtranslation[0m  typescript
+]0;inocult@middleware-devel: ~/Projects/rmc/sourceinocult@middleware-devel:~/Projects/rmc/source$ cd ..
+]0;inocult@middleware-devel: ~/Projects/rmcinocult@middleware-devel:~/Projects/rmc$ ls
+config.json  [0m[01;32mgenerate.py[0m  Manifest.json  readme.txt  [01;34msource[0m
+]0;inocult@middleware-devel: ~/Projects/rmcinocult@middleware-devel:~/Projects/rmc$ cp -R /opt/
+google/                   gwt-2.2.0.zip             VBoxGuestAdditions-3.2.8/
+grails-1.3.6/             idea/                     
+gwt-2.2.0/                qooxdoo-1.3-sdk/          
+]0;inocult@middleware-devel: ~/Projects/rmcinocult@middleware-devel:~/Projects/rmc$ cp -R /opt/qooxdoo-1.3-sdk/ qo[Kooxdoo
+ls  
+]0;inocult@middleware-devel: ~/Projects/rmcinocult@middleware-devel:~/Projects/rmc$ 
+]0;inocult@middleware-devel: ~/Projects/rmcinocult@middleware-devel:~/Projects/rmc$ ls
+config.json  [0m[01;32mgenerate.py[0m  Manifest.json  [01;34mqooxdoo[0m  readme.txt  [01;34msource[0m
+]0;inocult@middleware-devel: ~/Projects/rmcinocult@middleware-devel:~/Projects/rmc$ vi config.json 
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"config.json" 82L, 1765C[>c[1;1H{
+  "name"    : "rmc",
+
+  "include" :
+  [
+    {[7;6H "path" : "${QOOXDOO_PATH}/tool/data/config/application.json"
+    }
+  ],
+
+  "export" :
+  [
+    "api",
+    "api-data",
+    "build",
+    "clean",
+    "distclean",
+    "fix",
+    "info",
+    "inspector",
+    "lint",
+    "migration",
+    "pretty",[24;63H1,1[11CTop[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[24;63H2[2;1H[?12l[?25h[?25l[24;63H3,0-1[3;1H[?12l[?25h[?25l[24;63H4,1  [4;1H[?12l[?25h[?25l[24;63H5[5;1H[?12l[?25h[?25l[24;63H6[6;1H[?12l[?25h[?25l[24;63H7[7;1H[?12l[?25h[?25l[24;63H8[8;1H[?12l[?25h[?25l[24;63H9[9;1H[?12l[?25h[?25l[24;63H10,0-1[10;1H[?12l[?25h[?25l[24;64H1,1  [11;1H[?12l[?25h[?25l[24;64H2[12;1H[?12l[?25h[?25l[24;64H3[13;1H[?12l[?25h[?25l[24;64H4[14;1H[?12l[?25h[?25l[24;64H5[15;1H[?12l[?25h[?25l[24;64H6[16;1H[?12l[?25h[?25l[24;64H7[17;1H[?12l[?25h[?25l[24;64H8[18;1H[?12l[?25h[?25l[24;64H9[19;1H[?12l[?25h[?25l[24;63H20[20;1H[?12l[?25h[?25l[24;64H1[21;1H[?12l[?25h[?25l[24;64H2[22;1H[?12l[?25h[?25l[24;64H3[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "profiling",[24;1H[K[24;63H24,1[11C1%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "source",[24;63H[K[24;63H25,1[11C3%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "source-all",[24;63H[K[24;63H26,1[11C5%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "simulation-build",[24;63H[K[24;63H27,1[11C6%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "simulation-run",[24;63H[K[24;63H28,1[11C8%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "test",[24;63H[K[24;63H29,1[10C10%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "test-source",[24;63H[K[24;63H30,1[10C11%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "translation"[24;63H[K[24;63H31,1[10C13%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H ],[24;63H[K[24;63H32,1[10C15%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H33,1[10C16%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H "default-job" : "source",[24;63H[K[24;63H34,1[10C18%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H35,0-1[8C20%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H "let" :[24;63H[K[24;63H36,1[10C22%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H {[24;63H[K[24;63H37,1[10C23%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "APPLICATION"  : "rmc",[24;63H[K[24;63H38,1[10C25%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "QOOXDOO_PATH" : "/opt/qooxdoo-1.3-sdk",[24;63H[K[24;63H39,1[10C27%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "QXTHEME"      : "rmc.theme.Theme",[24;63H[K[24;63H40,1[10C28%[23;1H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;4H "API_EXCLUDE"  : ["qx.test.*", "${APPLICATION}.theme.*", "${APPLICATION}.tess[23;1Ht.*", "${APPLICATION}.simulation.*"],[24;63H[K[24;63H41,1[10C31%[22;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "LOCALES"      : [ "en" ],[24;63H[K[24;63H42,1[10C33%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "CACHE"[7C : "${TMPDIR}/cache",[24;63H[K[24;63H43,1[10C35%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "ROOT"[8C : "."[24;63H[K[24;63H44,1[10C36%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H }[24;63H[K[24;63H45,1[10C38%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H46,0-1[8C40%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H // You only need to edit the remainder of this file, if you want to customize[24;63H[K[24;63H47,1[10C41%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H // specific jobs, or add own job definitions.[24;63H[K[24;63H48,1[10C43%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H49,0-1[8C45%[23;1H[?12l[?25h[?25l[24;64H8,1  [22;1H[?12l[?25h[?25l[24;64H7[21;1H[?12l[?25h[?25l[24;64H6,0-1[20;1H[?12l[?25h[?25l[24;64H5,1  [19;1H[?12l[?25h[?25l[24;64H4[18;1H[?12l[?25h[?25l[24;64H3[17;1H[?12l[?25h[?25l[24;64H2[16;1H[?12l[?25h[?25l[24;66H2[16;2H[?12l[?25h[?25l[24;66H3[16;3H[?12l[?25h[?25l[24;66H4[16;4H[?12l[?25h[?25l[24;66H5[16;5H[?12l[?25h[?25l[24;66H6[16;6H[?12l[?25h[?25l[24;66H7[16;7H[?12l[?25h[?25l[24;66H8[16;8H[?12l[?25h[?25l[24;66H9[16;9H[?12l[?25h[?25l[24;66H10[16;10H[?12l[?25h[?25l[24;67H1[16;11H[?12l[?25h[?25l[24;67H2[16;12H[?12l[?25h[?25l[24;67H3[16;13H[?12l[?25h[?25l[24;67H4[16;14H[?12l[?25h[?25l[24;67H5[16;15H[?12l[?25h[?25l[24;67H6[16;16H[?12l[?25h[?25l[24;67H7[16;17H[?12l[?25h[?25l[24;67H8[16;18H[?12l[?25h[?25l[24;67H9[16;19H[?12l[?25h[?25l[24;66H20[16;20H[?12l[?25h[?25l[24;67H1[16;21H[?12l[?25h[?25l [46m[[m "en" [46m][m[24;67H2[16;22H[?12l[?25h[?25l[ "en" ][24;67H3[16;23H[?12l[?25h[?25l[24;67H4[16;24H[?12l[?25h[?25l[24;67H5[16;25H[?12l[?25h[?25l[24;67H6[16;26H[?12l[?25h[?25l[24;67H7[16;27H[?12l[?25h[?25l[24;64H1[14;27H[?12l[?25h[?25l[24;64H0[13;27H[?12l[?25h[?25l[24;63H39[12;27H[?12l[?25h[?25l[24;67H8[12;28H[?12l[?25h[?25l[24;1H[1m-- INSERT --[m[24;63H[K[24;63H39,28[9C45%[12;28H[?12l[?25h[?25ltqooxdoo-1.3-sdk",[12;44H[K[24;67H7[12;27H[?12l[?25h[?25lpqooxdoo-1.3-sdk",[12;43H[K[24;67H6[12;26H[?12l[?25h[?25loqooxdoo-1.3-sdk",[12;42H[K[24;67H5[12;25H[?12l[?25h[?25l/qooxdoo-1.3-sdk",[12;41H[K[24;67H4[12;24H[?12l[?25h[?25l"qooxdoo-1.3-sdk",[12;40H[K[24;67H3[12;23H[?12l[?25h[?25l".qooxdoo-1.3-sdk",[24;67H4[12;24H[?12l[?25h[?25l..qooxdoo-1.3-sdk",[24;67H5[12;25H[?12l[?25h[?25l./qooxdoo-1.3-sdk",[24;67H6[12;26H[?12l[?25h[24;1H[K[12;25H[?25l[24;63H39,25[9C45%[12;25H[?12l[?25h[?25l[24;63H[K[24;1H:[?12l[?25hw[?25l[?12l[?25h[?25l"config.json" 82L, 1763C written[30C39,25[9C45%[24;63H[K[24;63H39,25[9C45%[12;25H[?12l[?25h[?25l[24;1H[K[24;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[24;2H[K[24;2H[?12l[?25h [?25l[61C39,25[9C45%[12;25H[?12l[?25h[?25l[24;67H6[12;26H[?12l[?25h[?25l[24;1H[1m-- INSERT --[m[24;63H[K[24;63H39,26[9C45%[12;26H[?12l[?25h[?25l.qooxdoo-1.3-sdk",[12;42H[K[24;67H5[12;25H[?12l[?25h[?25l.qooxdoo-1.3-sdk",[12;41H[K[24;67H4[12;24H[?12l[?25h[?25l"qooxdoo-1.3-sdk",[12;40H[K[24;67H3[12;23H[?12l[?25h[24;1H[K[12;22H[?25l[24;63H39,22[9C45%[12;22H[?12l[?25h[?25l[24;63H[K[24;1H:[?12l[?25hw[?25l[?12l[?25h[?25l"config.json" 82L, 1760C written[30C39,22[9C45%[24;63H[K[24;63H39,22[9C45%[12;22H[?12l[?25h[?25l[24;1H[K[24;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;inocult@middleware-devel: ~/Projects/rmcinocult@middleware-devel:~/Projects/rmc$ g[K./generate.py source-all
+Cannot find real generator script under: "/home/inocult/Projects/rmc/qooxdoo-1.3-sdk/tool/bin/generator.py"; aborting
+]0;inocult@middleware-devel: ~/Projects/rmcinocult@middleware-devel:~/Projects/rmc$ vi config.json 
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"config.json" 82L, 1760C[>c[1;1H{
+  "name"    : "rmc",
+
+  "include" :
+  [
+    {[7;6H "path" : "${QOOXDOO_PATH}/tool/data/config/application.json"
+    }
+  ],
+
+  "export" :
+  [
+    "api",
+    "api-data",
+    "build",
+    "clean",
+    "distclean",
+    "fix",
+    "info",
+    "inspector",
+    "lint",
+    "migration",
+    "pretty",[24;63H1,1[11CTop[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[24;63H2[2;1H[?12l[?25h[?25l[24;63H3,0-1[3;1H[?12l[?25h[?25l[24;63H4,1  [4;1H[?12l[?25h[?25l[24;63H5[5;1H[?12l[?25h[?25l[24;63H6[6;1H[?12l[?25h[?25l[24;63H7[7;1H[?12l[?25h[?25l[24;63H8[8;1H[?12l[?25h[?25l[24;63H9[9;1H[?12l[?25h[?25l[24;63H10,0-1[10;1H[?12l[?25h[?25l[24;64H1,1  [11;1H[?12l[?25h[?25l[24;64H2[12;1H[?12l[?25h[?25l[24;64H3[13;1H[?12l[?25h[?25l[24;64H4[14;1H[?12l[?25h[?25l[24;64H5[15;1H[?12l[?25h[?25l[24;64H6[16;1H[?12l[?25h[?25l[24;64H7[17;1H[?12l[?25h[?25l[24;64H8[18;1H[?12l[?25h[?25l[24;64H9[19;1H[?12l[?25h[?25l[24;63H20[20;1H[?12l[?25h[?25l[24;64H1[21;1H[?12l[?25h[?25l[24;64H2[22;1H[?12l[?25h[?25l[24;64H3[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "profiling",[24;1H[K[24;63H24,1[11C1%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "source",[24;63H[K[24;63H25,1[11C3%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "source-all",[24;63H[K[24;63H26,1[11C5%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "simulation-build",[24;63H[K[24;63H27,1[11C6%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "simulation-run",[24;63H[K[24;63H28,1[11C8%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "test",[24;63H[K[24;63H29,1[10C10%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "test-source",[24;63H[K[24;63H30,1[10C11%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "translation"[24;63H[K[24;63H31,1[10C13%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H ],[24;63H[K[24;63H32,1[10C15%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H33,1[10C16%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H "default-job" : "source",[24;63H[K[24;63H34,1[10C18%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H35,0-1[8C20%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H "let" :[24;63H[K[24;63H36,1[10C22%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H {[24;63H[K[24;63H37,1[10C23%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "APPLICATION"  : "rmc",[24;63H[K[24;63H38,1[10C25%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "QOOXDOO_PATH" : "qooxdoo-1.3-sdk",[24;63H[K[24;63H39,1[10C27%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "QXTHEME"      : "rmc.theme.Theme",[24;63H[K[24;63H40,1[10C28%[23;1H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;4H "API_EXCLUDE"  : ["qx.test.*", "${APPLICATION}.theme.*", "${APPLICATION}.tess[23;1Ht.*", "${APPLICATION}.simulation.*"],[24;63H[K[24;63H41,1[10C31%[22;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "LOCALES"      : [ "en" ],[24;63H[K[24;63H42,1[10C33%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "CACHE"[7C : "${TMPDIR}/cache",[24;63H[K[24;63H43,1[10C35%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;4H "ROOT"[8C : "."[24;63H[K[24;63H44,1[10C36%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H }[24;63H[K[24;63H45,1[10C38%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H46,0-1[8C40%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H // You only need to edit the remainder of this file, if you want to customize[24;63H[K[24;63H47,1[10C41%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;2H // specific jobs, or add own job definitions.[24;63H[K[24;63H48,1[10C43%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H49,0-1[8C45%[23;1H[?12l[?25h[?25l[24;64H8,1  [22;1H[?12l[?25h[?25l[24;64H7[21;1H[?12l[?25h[?25l[24;64H6,0-1[20;1H[?12l[?25h[?25l[24;64H5,1  [19;1H[?12l[?25h[?25l[24;64H4[18;1H[?12l[?25h[?25l[24;64H3[17;1H[?12l[?25h[?25l[24;64H2[16;1H[?12l[?25h[?25l[24;64H1[14;1H[?12l[?25h[?25l[24;64H0[13;1H[?12l[?25h[?25l[24;63H39[12;1H[?12l[?25h[?25l[24;66H2[12;2H[?12l[?25h[?25l[24;66H3[12;3H[?12l[?25h[?25l[24;66H4[12;4H[?12l[?25h[?25l[24;66H5[12;5H[?12l[?25h[?25l[24;66H6[12;6H[?12l[?25h[?25l[24;66H7[12;7H[?12l[?25h[?25l[24;66H8[12;8H[?12l[?25h[?25l[24;66H9[12;9H[?12l[?25h[?25l[24;66H10[12;10H[?12l[?25h[?25l[24;67H1[12;11H[?12l[?25h[?25l[24;67H2[12;12H[?12l[?25h[?25l[24;67H3[12;13H[?12l[?25h[?25l[24;67H4[12;14H[?12l[?25h[?25l[24;67H5[12;15H[?12l[?25h[?25l[24;67H6[12;16H[?12l[?25h[?25l[24;67H7[12;17H[?12l[?25h[?25l[24;67H8[12;18H[?12l[?25h[?25l[24;67H9[12;19H[?12l[?25h[?25l[24;66H20[12;20H[?12l[?25h[?25l[24;67H1[12;21H[?12l[?25h[?25l[24;67H2[12;22H[?12l[?25h[?25l[24;67H3[12;23H[?12l[?25h[?25l[24;67H4[12;24H[?12l[?25h[?25l[24;67H5[12;25H[?12l[?25h[?25l[24;67H6[12;26H[?12l[?25h[?25l[24;67H7[12;27H[?12l[?25h[?25l[24;67H8[12;28H[?12l[?25h[?25l[24;67H9[12;29H[?12l[?25h[?25l[24;66H30[12;30H[?12l[?25h[?25l[24;67H1[12;31H[?12l[?25h[?25l[24;67H2[12;32H[?12l[?25h[?25l[24;67H3[12;33H[?12l[?25h[?25l[24;67H4[12;34H[?12l[?25h[?25l[24;67H5[12;35H[?12l[?25h[?25l[24;67H6[12;36H[?12l[?25h[?25l[24;67H7[12;37H[?12l[?25h[?25l[24;67H8[12;38H[?12l[?25h[?25l[24;67H9[12;39H[?12l[?25h[?25l[24;67H8[12;38H[?12l[?25h[?25l[24;1H[1m-- INSERT --[m[24;63H[K[24;63H39,38[9C45%[12;38H[?12l[?25h[?25ld",[12;39H[K[24;67H7[12;37H[?12l[?25h[?25ls",[12;38H[K[24;67H6[12;36H[?12l[?25h[?25l-",[12;37H[K[24;67H5[12;35H[?12l[?25h[?25l3",[12;36H[K[24;67H4[12;34H[?12l[?25h[?25l.",[12;35H[K[24;67H3[12;33H[?12l[?25h[?25l1",[12;34H[K[24;67H2[12;32H[?12l[?25h[?25l-",[12;33H[K[24;67H1[12;31H[?12l[?25h[?25lo",[12;32H[K[24;67H0[12;30H[?12l[?25h[?25lo#",[24;67H1[12;31H[?12l[?25h[?25l#:",[24;67H2[12;32H[?12l[?25h[?25l#",[12;33H[K[24;67H1[12;31H[?12l[?25h[?25lo",[12;32H[K[24;67H0[12;30H[?12l[?25h[24;1H[K[12;29H[?25l[24;63H39,29[9C45%[12;29H[?12l[?25h[?25l[24;63H[K[24;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"config.json" 82L, 1752C written
+[?1l>[?12l[?25h[?1049l]0;inocult@middleware-devel: ~/Projects/rmcinocult@middleware-devel:~/Projects/rmc$ vi config.json ./generate.py source-all
+
+============================================================================
+    INITIALIZING: RMC
+============================================================================
+>>> Configuration: config.json
+>>> Resolving config includes...
+>>> Jobs: source-all
+>>> Resolving jobs...
+>>> Incorporating job defaults...
+>>> Resolving macros...
+>>> Resolving libs/manifests...
+
+============================================================================
+    EXECUTING: SOURCE-ALL::SOURCE-ALL-SCRIPT
+============================================================================
+>>> Initializing cache...
+>>> Scanning libraries...
+  - Scanning /home/inocult/Projects/rmc/qooxdoo/framework...
+  - Warning: Excludes may break code ([u'qx.test.*', u'rmc.test.*', u'rmc.simulation.*'])
+>>> Resolving dependencies
+  -  .******.************************************************************************.***.*.*.******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+  - Sorting 623 classes ...............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+>>> Generate source version...
+  - Processing translations for 2 locales 
+    - Package 0:  10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+  - Generating boot script...
+>>> Done
+]0;inocult@middleware-devel: ~/Projects/rmcinocult@middleware-devel:~/Projects/rmc$ ./generate.py source-all[K[K[K[K[K[K[K[K[K[Kapi
+
+============================================================================
+    INITIALIZING: RMC
+============================================================================
+>>> Configuration: config.json
+>>> Resolving config includes...
+>>> Jobs: api
+>>> Resolving jobs...
+>>> Incorporating job defaults...
+>>> Resolving macros...
+>>> Resolving libs/manifests...
+
+============================================================================
+    EXECUTING: API::APICONF::BUILD-RESOURCES
+============================================================================
+>>> Initializing cache...
+>>> Scanning libraries...
+  - Scanning /home/inocult/Projects/rmc/qooxdoo/component/apiviewer...
+>>> Resolving dependencies
+  -  **.*.*.*.***.*.*.*..*.*.....*.*.....*...*......**..*...........................................**.........**....**...*.......*..**.......*..*.......**.....**......***.*.......******..*.....****....***********************............*.*.......*....*...*....**........*.....*.........*.............*......................*........**.***...**.*.......*....******.***......**...*...*********.*
+  - Sorting 389 classes .....................................................................................................................................................................................................................................................................................................................................................................................................
+>>> Copying resources...
+>>> Done
+
+============================================================================
+    EXECUTING: API::APICONF::BUILD-SCRIPT
+============================================================================
+>>> Initializing cache...
+>>> Scanning libraries...
+>>> Resolving dependencies
+  -  .....................................................................................................................................................................................................................................................................................................................................................................................................
+  - Sorting 389 classes .....................................................................................................................................................................................................................................................................................................................................................................................................
+>>> Generate build version...
+  - Processing translations for 1 locales 
+    - Package 0:  10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+  - Generating packages...
+    - Compiling package #0: 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+  - Generating boot script...
+>>> Done
+
+============================================================================
+    EXECUTING: API::APICONF::BUILD-FILES
+============================================================================
+>>> Initializing cache...
+>>> Copying application files...
+>>> Done
+
+============================================================================
+    EXECUTING: API::APICONF::BUILD-DATA
+============================================================================
+>>> Initializing cache...
+>>> Scanning libraries...
+  - Warning: Excludes may break code ([u'qx.test.*', u'rmc.theme.*', u'rmc.test.*', u'rmc.simulation.*'])
+>>> Resolving dependencies
+  -  ..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+  - Sorting 618 classes ..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+>>> Generating API data...
+  - Loading class docs... 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+  - Loading package docs...
+  - Connecting classes...
+  - Generating search index...
+  - Saving data... 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+  - Saving index...
+>>> Done
+>>> Done
+]0;inocult@middleware-devel: ~/Projects/rmcinocult@middleware-devel:~/Projects/rmc$ cd qooxdoo/
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdooinocult@middleware-devel:~/Projects/rmc/qooxdoo$ ls
+[0m[01;34mapplication[0m  [01;34mdocumentation[0m  index.html   readme.txt  version.txt
+[01;34mcomponent[0m    [01;34mframework[0m      license.txt  [01;34mtool[0m
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdooinocult@middleware-devel:~/Projects/rmc/qooxdoo$ cd application/
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/applicationinocult@middleware-devel:~/Projects/rmc/qooxdoo/application$ ls
+[0m[01;34mdemobrowser[0m  [01;34mfeedreader[0m  [01;34mplayground[0m  [01;34mportal[0m  [01;34mshowcase[0m
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/applicationinocult@middleware-devel:~/Projects/rmc/qooxdoo/application$ cd feedreader/
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreaderinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader$ ls
+config.json  [0m[01;32mgenerate.py[0m  image.json  Manifest.json  [01;34msource[0m
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreaderinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader$ cd sourcee/
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/sourceinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source$ l s
+[0m[01;34mclass[0m  [01;32mindex.html[0m  [01;34mresource[0m  [01;34mtranslation[0m
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/sourceinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source$ c d class/
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/classinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass$ ls
+[0m[01;34mfeedreader[0m
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/classinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass$ cd feedreader/
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/class/feedreaderinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass/feedreader$ ls
+[0m[01;32mApplication.js[0m  __init__.js  [01;34mio[0m  [01;34mmodel[0m  [01;34mview[0m
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/class/feedreaderinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass/feedreader$ more Application.js 
+/* ************************************************************************
+
+   qooxdoo - the new era of web development
+
+   http://qooxdoo.org
+
+   Copyright:
+     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
+
+   License:
+     LGPL: http://www.gnu.org/licenses/lgpl.html
+     EPL: http://www.eclipse.org/org/documents/epl-v10.php
+     See the LICENSE file in the project's top-level directory for details.
+
+   Authors:
+     * Fabian Jakobs (fjakobs)
+     * Sebastian Werner (wpbasti)
+     * Martin Wittemann (martinwittemann)
+
+************************************************************************ */
+
+/* ************************************************************************
+
+[7m--More--(3%)[27m#asset(feedreader/*)
+#asset(qx/icon/Tango/22/apps/internet-feed-reader.png)
+#asset(qx/icon/Tango/22/actions/process-stop.png)
+
+************************************************************************ */
+
+/**
+ * The feed reader's main application class.
+ */
+qx.Class.define("feedreader.Application",
+{
+  extend : qx.application.Standalone,
+
+
+  /*
+  *****************************************************************************
+     MEMBERS
+  *****************************************************************************
+  */
+
+  members :
+  {
+    // private memebers
+[7m--More--(6%)[27m    __treeController : null,
+    __listController : null,
+
+    __commands : null,
+
+    __treeView : null,
+    __header : null,
+    __toolBarView : null,
+    __listView : null,
+    __horizontalSplitPane : null,
+    __verticalSplitPane : null,
+    __prefWindow : null,
+    __articleView : null,
+    __addFeedWindow : null,
+
+    __feedFolder : null,
+    __userFeedFolder : null,
+    __staticFeedFolder: null,
+
+
+    /*
+    ---------------------------------------------------------------------------
+      APPLICATION METHODS
+[7m--More--(9%)[27m    ---------------------------------------------------------------------------
+    */
+
+    /**
+     * Application initialization which happens when
+     * all library files are loaded and ready
+     */
+    main : function()
+    {
+      this.base(arguments);
+
+      // Add log appenders
+      if (qx.core.Variant.isSet("qx.debug", "on"))
+      {
+        qx.log.appender.Native;
+        qx.log.appender.Console;
+      }
+
+      qx.io.PartLoader.getInstance().addListener("partLoaded", function(e) {
+        this.debug("part loaded: " + e.getData().getName());
+      }, this);
+      
+      // Load current locale part
+[7m--More--(12%)[27m      var currentLanguage = qx.locale.Manager.getInstance().getLanguage();
+      var knownParts = qx.Part.getInstance().getParts();
+      // if the locale is available as part
+      if (knownParts[currentLanguage]) {
+        // load this part
+        qx.io.PartLoader.require([currentLanguage], function() {
+          // forcing identical locale
+          qx.locale.Manager.getInstance().setLocale(currentLanguage);
+          // build the GUI after the initial locals has been loaded
+          this.buildUpGui();
+        }, this);
+      } else {
+        // if we cant find the default locale, print a warning and load the gui
+        this.warn(
+          "Cannot load locale part for current language " + 
+          currentLanguage + ", falling back to English."
+        );
+        this.buildUpGui();
+      }
+    },
+
+    
+    /**
+[7m--More--(17%)[27m     * Main routine which builds the whole GUI.
+     */
+    buildUpGui : function() 
+    {
+      // Initialize commands
+      this._initializeCommands();
+
+      // Create application layout
+      this._createLayout();
+
+      // Initialize the model
+      this._initializeModel();
+
+      // Initialize the bindings
+      this._setUpBinding();
+
+      // Set up the default view of the tree
+      this.__treeView.getRoot().setOpen(true);
+      this.__treeView.getRoot().getChildren()[0].setOpen(true);
+      this.__treeView.getRoot().getChildren()[1].setOpen(true);
+      this.__treeView.setHideRoot(true);
+
+      // Preselect the qooxdoo feed
+[7m--More--(20%)[27m      this.__treeController.getSelection().push(
+        this.__staticFeedFolder.getFeeds().getItem(0)
+      );
+      
+      this.reload();
+    },
+
+
+    /*
+    ---------------------------------------------------------------------------
+      MODEL RELATED
+    ---------------------------------------------------------------------------
+    */
+
+    /**
+     * Initialize the feed data model
+     */
+    _initializeModel : function()
+    {
+      // create the root folder
+      this.__feedFolder = new feedreader.model.FeedFolder("Feeds");
+
+      // Add static feeds
+[7m--More--(23%)[27m      this.__staticFeedFolder =
+        new feedreader.model.FeedFolder(this.tr("Static Feeds"));
+      this.__feedFolder.getFeeds().push(this.__staticFeedFolder);
+      this.__staticFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+          "qooxdoo News", "http://feeds2.feedburner.com/qooxdoo/news/content", "
+static"
+        )
+      );
+      this.__staticFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+          "JScript Team Blog", "http://blogs.msdn.com/jscript/rss.xml", "static"
+        )
+      );
+      this.__staticFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+          "Daring Fireball", "http://daringfireball.net/index.xml", "static"
+        )
+      );
+      this.__staticFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+          "Surfin' Safari", "http://webkit.org/blog/feed/", "static"
+        )
+[7m--More--(28%)[27m      );[K
+      this.__staticFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+          "Ajaxian","http://feeds2.feedburner.com/ajaxian", "static"
+        )
+      );
+
+      // Add user feeds
+      this.__userFeedFolder =
+        new feedreader.model.FeedFolder(this.tr("User Feeds"));
+      this.__feedFolder.getFeeds().push(this.__userFeedFolder);
+      this.__userFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+          "Heise", "http://www.heise.de/newsticker/heise-atom.xml", "user"
+        )
+      );
+      this.__userFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+          "IEBlog", "http://blogs.msdn.com/ie/rss.xml", "user"
+        )
+      );
+      this.__userFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+[7m--More--(32%)[27m          "The Mozilla Blog", "http://blog.mozilla.com/feed/", "user"
+        )
+      );
+      this.__userFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+          "Opera Desktop Blog", "http://my.opera.com/desktopteam/xml/rss/blog/",
+ "user"
+        )
+      );
+    },
+
+
+
+
+
+    /*
+    ---------------------------------------------------------------------------
+      BINDING RELATED
+    ---------------------------------------------------------------------------
+    */
+
+    /**
+     * Set up the bindings and controller.
+[7m--More--(35%)[27m     */[K
+    _setUpBinding : function() {
+
+      // bind the tree //
+      // create the options used to store the converter for the icon
+      var iconOptions = {converter: this._state2iconConverter};
+      // create the controller which binds the feeds to the tree
+      // 1. Parameter: The model (root feed folder)
+      // 2. Parameter: The view (the tree widget)
+      // 3. Parameter: name of the children of the model items
+      // 4. Parameter: name of the model property to show as label in the tree
+      this.__treeController = new qx.data.controller.Tree(
+        this.__feedFolder, this.__treeView, "feeds", "title"
+      );
+      // set the options for the icon binding
+      this.__treeController.setIconOptions(iconOptions);
+      // set the property for the icon binding
+      this.__treeController.setIconPath("state");
+
+      // bind the list //
+      // create the controller which binds ths list
+      // 1. Parameter: The model (null because is bound in the next line)
+      // 2. Parameter: The view (the list widget)
+[7m--More--(41%)[27m      // 3. Parameter: name of the model property to show as label in the list
+      this.__listController = new qx.data.controller.List(
+        null, this.__listView.getList(), "title"
+      );
+      // bind the first selection of the tree as the model of the list
+      this.__treeController.bind(
+        "selection[0].articles", this.__listController, "model"
+      );
+
+      // bind the article //
+      // bind the first selection of the list to the article view
+      this.__listController.bind("selection[0]", this.__articleView, "article");
+
+      // register a handler for the change of the list selection
+      this.__listController.getSelection().addListener(
+        "change" , this._listControllerChange, this
+      );
+      // register a handler for the change of the model of the list
+      this.__listController.addListener(
+        "changeModel", this._treeControllerChange, this
+      );
+
+      // binding for showing the loading image in the list
+[7m--More--(46%)[27m      var options = {converter: this._state2loadingConverter};
+      this.__treeController.bind(
+        "selection[0].state", this.__listView, "loading", options
+      );
+
+      // bind the enabled property of the remove feed button
+      options = {converter: this._category2enabledConverter};
+      this.__treeController.bind(
+        "selection[0]", this.__toolBarView.getRemoveButton(), "enabled", options
+      );
+    },
+
+
+    /**
+     * Converts the category to a boolean for the enabled status of the remove
+     * button.
+     * @param data {String} The category name.
+     */
+    _category2enabledConverter : function(data) {
+      return !!data && data.getCategory() == "user";
+    },
+
+
+[7m--More--(50%)[27m    /**[K
+     * Converter function which converts the state of a feed to a icon url.
+     * @param value {String} The loading state of the request.
+     */
+    _state2iconConverter : function(value) {
+      if (value == "new" || value == "loading") {
+        return "feedreader/images/loading22.gif";
+      }
+      else if (value == "loaded") {
+        return "icon/22/apps/internet-feed-reader.png";
+      } else if (value == "error") {
+        return "icon/22/actions/process-stop.png";
+      }
+      return "icon/22/places/folder.png";
+    },
+
+
+    /**
+     * Converter function which converts the state of a feed to a loading
+     * indicator in the list view.
+     * @param data {String} The loading state of the request.
+     */
+    _state2loadingConverter : function(data) {
+[7m--More--(54%)[27m      if (data == "new" || data == "loading") {
+        return true;
+      }
+      return false;
+    },
+
+
+    /**
+     * Event handler for a change of the selection of the list.
+     * @param ev {qx.event.type.Data} The change event of the list controller.
+     */
+    _listControllerChange : function(ev) {
+      // get the selected feed
+      var feed = this.__treeController.getSelection().getItem(0);
+      // get the selected article
+      var article = this.__listController.getSelection().getItem(0);
+      // set the selected article
+      if (article != undefined) {
+        feed.setSelectedArticle(article);
+      }
+    },
+
+
+[7m--More--(57%)[27m    /**[K
+     * Event handler for a change of the selection of the tree.
+     * @param ev {qx.event.type.Data} The change event of the tree controller.
+     */
+    _treeControllerChange : function(ev) {
+      // get the selected feed
+      var feed = this.__treeController.getSelection().getItem(0);
+      // restore the last selected feed
+      // if a feed is selected and its not an folder and an article was selected
+      // and if the article belongs to the current feed
+      if (
+        feed != null &&
+        feed.classname == "feedreader.model.Feed" &&
+        feed.getSelectedArticle() != null &&
+        feed.getArticles().contains(feed.getSelectedArticle())
+      ) {
+        qx.event.Timer.once(function() {
+          this.__listController.getSelection().push(feed.getSelectedArticle()); 
+         
+        }, this, 0);
+      } else {
+        this.__listView.getList().scrollToY(0);
+      }
+[7m--More--(62%)[27m    },[K
+
+
+
+
+    /*
+    ---------------------------------------------------------------------------
+      GUI RELATED
+    ---------------------------------------------------------------------------
+    */
+
+    /**
+     * Creates the core layout.
+     */
+    _createLayout : function()
+    {
+      // Create main layout
+      var dockLayout = new qx.ui.layout.Dock();
+      dockLayout.setSeparatorY("separator-vertical");
+      var dockLayoutComposite = new qx.ui.container.Composite(dockLayout);
+      this.getRoot().add(dockLayoutComposite, {edge:0});
+
+      // Create header
+[7m--More--(65%)[27m      this.__header = new feedreader.view.Header();
+      dockLayoutComposite.add(this.__header, {edge: "north"});
+
+      // Create toolbar
+      this.__toolBarView = new feedreader.view.ToolBar(this);
+      dockLayoutComposite.add(this.__toolBarView, {edge: "north"});
+
+      // Create horizontal splitpane for tree and list+article view
+      this.__horizontalSplitPane = new qx.ui.splitpane.Pane();
+      dockLayoutComposite.add(this.__horizontalSplitPane);
+
+      // Create tree view
+      this.__treeView = new qx.ui.tree.Tree();
+      this.__treeView.setWidth(250);
+      this.__treeView.setBackgroundColor("white");
+      this.__horizontalSplitPane.add(this.__treeView, 0);
+
+      // Create vertical splitpane for list and detail view
+      this.__verticalSplitPane = new qx.ui.splitpane.Pane("vertical");
+      this.__verticalSplitPane.setDecorator(null);
+      this.__horizontalSplitPane.add(this.__verticalSplitPane, 1);
+
+      // Create the list view
+[7m--More--(70%)[27m      this.__listView = new feedreader.view.List(this.__feedFolder);
+      this.__listView.setHeight(200);
+      this.__listView.setDecorator("main");
+      this.__verticalSplitPane.add(this.__listView, 0);
+
+      // Create article view
+      this.__articleView = new feedreader.view.Article();
+      this.__articleView.setDecorator("main");
+      this.__verticalSplitPane.add(this.__articleView, 1);
+    },
+
+
+
+
+    /*
+    ---------------------------------------------------------------------------
+      COMMANDS
+    ---------------------------------------------------------------------------
+    */
+
+    /**
+     * Initialize commands (shortcuts, ...)
+     */
+[7m--More--(74%)[27m    _initializeCommands : function()
+    {
+      var commands = {};
+
+      commands.reload = new qx.ui.core.Command("Control+R");
+      commands.reload.addListener("execute", this.reload, this);
+
+      commands.about = new qx.ui.core.Command("F1");
+      commands.about.addListener("execute", this.showAbout, this);
+
+      commands.preferences = new qx.ui.core.Command("Control+P");
+      commands.preferences.addListener("execute", this.showPreferences, this);
+
+      commands.addFeed = new qx.ui.core.Command("Control+A");
+      commands.addFeed.addListener("execute", this.showAddFeed, this);
+
+      commands.removeFeed = new qx.ui.core.Command("Control+D");
+      commands.removeFeed.addListener("execute", this.removeFeed, this);
+
+      this.__commands = commands;
+    },
+
+
+[7m--More--(78%)[27m    /**[K
+     * Get the command with the given command id
+     *
+     * @param commandId {String} the command's command id
+     * @return {qx.ui.core.Command} The command
+     */
+    getCommand : function(commandId) {
+      return this.__commands[commandId];
+    },
+
+
+
+
+
+    /*
+    ---------------------------------------------------------------------------
+      PUBLIC API
+    ---------------------------------------------------------------------------
+    */
+
+    /**
+     * Adds a feed to the feeds database.
+     *
+[7m--More--(81%)[27m     * @param title {String} The title of the feed.
+     * @param url {String} The url to the feed.
+     * @param category {String?""} The category of the new feed
+     */
+    addFeed : function(title, url, category)
+    {
+      var feed = new feedreader.model.Feed(title, url, category);
+      this.__userFeedFolder.getFeeds().push(feed);
+
+      var loader = feedreader.io.FeedLoader.getInstance();
+      loader.load(feed);
+    },
+
+
+    /**
+     * Removes the currently selected selected feed from the view.
+     */
+    removeFeed : function()
+    {
+      // get the selected feed
+      var feed = this.__treeController.getSelection().getItem(0);
+      // if there is a feed and its not static
+      if (feed && feed.getCategory && feed.getCategory() !== "static") {
+[7m--More--(85%)[27m        var userFeeds = this.__userFeedFolder.getFeeds();
+        // remove it
+        for (var i = 0; i < userFeeds.length; i++) {
+          if (feed === userFeeds.getItem(i)) {
+            userFeeds.splice(i, 1);
+            return;
+          }
+        }
+      }
+    },
+
+
+    /**
+     * Reloads the feed readers including all feeds.
+     */
+    reload : function()
+    {
+      var loader = feedreader.io.FeedLoader.getInstance();
+      loader.loadAll(this.__feedFolder);
+      // remove the article which is currently on the screen
+      this.__articleView.setArticle(null);
+    },
+
+[7m--More--(88%)[27m[K
+    /**
+     * Opens the preferences window
+     */
+    showPreferences : function()
+    {
+      this.__toolBarView.signalLoading("settings", true);
+      qx.io.PartLoader.require(["settings"], function()
+      {
+        // if the window is not created
+        if (!this.__prefWindow)
+        {
+          // create it
+          this.__prefWindow = new feedreader.view.PreferenceWindow();
+          this.getRoot().add(this.__prefWindow);
+        }
+
+        // open the window
+        this.__prefWindow.center();
+        this.__prefWindow.open();
+        
+        // signal the end of the loading
+        this.__toolBarView.signalLoading("settings", false);        
+[7m--More--(92%)[27m      }, this);
+    },
+
+
+    /**
+     * Shows the about popup for the application.
+     * @lint ignoreDeprecated(alert)
+     */
+    showAbout : function() {
+      alert(this.tr("FeedReader (qooxdoo powered)"));
+    },
+
+
+    /**
+     * Opens the "add feed" window
+     */
+    showAddFeed : function()
+    {
+      this.__toolBarView.signalLoading("addfeed", true);
+      qx.io.PartLoader.require(["addfeed"], function()
+      {
+        // if the window is not created
+        if (!this.__addFeedWindow)
+[7m--More--(94%)[27m        {[K
+            // create it
+          this.__addFeedWindow = new feedreader.view.AddFeedWindow(this);
+          this.getRoot().add(this.__addFeedWindow);
+        }
+
+        // open the window
+        this.__addFeedWindow.center();
+        this.__addFeedWindow.open();
+        
+        // signal the end of the loading
+        this.__toolBarView.signalLoading("addfeed", false);
+      }, this);
+    }
+  },
+
+
+
+
+  /*
+  *****************************************************************************
+     DESTRUCTOR
+  *****************************************************************************
+[7m--More--(97%)[27m  */[K
+
+  destruct : function()
+  {
+    this.__commands = null;
+    this._disposeObjects("__toolBarView", "__listView", "__articleView", "__tree
+View",
+        "__feedFolder", "__horizontalSplitPane", "__verticalSplitPane", "__heade
+r",
+        "__staticFeedFolder", "__userFeedFolder", "__treeController", "__listCon
+troller",
+        "__prefWindow", "__addFeedWindow");
+  }
+});
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/class/feedreaderinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass/feedreader$ ls
+[0m[01;32mApplication.js[0m  __init__.js  [01;34mio[0m  [01;34mmodel[0m  [01;34mview[0m
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/class/feedreaderinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass/feedreader$ cd io/
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/class/feedreader/ioinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass/feedreader/io$ ls
+FeedLoader.js  __init__.js
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/class/feedreader/ioinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass/feedreader/io$ cd ..
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/class/feedreaderinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass/feedreader$ ls
+[0m[01;32mApplication.js[0m  __init__.js  [01;34mio[0m  [01;34mmodel[0m  [01;34mview[0m
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/class/feedreaderinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass/feedreader$ cd model/
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/class/feedreader/modelinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass/feedreader/model$ ls
+FeedFolder.js  Feed.js  __init__.js
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/class/feedreader/modelinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass/feedreader/model$ more Feed
+Feed: No such file or directory
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/class/feedreader/modelinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass/feedreader/model$ more Feed.js 
+/* ************************************************************************
+
+   qooxdoo - the new era of web development
+
+   http://qooxdoo.org
+
+   Copyright:
+     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
+
+   License:
+     LGPL: http://www.gnu.org/licenses/lgpl.html
+     EPL: http://www.eclipse.org/org/documents/epl-v10.php
+     See the LICENSE file in the project's top-level directory for details.
+
+   Authors:
+     * Fabian Jakobs (fjakobs)
+     * Sebastian Werner (wpbasti)
+     * Martin Wittemann (martinwittemann)
+
+************************************************************************ */
+
+/**
+ * Date data model for a news feed
+[7m--More--(29%)[27m */[K
+qx.Class.define("feedreader.model.Feed",
+{
+  extend : qx.core.Object,
+
+
+
+
+  /*
+  *****************************************************************************
+     CONSTRUCTOR
+  *****************************************************************************
+  */
+
+  /**
+   * @param title {String} feed title
+   * @param url {String} feed url
+   * @param category {String?""} feed category
+   */
+  construct: function(title, url, category)
+  {
+    this.base(arguments);
+
+[7m--More--(51%)[27m    this.set({
+      url: url,
+      title: title,
+      category : category || ""
+    });
+
+
+    this.setArticles(new qx.data.Array());
+  },
+
+
+  /*
+  *****************************************************************************
+     PROPERTIES
+  *****************************************************************************
+  */
+
+  properties :
+  {
+    /** The articles in an array */
+    articles :
+    {
+      check : "qx.data.Array",
+[7m--More--(70%)[27m      event : "changeArticles"
+    },
+
+
+    /** The currently selected article */
+    selectedArticle :
+    {
+      nullable: true
+    },
+
+
+    /** The feed URL */
+    url :
+    {
+      check : "String",
+      event : "changeUrl"
+    },
+
+
+    /** The feed title */
+    title :
+    {
+      check : "String",
+[7m--More--(84%)[27m      event : "changeTitle"
+    },
+
+
+    /** The feed category */
+    category :
+    {
+      check : "String",
+      init : "",
+      event : "dataModified"
+    },
+
+
+    /** The current loading state */
+    state :
+    {
+      check : ["new", "loading", "loaded", "error"],
+      init : "new",
+      event : "stateModified"
+    }
+  }
+});
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/class/feedreader/modelinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass/feedreader/model$  [Kcd ..
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/class/feedreaderinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass/feedreader$  [Kls
+[0m[01;32mApplication.js[0m  __init__.js  [01;34mio[0m  [01;34mmodel[0m  [01;34mview[0m
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/class/feedreaderinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass/feedreader$ cd[K[Kmore Application.js 
+/* ************************************************************************
+
+   qooxdoo - the new era of web development
+
+   http://qooxdoo.org
+
+   Copyright:
+     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
+
+   License:
+     LGPL: http://www.gnu.org/licenses/lgpl.html
+     EPL: http://www.eclipse.org/org/documents/epl-v10.php
+     See the LICENSE file in the project's top-level directory for details.
+
+   Authors:
+     * Fabian Jakobs (fjakobs)
+     * Sebastian Werner (wpbasti)
+     * Martin Wittemann (martinwittemann)
+
+************************************************************************ */
+
+/* ************************************************************************
+
+[7m--More--(3%)[27m#asset(feedreader/*)
+#asset(qx/icon/Tango/22/apps/internet-feed-reader.png)
+#asset(qx/icon/Tango/22/actions/process-stop.png)
+
+************************************************************************ */
+
+/**
+ * The feed reader's main application class.
+ */
+qx.Class.define("feedreader.Application",
+{
+  extend : qx.application.Standalone,
+
+
+  /*
+  *****************************************************************************
+     MEMBERS
+  *****************************************************************************
+  */
+
+  members :
+  {
+    // private memebers
+[7m--More--(6%)[27m    __treeController : null,
+[7m--More--(6%)[27m    __listController : null,
+[7m--More--(7%)[27m[K
+[7m--More--(7%)[27m    __commands : null,
+[7m--More--(7%)[27m[K
+[7m--More--(7%)[27m    __treeView : null,
+[7m--More--(7%)[27m    __header : null,
+[7m--More--(7%)[27m    __toolBarView : null,
+[7m--More--(7%)[27m    __listView : null,
+[7m--More--(7%)[27m    __horizontalSplitPane : null,
+[7m--More--(7%)[27m    __verticalSplitPane : null,
+[7m--More--(8%)[27m    __prefWindow : null,
+[7m--More--(8%)[27m    __articleView : null,
+[7m--More--(8%)[27m    __addFeedWindow : null,
+[7m--More--(8%)[27m[K
+[7m--More--(8%)[27m    __feedFolder : null,
+[7m--More--(8%)[27m    __userFeedFolder : null,
+[7m--More--(8%)[27m    __staticFeedFolder: null,
+[7m--More--(8%)[27m[K
+[7m--More--(8%)[27m[K
+[7m--More--(8%)[27m    /*[K
+[7m--More--(8%)[27m    ---------------------------------------------------------------------------
+[7m--More--(9%)[27m      APPLICATION METHODS
+[7m--More--(9%)[27m    ---------------------------------------------------------------------------
+[7m--More--(9%)[27m    */[K
+[7m--More--(10%)[27m[K
+[7m--More--(10%)[27m    /**[K
+[7m--More--(10%)[27m     * Application initialization which happens when
+[7m--More--(10%)[27m     * all library files are loaded and ready
+[7m--More--(10%)[27m     */[K
+[7m--More--(10%)[27m    main : function()
+[7m--More--(10%)[27m    {[K
+[7m--More--(10%)[27m      this.base(arguments);
+[7m--More--(10%)[27m[K
+[7m--More--(10%)[27m      // Add log appenders
+[7m--More--(11%)[27m      if (qx.core.Variant.isSet("qx.debug", "on"))
+[7m--More--(11%)[27m      {[K
+[7m--More--(11%)[27m        qx.log.appender.Native;
+[7m--More--(11%)[27m        qx.log.appender.Console;
+[7m--More--(11%)[27m      }[K
+[7m--More--(11%)[27m[K
+[7m--More--(11%)[27m      qx.io.PartLoader.getInstance().addListener("partLoaded", function(e) {
+[7m--More--(12%)[27m        this.debug("part loaded: " + e.getData().getName());
+[7m--More--(12%)[27m      }, this);
+[7m--More--(12%)[27m      [K
+[7m--More--(12%)[27m      // Load current locale part
+[7m--More--(12%)[27m      var currentLanguage = qx.locale.Manager.getInstance().getLanguage();
+[7m--More--(13%)[27m      var knownParts = qx.Part.getInstance().getParts();
+[7m--More--(13%)[27m      // if the locale is available as part
+[7m--More--(13%)[27m      if (knownParts[currentLanguage]) {
+[7m--More--(14%)[27m        // load this part
+[7m--More--(14%)[27m        qx.io.PartLoader.require([currentLanguage], function() {
+[7m--More--(14%)[27m          // forcing identical locale
+[7m--More--(14%)[27m          qx.locale.Manager.getInstance().setLocale(currentLanguage);
+[7m--More--(15%)[27m          // build the GUI after the initial locals has been loaded
+[7m--More--(15%)[27m          this.buildUpGui();
+[7m--More--(15%)[27m        }, this);
+[7m--More--(15%)[27m      } else {
+[7m--More--(15%)[27m        // if we cant find the default locale, print a warning and load the gui
+[7m--More--(16%)[27m        this.warn(
+[7m--More--(16%)[27m          "Cannot load locale part for current language " + 
+[7m--More--(16%)[27m          currentLanguage + ", falling back to English."
+[7m--More--(16%)[27m        );[K
+[7m--More--(16%)[27m        this.buildUpGui();
+[7m--More--(17%)[27m      }[K
+[7m--More--(17%)[27m    },[K
+[7m--More--(17%)[27m[K
+[7m--More--(17%)[27m    [K
+[7m--More--(17%)[27m    /**[K
+[7m--More--(17%)[27m     * Main routine which builds the whole GUI.
+[7m--More--(17%)[27m     */[K
+[7m--More--(17%)[27m    buildUpGui : function() 
+[7m--More--(17%)[27m    {[K
+[7m--More--(17%)[27m      // Initialize commands
+[7m--More--(17%)[27m      this._initializeCommands();
+[7m--More--(18%)[27m[K
+[7m--More--(18%)[27m      // Create application layout
+[7m--More--(18%)[27m      this._createLayout();
+[7m--More--(18%)[27m[K
+[7m--More--(18%)[27m      // Initialize the model
+[7m--More--(18%)[27m      this._initializeModel();
+[7m--More--(18%)[27m[K
+[7m--More--(18%)[27m      // Initialize the bindings
+[7m--More--(18%)[27m      this._setUpBinding();
+[7m--More--(19%)[27m[K
+[7m--More--(19%)[27m      // Set up the default view of the tree
+[7m--More--(19%)[27m      this.__treeView.getRoot().setOpen(true);
+[7m--More--(19%)[27m      this.__treeView.getRoot().getChildren()[0].setOpen(true);
+[7m--More--(19%)[27m      this.__treeView.getRoot().getChildren()[1].setOpen(true);
+[7m--More--(20%)[27m      this.__treeView.setHideRoot(true);
+[7m--More--(20%)[27m[K
+[7m--More--(20%)[27m      // Preselect the qooxdoo feed
+[7m--More--(20%)[27m      this.__treeController.getSelection().push(
+[7m--More--(20%)[27m        this.__staticFeedFolder.getFeeds().getItem(0)
+[7m--More--(21%)[27m      );[K
+[7m--More--(21%)[27m      [K
+[7m--More--(21%)[27m      this.reload();
+[7m--More--(21%)[27m    },[K
+[7m--More--(21%)[27m[K
+[7m--More--(21%)[27m[K
+[7m--More--(21%)[27m    /*[K
+[7m--More--(21%)[27m    ---------------------------------------------------------------------------
+[7m--More--(22%)[27m      MODEL RELATED
+[7m--More--(22%)[27m    ---------------------------------------------------------------------------
+[7m--More--(22%)[27m    */[K
+[7m--More--(22%)[27m[K
+[7m--More--(22%)[27m    /**[K
+[7m--More--(22%)[27m     * Initialize the feed data model
+[7m--More--(22%)[27m     */[K
+[7m--More--(22%)[27m    _initializeModel : function()
+[7m--More--(23%)[27m    {[K
+      // create the root folder
+      this.__feedFolder = new feedreader.model.FeedFolder("Feeds");
+
+      // Add static feeds
+      this.__staticFeedFolder =
+        new feedreader.model.FeedFolder(this.tr("Static Feeds"));
+      this.__feedFolder.getFeeds().push(this.__staticFeedFolder);
+      this.__staticFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+          "qooxdoo News", "http://feeds2.feedburner.com/qooxdoo/news/content", "
+static"
+        )
+      );
+      this.__staticFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+          "JScript Team Blog", "http://blogs.msdn.com/jscript/rss.xml", "static"
+        )
+      );
+      this.__staticFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+          "Daring Fireball", "http://daringfireball.net/index.xml", "static"
+        )
+[7m--More--(27%)[27m      );[K
+[7m--More--(27%)[27m      this.__staticFeedFolder.getFeeds().push(
+[7m--More--(27%)[27m        new feedreader.model.Feed(
+          "Surfin' Safari", "http://webkit.org/blog/feed/", "static"
+        )
+      );
+      this.__staticFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+          "Ajaxian","http://feeds2.feedburner.com/ajaxian", "static"
+        )
+      );
+
+      // Add user feeds
+      this.__userFeedFolder =
+        new feedreader.model.FeedFolder(this.tr("User Feeds"));
+      this.__feedFolder.getFeeds().push(this.__userFeedFolder);
+      this.__userFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+          "Heise", "http://www.heise.de/newsticker/heise-atom.xml", "user"
+        )
+      );
+      this.__userFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+          "IEBlog", "http://blogs.msdn.com/ie/rss.xml", "user"
+        )
+[7m--More--(32%)[27m      );[K
+      this.__userFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+          "The Mozilla Blog", "http://blog.mozilla.com/feed/", "user"
+        )
+      );
+      this.__userFeedFolder.getFeeds().push(
+        new feedreader.model.Feed(
+          "Opera Desktop Blog", "http://my.opera.com/desktopteam/xml/rss/blog/",
+ "user"
+        )
+      );
+    },
+
+
+
+
+
+    /*
+    ---------------------------------------------------------------------------
+      BINDING RELATED
+    ---------------------------------------------------------------------------
+    */
+[7m--More--(35%)[27m[K
+    /**
+     * Set up the bindings and controller.
+     */
+    _setUpBinding : function() {
+
+      // bind the tree //
+      // create the options used to store the converter for the icon
+      var iconOptions = {converter: this._state2iconConverter};
+      // create the controller which binds the feeds to the tree
+      // 1. Parameter: The model (root feed folder)
+      // 2. Parameter: The view (the tree widget)
+      // 3. Parameter: name of the children of the model items
+      // 4. Parameter: name of the model property to show as label in the tree
+      this.__treeController = new qx.data.controller.Tree(
+        this.__feedFolder, this.__treeView, "feeds", "title"
+      );
+      // set the options for the icon binding
+      this.__treeController.setIconOptions(iconOptions);
+      // set the property for the icon binding
+      this.__treeController.setIconPath("state");
+
+      // bind the list //
+[7m--More--(40%)[27m      // create the controller which binds ths list
+      // 1. Parameter: The model (null because is bound in the next line)
+      // 2. Parameter: The view (the list widget)
+      // 3. Parameter: name of the model property to show as label in the list
+      this.__listController = new qx.data.controller.List(
+        null, this.__listView.getList(), "title"
+      );
+      // bind the first selection of the tree as the model of the list
+      this.__treeController.bind(
+        "selection[0].articles", this.__listController, "model"
+      );
+
+      // bind the article //
+      // bind the first selection of the list to the article view
+      this.__listController.bind("selection[0]", this.__articleView, "article");
+
+      // register a handler for the change of the list selection
+      this.__listController.getSelection().addListener(
+        "change" , this._listControllerChange, this
+      );
+      // register a handler for the change of the model of the list
+      this.__listController.addListener(
+        "changeModel", this._treeControllerChange, this
+[7m--More--(45%)[27m      );[K
+
+      // binding for showing the loading image in the list
+      var options = {converter: this._state2loadingConverter};
+      this.__treeController.bind(
+        "selection[0].state", this.__listView, "loading", options
+      );
+
+      // bind the enabled property of the remove feed button
+      options = {converter: this._category2enabledConverter};
+      this.__treeController.bind(
+        "selection[0]", this.__toolBarView.getRemoveButton(), "enabled", options
+      );
+    },
+
+
+    /**
+     * Converts the category to a boolean for the enabled status of the remove
+     * button.
+     * @param data {String} The category name.
+     */
+    _category2enabledConverter : function(data) {
+      return !!data && data.getCategory() == "user";
+[7m--More--(49%)[27m    },[K
+
+
+    /**
+     * Converter function which converts the state of a feed to a icon url.
+     * @param value {String} The loading state of the request.
+     */
+    _state2iconConverter : function(value) {
+      if (value == "new" || value == "loading") {
+        return "feedreader/images/loading22.gif";
+      }
+      else if (value == "loaded") {
+        return "icon/22/apps/internet-feed-reader.png";
+      } else if (value == "error") {
+        return "icon/22/actions/process-stop.png";
+      }
+      return "icon/22/places/folder.png";
+    },
+
+
+    /**
+     * Converter function which converts the state of a feed to a loading
+     * indicator in the list view.
+[7m--More--(53%)[27m     * @param data {String} The loading state of the request.
+     */
+    _state2loadingConverter : function(data) {
+      if (data == "new" || data == "loading") {
+        return true;
+      }
+      return false;
+    },
+
+
+    /**
+     * Event handler for a change of the selection of the list.
+     * @param ev {qx.event.type.Data} The change event of the list controller.
+     */
+    _listControllerChange : function(ev) {
+      // get the selected feed
+      var feed = this.__treeController.getSelection().getItem(0);
+      // get the selected article
+      var article = this.__listController.getSelection().getItem(0);
+      // set the selected article
+      if (article != undefined) {
+        feed.setSelectedArticle(article);
+      }
+[7m--More--(57%)[27m    },[K
+
+
+    /**
+     * Event handler for a change of the selection of the tree.
+     * @param ev {qx.event.type.Data} The change event of the tree controller.
+     */
+    _treeControllerChange : function(ev) {
+      // get the selected feed
+      var feed = this.__treeController.getSelection().getItem(0);
+      // restore the last selected feed
+      // if a feed is selected and its not an folder and an article was selected
+      // and if the article belongs to the current feed
+      if (
+        feed != null &&
+        feed.classname == "feedreader.model.Feed" &&
+        feed.getSelectedArticle() != null &&
+        feed.getArticles().contains(feed.getSelectedArticle())
+      ) {
+        qx.event.Timer.once(function() {
+          this.__listController.getSelection().push(feed.getSelectedArticle()); 
+         
+        }, this, 0);
+[7m--More--(62%)[27m      } else {
+        this.__listView.getList().scrollToY(0);
+      }
+    },
+
+
+
+
+    /*
+    ---------------------------------------------------------------------------
+      GUI RELATED
+    ---------------------------------------------------------------------------
+    */
+
+    /**
+     * Creates the core layout.
+     */
+    _createLayout : function()
+    {
+      // Create main layout
+      var dockLayout = new qx.ui.layout.Dock();
+      dockLayout.setSeparatorY("separator-vertical");
+      var dockLayoutComposite = new qx.ui.container.Composite(dockLayout);
+[7m--More--(65%)[27m      this.getRoot().add(dockLayoutComposite, {edge:0});
+
+      // Create header
+      this.__header = new feedreader.view.Header();
+      dockLayoutComposite.add(this.__header, {edge: "north"});
+
+      // Create toolbar
+      this.__toolBarView = new feedreader.view.ToolBar(this);
+      dockLayoutComposite.add(this.__toolBarView, {edge: "north"});
+
+      // Create horizontal splitpane for tree and list+article view
+      this.__horizontalSplitPane = new qx.ui.splitpane.Pane();
+      dockLayoutComposite.add(this.__horizontalSplitPane);
+
+      // Create tree view
+      this.__treeView = new qx.ui.tree.Tree();
+      this.__treeView.setWidth(250);
+      this.__treeView.setBackgroundColor("white");
+      this.__horizontalSplitPane.add(this.__treeView, 0);
+
+      // Create vertical splitpane for list and detail view
+      this.__verticalSplitPane = new qx.ui.splitpane.Pane("vertical");
+      this.__verticalSplitPane.setDecorator(null);
+[7m--More--(70%)[27m      this.__horizontalSplitPane.add(this.__verticalSplitPane, 1);
+
+      // Create the list view
+      this.__listView = new feedreader.view.List(this.__feedFolder);
+      this.__listView.setHeight(200);
+      this.__listView.setDecorator("main");
+      this.__verticalSplitPane.add(this.__listView, 0);
+
+      // Create article view
+      this.__articleView = new feedreader.view.Article();
+      this.__articleView.setDecorator("main");
+      this.__verticalSplitPane.add(this.__articleView, 1);
+    },
+
+
+
+
+    /*
+    ---------------------------------------------------------------------------
+      COMMANDS
+    ---------------------------------------------------------------------------
+    */
+
+[7m--More--(73%)[27m    /**[K
+     * Initialize commands (shortcuts, ...)
+     */
+    _initializeCommands : function()
+    {
+      var commands = {};
+
+      commands.reload = new qx.ui.core.Command("Control+R");
+      commands.reload.addListener("execute", this.reload, this);
+
+      commands.about = new qx.ui.core.Command("F1");
+      commands.about.addListener("execute", this.showAbout, this);
+
+      commands.preferences = new qx.ui.core.Command("Control+P");
+      commands.preferences.addListener("execute", this.showPreferences, this);
+
+      commands.addFeed = new qx.ui.core.Command("Control+A");
+      commands.addFeed.addListener("execute", this.showAddFeed, this);
+
+      commands.removeFeed = new qx.ui.core.Command("Control+D");
+      commands.removeFeed.addListener("execute", this.removeFeed, this);
+
+      this.__commands = commands;
+[7m--More--(78%)[27m    },[K
+
+
+    /**
+     * Get the command with the given command id
+     *
+     * @param commandId {String} the command's command id
+     * @return {qx.ui.core.Command} The command
+     */
+    getCommand : function(commandId) {
+      return this.__commands[commandId];
+    },
+
+
+
+
+
+    /*
+    ---------------------------------------------------------------------------
+      PUBLIC API
+    ---------------------------------------------------------------------------
+    */
+
+[7m--More--(80%)[27m    /**[K
+     * Adds a feed to the feeds database.
+     *
+     * @param title {String} The title of the feed.
+     * @param url {String} The url to the feed.
+     * @param category {String?""} The category of the new feed
+     */
+    addFeed : function(title, url, category)
+    {
+      var feed = new feedreader.model.Feed(title, url, category);
+      this.__userFeedFolder.getFeeds().push(feed);
+
+      var loader = feedreader.io.FeedLoader.getInstance();
+      loader.load(feed);
+    },
+
+
+    /**
+     * Removes the currently selected selected feed from the view.
+     */
+    removeFeed : function()
+    {
+      // get the selected feed
+[7m--More--(84%)[27m      var feed = this.__treeController.getSelection().getItem(0);
+      // if there is a feed and its not static
+      if (feed && feed.getCategory && feed.getCategory() !== "static") {
+        var userFeeds = this.__userFeedFolder.getFeeds();
+        // remove it
+        for (var i = 0; i < userFeeds.length; i++) {
+          if (feed === userFeeds.getItem(i)) {
+            userFeeds.splice(i, 1);
+            return;
+          }
+        }
+      }
+    },
+
+
+    /**
+     * Reloads the feed readers including all feeds.
+     */
+    reload : function()
+    {
+      var loader = feedreader.io.FeedLoader.getInstance();
+      loader.loadAll(this.__feedFolder);
+      // remove the article which is currently on the screen
+[7m--More--(88%)[27m      this.__articleView.setArticle(null);
+    },
+
+
+    /**
+     * Opens the preferences window
+     */
+    showPreferences : function()
+    {
+      this.__toolBarView.signalLoading("settings", true);
+      qx.io.PartLoader.require(["settings"], function()
+      {
+        // if the window is not created
+        if (!this.__prefWindow)
+        {
+          // create it
+          this.__prefWindow = new feedreader.view.PreferenceWindow();
+          this.getRoot().add(this.__prefWindow);
+        }
+
+        // open the window
+        this.__prefWindow.center();
+        this.__prefWindow.open();
+[7m--More--(91%)[27m        [K
+        // signal the end of the loading
+        this.__toolBarView.signalLoading("settings", false);        
+      }, this);
+    },
+
+
+    /**
+     * Shows the about popup for the application.
+     * @lint ignoreDeprecated(alert)
+     */
+    showAbout : function() {
+      alert(this.tr("FeedReader (qooxdoo powered)"));
+    },
+
+
+    /**
+     * Opens the "add feed" window
+     */
+    showAddFeed : function()
+    {
+      this.__toolBarView.signalLoading("addfeed", true);
+      qx.io.PartLoader.require(["addfeed"], function()
+[7m--More--(94%)[27m      {[K
+        // if the window is not created
+        if (!this.__addFeedWindow)
+        {
+            // create it
+          this.__addFeedWindow = new feedreader.view.AddFeedWindow(this);
+          this.getRoot().add(this.__addFeedWindow);
+        }
+
+        // open the window
+        this.__addFeedWindow.center();
+        this.__addFeedWindow.open();
+        
+        // signal the end of the loading
+        this.__toolBarView.signalLoading("addfeed", false);
+      }, this);
+    }
+  },
+
+
+
+
+  /*
+[7m--More--(97%)[27m  *****************************************************************************
+     DESTRUCTOR
+  *****************************************************************************
+  */
+
+  destruct : function()
+  {
+    this.__commands = null;
+    this._disposeObjects("__toolBarView", "__listView", "__articleView", "__tree
+View",
+        "__feedFolder", "__horizontalSplitPane", "__verticalSplitPane", "__heade
+r",
+        "__staticFeedFolder", "__userFeedFolder", "__treeController", "__listCon
+troller",
+        "__prefWindow", "__addFeedWindow");
+  }
+});
+]0;inocult@middleware-devel: ~/Projects/rmc/qooxdoo/application/feedreader/source/class/feedreaderinocult@middleware-devel:~/Projects/rmc/qooxdoo/application/feedreader/source/claass/feedreader$  [Kmore Application.js 
+/* ************************************************************************
+
+   qooxdoo - the new era of web development
+
+   http://qooxdoo.org
+
+   Copyright:
+     2004-2008 1&1 Internet AG, Germany, http://www.1und1.de
+
+   License:
+     LGPL: http://www.gnu.org/licenses/lgpl.html
+     EPL: http://www.eclipse.org/org/documents/epl-v10.php
+     See the LICENSE file in the project's top-level directory for details.
+
+   Authors:
+     * Fabian Jakobs (fjakobs)
+     * Sebastian Werner (wpbasti)
+     * Martin Wittemann (martinwittemann)
+
+************************************************************************ */
+
+/* ************************************************************************
+
+[7m--More--(3%)[27m#asset(feedreader/*)
+#asset(qx/icon/Tango/22/apps/internet-feed-reader.png)
+#asset(qx/icon/Tango/22/actions/process-stop.png)
+
+************************************************************************ */
+
+/**
+ * The feed reader's main application class.
+ */
+qx.Class.define("feedreader.Application",
+{
+  extend : qx.application.Standalone,
+
+
+  /*
+  *****************************************************************************
+     MEMBERS
+  *****************************************************************************
+  */
+
+  members :
+  {
+    // private memebers
+[7m--More--(6%)[27m    __treeController : null,
+    __listController : null,
+
+    __commands : null,
+
+    __treeView : null,
+    __header : null,
+    __toolBarView : null,
+    __listView : null,
+    __horizontalSplitPane : null,
+    __verticalSplitPane : null,
+    __prefWindow : null,
+    __articleView : null,
+    __addFeedWindow : null,
+
+    __feedFolder : null,
+    __userFeedFolder : null,
+    __staticFeedFolder: null,
+
+
+    /*
+    ---------------------------------------------------------------------------
+      APPLICATION METHODS
+[7m--More--(9%)[27m    ---------------------------------------------------------------------------
+    */
+
+    /**
+     * Application initialization which happens when
+     * all library files are loaded and ready
+     */
+    main : function()
+    {
+      this.base(arguments);
+
+      // Add log appenders
+      if (qx.core.Variant.isSet("qx.debug", "on"))
+      {
+        qx.log.appender.Native;
+        qx.log.appender.Console;
+      }
+
+      qx.io.PartLoader.getInstance().addListener("partLoaded", function(e) {
+        this.debug("part loaded: " + e.getData().getName());
+      }, this);
+      
+      // Load current locale part
+[7m--More--(12%)[27m      var currentLanguage = qx.locale.Manager.getInstance().getLanguage();
+      var knownParts = qx.Part.getInstance().getParts();
+      // if t

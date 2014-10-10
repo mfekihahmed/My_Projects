@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Open NMS Topology</title>
+    <link rel="shortcut icon" href="opennms.ico" >
+
+    <style>
+      body {font: 10pt arial;}
+    </style>
+                                                                        
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="../network.js"></script>
+    <script type="text/javascript" src="opennms.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript">
+      var nodesTable = null;
+      var linksTable = null;
+      var network = null;
+	  var packagesTable = null;
+
+      var DIR = 'img/opennms/';
+	  var txt = '{"opennms":[{"statut":"off","flow":"no","from":2,"to":8,"msg":"permitted Flow","image":"redmsg.png"}]}';
+      var config = null;
+      google.load('visualization', '1');
+      
+      // Set callback to run when API is loaded
+      google.setOnLoadCallback(drawVisualization); 
+
+      // Called when the Visualization API is loaded.
+      
+    </script>
+  </head>
+
+  <body>
+
+    <div id="opennms"></div>
+	
+  </body>
+</html>

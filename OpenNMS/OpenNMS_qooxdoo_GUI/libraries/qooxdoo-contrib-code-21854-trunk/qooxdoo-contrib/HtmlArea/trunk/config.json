@@ -1,0 +1,64 @@
+{
+  "name"    : "HtmlArea",
+
+  "include" :
+  [
+    {
+      "path" : "${QOOXDOO_PATH}/tool/data/config/application.json"
+    }
+  ],
+
+  "export" :
+  [
+    "api",
+    "build",
+    "clean",
+    "distclean",
+    "fix",
+    "inspector",
+    "lint",
+    "migration",
+    "pretty",
+    "profiling",
+    "source",
+    "source-all",
+    "test",
+    "test-source",
+    "translation"
+  ],
+
+  "let" :
+  {
+    "APPLICATION"  : "htmlarea",
+    "APPLICATION_MAIN_CLASS" : "${APPLICATION}.demo.Application",
+    "QOOXDOO_PATH" : "../../qooxdoo/trunk",
+    "API_EXCLUDE"  : ["qx.legacy.*", "qx.test.*"],
+    "LOCALES"      : [ "en" ],
+    "ROOT"         : "."
+  },
+
+  // You only need to edit the remainder of this file, if you want to customize
+  // specific jobs, or add own job definitions.
+
+  
+  "jobs" :
+  {
+    "copy-blank" : 
+    {
+      "copy-files" :
+      {
+        "files"     : [ "blank.html" ],
+        "source" : "source",
+        "target"  : "test/html"
+      }
+    },
+    
+    "test" : {
+      "run" : [ "copy-blank" ]
+    },
+    
+    "test-source" : {
+      "run" : [ "copy-blank" ]
+    } 
+  }
+}

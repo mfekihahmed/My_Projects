@@ -1,0 +1,16 @@
+{
+	"categories": [
+		{
+            "id":"app"
+			"name": "Applications"
+			"icon": ""
+			"subcategories":[]
+		},
+		{
+            "id":""
+			"name": ""
+			"icon": ""
+		}
+	]
+}
+

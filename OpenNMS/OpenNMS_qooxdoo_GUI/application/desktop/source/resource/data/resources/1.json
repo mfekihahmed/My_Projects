@@ -1,0 +1,198 @@
+
+{
+	"name": "Library",
+	"icon": "icons/16/infra.png",
+	"elType": "folder",
+	"groups": [
+		{
+			"name": "Infrastructure",
+			"icon": "icons/16/infrastructure.png",
+			"elType": "folder",
+			"groups": [
+				{
+					"name": "Switch",
+					"icon": "icons/16/services.png",
+					"elType": "folder",
+					"groups": [
+						{
+							"name": "NoviSwitch",
+							"icon": "icons/16/Switch.png",
+							"elType": "element"
+						},
+						{
+							"name": "Cisco catalyst",
+							"icon": "icons/16/Switch.png",
+							"elType": "element"
+						},
+						{
+							"name": "Ciena 6500",
+							"icon": "icons/16/Switch.png",
+							"elType": "element"
+						},
+						{
+							"name": "Pica8",
+							"icon": "icons/16/Switch.png",
+							"elType": "element"
+						}
+					]
+				},{
+					"name": "Servers",
+					"icon": "icons/16/services.png",
+					"elType": "folder",
+					"groups": [
+						{
+							"name": "HP Server",
+							"icon": "icons/16/Host.png",
+							"elType": "element"
+						}
+					]
+				}  
+			]
+		}, {
+			"name": "Controllers",
+			"icon": "icons/16/services.png",
+			"elType": "folder",
+			"groups": [
+				{
+					"name": "Cloud",
+					"icon": "icons/16/services.png",
+					"elType": "folder",
+					"groups":[
+						{
+							"name": "OpenStack Controller",
+							"icon": "icons/16/openStack.png",
+							"elType": "controller"
+						},
+						{
+							"name": "Rackspace",
+							"icon": "icons/16/services.png",
+							"elType": "EmptyCloud"
+						},
+						{
+							"name": "Amazon",
+							"icon": "icons/16/services.png",
+							"elType": "EmptyCloud"
+						}
+					]
+				}, {
+					"name": "Network",
+					"icon": "icons/16/services.png",
+					"elType": "folder",
+					"groups":[
+						{
+							"name": "SDN Controller",
+							"icon": "icons/16/services.png",
+							"elType": "controller"
+						}
+					]
+				}
+			]
+		}, {
+			"name": "Components",
+			"icon": "icons/16/services.png",
+			"elType": "folder",
+			"groups": [
+				{
+					"name": "Compute",
+					"icon": "icons/16/services.png",
+					"elType": "folder",
+					"groups": [
+						{
+							"name": "Storage",
+							"icon": "icons/16/services.png",
+							"elType": "folder",
+							"groups":[
+								{
+									"name": "Swift",
+									"icon": "icons/16/openStack.png",
+									"elType": "component"
+								}, {
+									"name": "Cinder",
+									"icon": "icons/16/openStack.png",
+									"elType": "component"
+								}
+							]
+						}, {
+							"name": "Networking",
+							"icon": "icons/16/services.png",
+							"elType": "folder",
+							"groups":[
+								{
+									"name": "Quantum",
+									"icon": "icons/16/openStack.png",
+									"elType": "component"
+								}
+							]
+						}
+					]
+				}, {
+					"name": "Network",
+					"icon": "icons/16/services.png",
+					"elType": "folder",
+					"groups": [
+						{
+							"name": "Switching",
+							"icon": "icons/16/services.png",
+							"elType": "folder",
+							"groups":[
+								{
+									"name": "Layer 2 Switch",
+									"icon": "icons/16/services.png",
+									"elType": "component"
+								}
+							]
+						}, {
+							"name": "Traffic Management",
+							"icon": "icons/16/services.png",
+							"elType": "folder",
+							"groups":[
+								{
+									"name": "Firewall",
+									"icon": "icons/16/firewall.png",
+									"elType": "component"
+								}, {
+									"name": "Load Balancer",
+									"icon": "icons/16/services.png",
+									"elType": "component"
+								}
+							]
+						}
+					]
+				} 
+			]
+		}, {
+			"name": "Applications",
+			"icon": "icons/16/application.png",
+			"elType": "folder",
+			"groups": [
+				{
+					"name": "Cloud",
+					"icon": "icons/16/services.png",
+					"elType": "folder",
+					"groups":[
+						{
+							"name": "HA OpenStack",
+							"icon": "icons/16/services.png",
+							"elType": "application"
+						}, {
+							"name": "OpenStack All in One",
+							"icon": "icons/16/services.png",
+							"elType": "application"
+						}
+					]
+				}, {
+					"name": "Network",
+					"icon": "icons/16/services.png",
+					"elType": "folder",
+					"groups":[
+						{
+							"name": "Virtual Network",
+							"icon": "icons/16/services.png",
+							"elType": "application"
+						}
+					]
+				}
+			]
+		}
+	]
+}
